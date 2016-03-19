@@ -5,19 +5,19 @@ Imports Microsoft.VisualBasic.ComponentModel.Collection.Generic
 
 Public Class Menu
 
-    Dim __ulst As Dictionary(Of String, MenuItem)
+    Dim __ulst As Dictionary(Of MenuItem)
 
     Public Property ulist As MenuItem()
         Get
             If __ulst Is Nothing Then
-                __ulst = New Dictionary(Of String, MenuItem)
+                __ulst = New Dictionary(Of MenuItem)
             End If
 
             Return __ulst.Values.ToArray
         End Get
         Set(value As MenuItem())
             If value Is Nothing Then
-                __ulst = New Dictionary(Of String, MenuItem)
+                __ulst = New Dictionary(Of MenuItem)
             Else
                 __ulst = value.ToDictionary
             End If
