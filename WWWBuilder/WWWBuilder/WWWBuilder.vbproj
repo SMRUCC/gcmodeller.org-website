@@ -92,8 +92,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HTML\Doc.vb" />
+    <Compile Include="HTML\Href.vb" />
     <Compile Include="Project.vb" />
-    <Compile Include="HTML.vb" />
+    <Compile Include="HTML\HTML.vb" />
     <Compile Include="CLI\CLI.vb" />
     <Compile Include="Program.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

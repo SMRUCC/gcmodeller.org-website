@@ -5,6 +5,8 @@ Public Class Project : Inherits ITextFile
 
     Public Property Title As String
 
+    Public Property Resources As Dictionary(Of String, HrefLink)
+
     Public Function CreateNew(DIR As String) As Project
         Dim proj As New Project With {
             .Title = "New HTML Template Project"
