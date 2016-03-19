@@ -1,0 +1,5 @@
+"E:\website\WWWBuilder\WWWBuilder\bin\x64\Release\WWWBuilder.exe" /menu.add /proj "E:\website\Project\gcmodeller.org.xml" /name Home /class "fa fa-home" /action ./index.html
+"E:\website\WWWBuilder\WWWBuilder\bin\x64\Release\WWWBuilder.exe" /menu.add /proj "E:\website\Project\gcmodeller.org.xml" /name Home /class "fa fa-home" /action ./index.html
+"E:\website\WWWBuilder\WWWBuilder\bin\x64\Release\WWWBuilder.exe" /menu.add /proj "E:\website\Project\gcmodeller.org.xml" /name Home /class "fa fa-home" /action ./index.html
+"E:\website\WWWBuilder\WWWBuilder\bin\x64\Release\WWWBuilder.exe" /menu.add /proj "E:\website\Project\gcmodeller.org.xml" /name Home /class "fa fa-home" /action ./index.html
+"E:\website\WWWBuilder\WWWBuilder\bin\x64\Release\WWWBuilder.exe" /menu.add /proj "E:\website\Project\gcmodeller.org.xml" /name Home /class "fa fa-home" /action ./index.html

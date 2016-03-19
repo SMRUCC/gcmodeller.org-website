@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="utf-16"?>
 <Project xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Title>file:///E:/website/Project/gcmodeller.org.xml</Title>
+  <Resources />
+  <HTML>
+    <Menu>
+      <ulist>
+        <MenuItem>
+          <Link d6p1:Resource.Id="fa fa-home" xmlns:d6p1="Microsoft.VisualBasic/Href_Annotation-ResourceId">
+            <href-text xmlns="Microsoft.VisualBasic/Href_Annotation-Text-Data">./index.html</href-text>
+          </Link>
+          <Name>Home</Name>
+        </MenuItem>
+      </ulist>
+    </Menu>
+  </HTML>
 </Project>

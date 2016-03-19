@@ -5,7 +5,31 @@ Public Class Project : Inherits ITextFile
 
     Public Property Title As String
 
-    Public Property Resources As Dictionary(Of String, HrefLink)
+    Public Property Resources As HrefLink()
+        Get
+            If __resHash Is Nothing Then
+                Return New HrefLink() {}
+            Else
+                Return __resHash.Values.ToArray
+            End If
+        End Get
+        Set(value As HrefLink())
+            If value Is Nothing Then
+                __resHash = New Dictionary(Of String, HrefLink)
+            Else
+                __resHash = value.ToDictionary(Function(x) x.ResourceId)
+            End If
+        End Set
+    End Property
+    Public Property HTML As Doc
+
+    Dim __resHash As Dictionary(Of String, HrefLink)
+
+    Public ReadOnly Property ResHash As IReadOnlyDictionary(Of String, HrefLink)
+        Get
+            Return __resHash
+        End Get
+    End Property
 
     Public Function CreateNew(DIR As String) As Project
         Dim proj As New Project With {
