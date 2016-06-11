@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE 9]><html class="lt-ie10" lang="en"><![endif]-->
 <html style="" 
       idmmzcc-ext-docid="196177856" 
@@ -54,8 +54,8 @@
         <section class="top-bar-section">
             <!-- Right Nav Section -->
             <ul class="left">
-              <li class="active"><a href="./index.html"><i class="fa fa-home"></i> Home</a></li>
-              <li><a href="./Download.html"><i class="fa fa-download"></i> Download</a></li>              
+              <li ><a href="./index.html"><i class="fa fa-home"></i> Home</a></li>
+              <li class="active"><a href="./Download.html"><i class="fa fa-download"></i> Download</a></li>              
               <li><a href="./Community.html"><i class="fa fa-github"></i> Community</a></li>
             </ul>
 			<ul class="right">
@@ -75,57 +75,72 @@
           </section></nav>
       </div>
 
-	  <div class="row">
-	  <br>
-<iframe width=1024 height=840 frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="./slider.html">
-</iframe>
-</div>
+      <div class="row">
+  <div class="small-12 columns">
+    <h1>Download</h1>
 
-<div class="row">
-  <div class="small-12 column">
-    <p>
-      GCModeller is an open source systems biology software toolkit that implemented by Microsoft's .NET Framework technology and written in <a href="">Microsoft VisualBasic.NET</a> language.<br>
-      We are trying to found out how does the disease was caused by the plant pathogen <strong><i>Xanthomonas campestris</i> pathovar <i>campestris</i></strong> on their host.
-<br>
-The efforts of what we does on the GCModeller developed includes: <strong>important disease pathway calculation, predicts for the important regulator of the virulence, stress resistance calculation of the bacteria.</strong>
-<br>
-The future work on GCModeller development will focus on bacteria/environment interaction, metagenomics and Microsoft Azure cloud computing, trying to explain the evolution of the diseases caused bacteria genome.
-    </p>
+    <h5>The latest GCModeller release is available at <a href="https://github.com/SMRUCC/GCModeller/releases">github release page</a>.</h5>
+    <p>Please choose your operating system to view the available packages. Source code is available on <a href="https://github.com/SMRUCC/GCModeller">GitHub</a>.</p>
+<p>GCModeller for Windows is available as a Windows Installer file, and GCModeller for Linux/Mac is available at github release which it has a <b>Unix</b> tag</p>
+<div>
+          <a href="https://github.com/SMRUCC/GCModeller/releases" class="button radius"><i class="fa fa-download"></i> Download GCModeller 64-bit</a>
+        </div>
+<!--     <dl id="mono-download" class="tabs vertical" data-tab="" data-options="deep_linking: true; scroll_to_content: false">
+      <dd class="active"><a href="#download-win"><i class="fa fa-windows"></i>&nbsp;Windows</a></dd>	  
+      <dd><a href="#download-lin"><i class="fa fa-linux"></i>&nbsp;Linux</a></dd>
+      <dd class=""><a href="#download-mac"><i class="fa fa-apple"></i>&nbsp;Mac OS X</a></dd>
+    </dl>
+
+    <div class="tabs-content vertical">
+      <div class="panel content" id="download-mac">
+        <h3>GCModeller for Mac OS X is available at github release which it has a <b>Unix</b> tag</h3>       
+        <div>
+          <a href="http://download.mono-project.com/archive/4.2.2/macos-10-x86/MonoFramework-MDK-4.2.2.30.macos10.xamarin.x86.pkg" class="button radius"><i class="fa fa-download"></i> Download GCModeller</a>
+        </div>
+      </div>
+      <div class="panel content" id="download-lin">
+         <h3>GCModeller for Linux is available at github release which it has a <b>Unix</b> tag</h3>       
+        <div>
+          <a href="http://download.mono-project.com/archive/4.2.2/macos-10-x86/MonoFramework-MDK-4.2.2.30.macos10.xamarin.x86.pkg" class="button radius"><i class="fa fa-download"></i> Download GCModeller</a>
+        </div>
+      </div>
+      <div class="panel content active" id="download-win">
+        <h3>GCModeller for Windows is available as a Windows Installer file</h3>
+        <p></p>
+        <div>
+          <a href="https://github.com/SMRUCC/GCModeller/releases" class="button radius"><i class="fa fa-download"></i> Download GCModeller 64-bit</a>
+        </div>
+      </div>
+    </div> -->
+  <hr>
+  <h1>Environment</h1>
+  <p>For windows platform, GCModeller only provided 64-bit program (But you can <a href="https://github.com/SMRUCC/GCModeller/archive/master.zip">download the source code</a> and compile GCModeller in 32-bit mode in VisualStudio 2015). And running GCModeller required of .NET Framework 4.6 was installed, this will required Windows version of Windows 7 or higher. For running on Windows XP, you can download the latest <a href="http://www.mono-project.com/docs/getting-started/install/windows">mono</a> environment. 
+  </p>
+  <p>For Linux/Mac platform, just following the <a href="http://www.mono-project.com/download/#download-lin">mono installation guides</a> on Linux or Mac.
+  </p>
+  </p>
+</div>
   </div>
-</div>
 
-<div class="row">
-  <div class="small-12 column">
-    <div class="row">
-      <div class="medium-4 column">
-        <h3>Get GCModeller</h3>
-        <p>The latest GCModeller release is waiting for you!</p>
-        <p><a href="./Download.html" class="button"><i class="fa fa-download"></i> Download</a></p>
-      </div>
-
-      <div class="medium-4 column">
-        <h3>Read the docs</h3>
-        <p>
-          We cover everything you need to know, from configuring Mono to how the internals are implemented.
-          <br>
-          <em>Our documentation is open source too, so you can help us improve it.</em>
-        </p>
-        <p><a href="http://docs.gcmodeller.org"><i class="fa fa-book"></i> Learn more</a></p>
-        
-      </div>
-
-      <div class="medium-4 column">
-        <h3>Community</h3>
-        <p>
-          As an open source project, we love getting contributions from the community.
-          <br>
-          <em>File a bug report, add new code or chat with the developers.</em>
-        </p>
-        <p><a href="http://developer.gcmodeller.org"><i class="fa fa-github"></i> Technical blog</a></p>
-      </div>
-    </div>
-  </div>
-</div>
+<script>
+function runScripts() {
+  $(document).ready(function() {
+    function activate(os) {
+      $('dd.active').removeClass();
+      $('dd:has(a[href=#download-' + os + '])').addClass('active');
+      $('div.panel.active').removeClass('active');
+      $('#download-' + os).addClass('active');
+    }
+    if (!window.location.hash) {
+      if (window.navigator.appVersion.search('Linux') > 0 || window.navigator.platform.search('Linux') > 0) {
+        activate('lin');
+      } else if (window.navigator.appVersion.search('Windows') > 0 || window.navigator.platform.search('Windows') > 0) {
+        activate('win');
+      }
+    }
+  });
+}
+</script>
 
 
       <div id="push"></div>
