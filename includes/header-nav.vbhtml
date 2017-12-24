@@ -2,7 +2,7 @@
   <nav class="top-bar" data-topbar="">
 	<ul class="title-area">
 	  <li class="name">
-		<h1><a href="index.html"><img alt="GCModeller Logo" src="logo.png" id="header-logo">GCModeller</a></h1>
+		<h1><a href="index.html"><img alt="GCModeller Logo" src="DNA.png" id="header-logo">GCModeller</a></h1>
 	  </li>
 	  <li class="toggle-topbar"><a href="#">Menu</a></li>
 	</ul>
