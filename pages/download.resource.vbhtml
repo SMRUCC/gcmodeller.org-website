@@ -15,7 +15,7 @@
             <a href="https://travis-ci.org/SMRUCC/GCModeller"> <img src="https://travis-ci.org/SMRUCC/GCModeller.svg?branch=master" title="GCModeller CI Build status" /> </a>
         </p>
         <p>
-            For windows platform, GCModeller only provided 64-bit program (But you can <a href="https://github.com/SMRUCC/GCModeller/archive/master.zip">download the source code</a> and compile GCModeller in 32-bit mode in VisualStudio 2015). And running GCModeller required of .NET Framework 4.6 was installed, this will required Windows version of Windows 7 or higher. For running on Windows XP, you can download the latest <a href="http://www.mono-project.com/docs/getting-started/install/windows">mono</a> environment.
+            For windows platform, GCModeller only provided 64-bit program (But you can <a href="https://github.com/SMRUCC/GCModeller/archive/master.zip">download the source code</a> and compile GCModeller in 32-bit mode in VisualStudio 2017). And running GCModeller required of .NET Framework 4.7 was installed, this will required Windows version of Windows 7 or higher. For running on Windows XP, you can download the latest <a href="http://www.mono-project.com/docs/getting-started/install/windows">mono</a> environment.
         </p>
         <p>
             For Linux/Mac platform, just following the <a href="http://www.mono-project.com/download/#download-lin">mono installation guides</a> on Linux or Mac.
