@@ -1,1 +1,1 @@
-<?vb $download.active = "active" ?>
+<?vb $download_active = "active" ?>

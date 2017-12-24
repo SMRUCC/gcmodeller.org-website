@@ -1,4 +1,4 @@
-<?vb $index.active = "active" ?>
+<?vb $index_active = "active" ?>
 
 <div class="row">
     <br>
