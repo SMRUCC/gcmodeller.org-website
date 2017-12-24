@@ -1,5 +1,5 @@
 <%= ../includes/template.vbhtml %>
 
-<?vb 
+<?vb
     Dim $content As <%= ./index.resource.vbhtml %>
 ?>
