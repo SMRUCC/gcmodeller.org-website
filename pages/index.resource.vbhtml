@@ -8,7 +8,7 @@
             marginheight="0"
             scrolling="no"
             allowtransparency="yes"
-            src="./slider.html"></iframe>
+            src="gallery-slider/index.html"></iframe>
 </div>
 
 <div class="row">
