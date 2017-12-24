@@ -1,3 +1,5 @@
+<?vb $index.active = "active" ?>
+
 <div class="row">
     <br>
     <iframe width="1024"

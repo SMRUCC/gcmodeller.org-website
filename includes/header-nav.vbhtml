@@ -10,16 +10,16 @@
 	<section class="top-bar-section">
 	  <!-- Right Nav Section -->
 	  <ul class="left">
-		<li class="active"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-		<li><a href="download.html"><i class="fa fa-download"></i> Download</a></li>
-		<li><a href="community.html"><i class="fa fa-github"></i> Community</a></li>
+		<li class="$index.active"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+		<li class="$download.active"><a href="download.html"><i class="fa fa-download"></i> Download</a></li>
+		<li class="$community.active"><a href="community.html"><i class="fa fa-github"></i> Community</a></li>
 	  </ul>
 	  <ul class="right">
 		<li class="has-form right">
 		  <form id="header-searchform" action="http://bing.com" method="get">
 			<div class="row collapse">
 			  <div class="small-11 medium-9 large-10 columns">
-				<input name="q" placeholder="Search..." type="text" id="bing">
+				<input name="q" placeholder="Search..." type="text" id="bing" />
 			  </div>
 			  <div class="small-1 medium-3 large-2 columns">
 				<button type="submit" class="postfix button" href="#"><i class="fa fa-search"></i></button>
