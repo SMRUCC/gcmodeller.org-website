@@ -2,4 +2,4 @@
 *.sqlite
 *.suo
 
-slnx.sqlite
+.vs/slnx.sqlite
