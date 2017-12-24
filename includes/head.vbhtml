@@ -16,7 +16,7 @@
 	<meta class="foundation-mq-small">
 	<meta class="foundation-mq-topbar">
 
-	<link rel="shortcut icon" href="./DNA.png">
+	<link rel="shortcut icon" href="logo.png">
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/foundation.css">
 	<link rel="stylesheet" href="styles/font-awesome.css">
