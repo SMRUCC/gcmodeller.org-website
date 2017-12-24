@@ -5,6 +5,7 @@
 <head>
 <%= ../includes/head.vbhtml %>
 </head>
+
 <body>
 
 <div id="main-wrapper">
@@ -20,5 +21,4 @@ $content
 <%= ../includes/script-includes.vbhtml %>
 
 </body>
-
 </html>
