@@ -36,7 +36,7 @@
                 <h3>Get GCModeller</h3>
                 <p>The latest GCModeller release is waiting for you!</p>
                 <p>
-                    <a href="./Download.html" class="button"><i class="fa fa-download"></i> Download</a>
+                    <a href="download.html" class="button"><i class="fa fa-download"></i> Download</a>
                 </p>
             </div>
 
