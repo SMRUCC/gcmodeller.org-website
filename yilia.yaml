@@ -1,5 +1,7 @@
 asserts:
    - c934c7466de65d7d1a032be49853a151.txt
+   - .gitignore
+   - README.md
    - siteMap.xml
    - BingSiteAuth.xml
    - logo.png
