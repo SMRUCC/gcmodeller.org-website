@@ -1,5 +1,3 @@
-<?vb $community_active = "active" ?>
-
 <div class="row">
     <div class="small-12 columns">
         <h2>Contribute to the Project</h2>
