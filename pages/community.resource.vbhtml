@@ -13,7 +13,10 @@
                 </p>
             </div>
         </div>
-
+    </div>
+</div>
+<div class="row">
+    <div class="small-12 columns">
         <hr>
 
         <h2>Report Bugs</h2>
@@ -42,7 +45,10 @@
                 </p>
             </div>
         </div>
-
+    </div>
+</div>
+<div class="row">
+    <div class="small-12 columns">
         <hr>
 
         <h2>Get Help</h2>

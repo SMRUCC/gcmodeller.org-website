@@ -8,7 +8,11 @@
         <div>
             <a href="https://github.com/SMRUCC/GCModeller/releases" class="button radius"><i class="fa fa-download"></i> Download GCModeller 64-bit</a>
         </div>
-        <br />
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
         <h1>Environment</h1>
         <p>
             <a href="https://opensource.org/licenses/GPL-3.0/"> <img src="https://badges.frapsoft.com/os/gpl/gpl.svg?v=103" title="GPL3 License" /> </a>

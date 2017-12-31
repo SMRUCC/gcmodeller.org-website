@@ -12,6 +12,10 @@
 <%= ../includes/header-nav.vbhtml %>
 
 $content
+
+<!-- 添加上这个<div>标签之后可以防止在高度比较低的时候出现错位的现象 -->
+<div id="push"></div>
+
 </div>
 
 <footer>
