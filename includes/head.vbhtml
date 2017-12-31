@@ -3,7 +3,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
 	
-	<title>GCModeller: genomics CAD(Computer Assistant Design) Modeller System</title>
+	<title>$title</title>
 	<meta name="author" content="xie.guigang@gcmodeller.org">
 	<meta name="copyright" content="http://gcmodeller.org Copyright (c) 2018">
 	<meta name="keywords" content="GCModeller; Xanthomonas" />
