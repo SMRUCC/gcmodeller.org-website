@@ -1,7 +1,8 @@
 <div class="row">
     <br />
-    <iframe width="1024"
-            height="840"
+    <iframe width="1024px"
+            height="840px"
+			max-width="1024px"			
             frameborder="no"
             border="0"
             marginwidth="0"
