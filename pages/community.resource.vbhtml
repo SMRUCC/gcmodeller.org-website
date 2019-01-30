@@ -99,7 +99,7 @@
 
             <div>
                 <p>
-                    This open source project is founding by <a href="http://www.bionovogene.com/">BioNovoGene</a> company.
+                    This open source project is funding by <a href="http://www.bionovogene.com/">BioNovoGene</a> company.
                 </p>
             </div>
         </div>     
