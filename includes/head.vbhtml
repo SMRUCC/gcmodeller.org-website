@@ -5,8 +5,9 @@
 	
 	<title>$title</title>
 	<meta name="author" content="xie.guigang@gcmodeller.org">
-	<meta name="copyright" content="http://gcmodeller.org Copyright (c) 2018">
+	<meta name="copyright" content="SMRUCC genomics Copyright (c) 2019">
 	<meta name="keywords" content="GCModeller; Xanthomonas" />
+	<meta name="generator" content="https://github.com/xieguigang/xDoc">
 
 	<meta class="foundation-data-attribute-namespace">
 	<meta class="foundation-mq-xxlarge">
