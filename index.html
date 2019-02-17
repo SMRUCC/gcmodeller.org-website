@@ -1,86 +1,89 @@
 <!DOCTYPE html>
+
 <!--[if IE 9]><html class="lt-ie10" lang="en"><![endif]-->
-<html class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en">
+<html class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
+ lang="en">
 
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-	<meta name="theme-color" content="#333" />
-	<title>GCModeller: genomics CAD(Computer Assistant Design) Modeller System</title>
-	<meta name="author" content="xie.guigang@gcmodeller.org">
-	<meta name="copyright" content="SMRUCC genomics Copyright (c) 2019">
-	<meta name="keywords" content="GCModeller; Xanthomonas" />
-	<meta name="generator" content="https://github.com/xieguigang/xDoc">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
 
-	<meta class="foundation-data-attribute-namespace">
-	<meta class="foundation-mq-xxlarge">
-	<meta class="foundation-mq-xlarge">
-	<meta class="foundation-mq-large">
-	<meta class="foundation-mq-medium">
-	<meta class="foundation-mq-small">
-	<meta class="foundation-mq-topbar">
+<title>GCModeller: genomics CAD(Computer Assistant Design) Modeller System</title>
+<meta name="author" content="xie.guigang@gcmodeller.org" />
+<meta name="copyright" content="SMRUCC genomics Copyright (c) 2019" />
+<meta name="keywords" content="GCModeller; Xanthomonas" />
+<meta name="generator" content="https://github.com/xieguigang/xDoc" />
+<meta name="theme-color" content="#333" />
 
-	<link rel="shortcut icon" href="logo.png">
-	<link rel="stylesheet" href="styles/normalize.css">
-	<link rel="stylesheet" href="styles/foundation.css">
-	<link rel="stylesheet" href="styles/font-awesome.css">
-	<link rel="stylesheet" href="styles/github.css">
-	<link rel="stylesheet" href="styles/magnific-popup.css">
-	<link rel="stylesheet" href="styles/css.css">
-	<link rel="stylesheet" href="styles/main.css">
+<meta class="foundation-data-attribute-namespace">
+<meta class="foundation-mq-xxlarge">
+<meta class="foundation-mq-xlarge">
+<meta class="foundation-mq-large">
+<meta class="foundation-mq-medium">
+<meta class="foundation-mq-small">
+<meta class="foundation-mq-topbar">
 
-	<script src="lib/modernizr.js"></script>
-	<script type="text/javascript">
-		function searchURL() {
-			var term = document.getElementById("bing").value;
-			var query = term + "+site%3Agcmodeller.org";
-			var url = "http://cn.bing.com/search?q=" + query; 
-		  
-			window.location = url;
-		}
-	</script>
+<link rel="shortcut icon" href="logo.png">
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/foundation.css">
+<link rel="stylesheet" href="styles/font-awesome.css">
+<link rel="stylesheet" href="styles/github.css">
+<link rel="stylesheet" href="styles/magnific-popup.css">
+<link rel="stylesheet" href="styles/css.css">
+<link rel="stylesheet" href="styles/main.css">
+
+<script src="lib/modernizr.js"></script>
+<script type="text/javascript">
+	function searchURL() {
+		var term = document.getElementById("bing").value;
+		var query = term + "+site%3Agcmodeller.org";
+		var url = "http://cn.bing.com/search?q=" + query;
+
+		window.location = url;
+	}
+</script>
 </head>
 
 <body>
 
-<div id="main-wrapper">
-<div id="header-nav" class="contain-to-grid">
-  <nav class="top-bar" data-topbar="">
-	<ul class="title-area">
-	  <li class="name">
-		<h1><a href="index.html"><img alt="GCModeller Logo" src="DNA.png" id="header-logo">GCModeller</a></h1>
-	  </li>
-	  <li class="toggle-topbar"><a href="#">Menu</a></li>
-	</ul>
+	<div id="main-wrapper">
+		<div id="header-nav" class="contain-to-grid">
+	<nav class="top-bar" data-topbar="">
+		<ul class="title-area">
+			<li class="name">
+				<h1><a href="index.html"><img alt="GCModeller Logo" src="DNA.png" id="header-logo">GCModeller</a></h1>
+			</li>
+			<li class="toggle-topbar"><a href="#">Menu</a></li>
+		</ul>
 
-	<section class="top-bar-section">
-	  <!-- Right Nav Section -->
-	  <ul class="left">
-		<li class="active"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-		<li class=""><a href="download.html"><i class="fa fa-download"></i> Download</a></li>
-		<li class=""><a href="community.html"><i class="fa fa-github"></i> Community</a></li>
-	  </ul>
-	  <ul class="right">
-		<li class="has-form right">
-		  <form id="header-searchform" action="http://bing.com" method="get">
-			<div class="row collapse">
-			  <div class="small-11 medium-9 large-10 columns">
-				<input name="q" placeholder="Search..." type="text" id="bing" />
-			  </div>
-			  <div class="small-1 medium-3 large-2 columns">
-				<button type="submit" class="postfix button" href="#"><i class="fa fa-search"></i></button>
-			  </div>
-			</div>
-		  </form>
-		</li>
-	  </ul>
-	</section>
-  </nav>
+		<section class="top-bar-section">
+			<!-- Right Nav Section -->
+			<ul class="left">
+				<li class="active"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+				<li class=""><a href="download.html"><i class="fa fa-download"></i> Download</a></li>
+				<li class=""><a href="community.html"><i class="fa fa-github"></i> Community</a></li>
+			</ul>
+			<ul class="right">
+				<li class="has-form right">
+					<form id="header-searchform" action="http://bing.com" method="get">
+						<div class="row collapse">
+							<div class="small-11 medium-9 large-10 columns">
+								<input name="q" placeholder="Search..." type="text" id="bing" />
+							</div>
+							<div class="small-1 medium-3 large-2 columns">
+								<button type="submit" class="postfix button" href="#"><i class="fa fa-search"></i></button>
+							</div>
+						</div>
+					</form>
+				</li>
+			</ul>
+		</section>
+	</nav>
 </div>
 
-<div class="row">
+		<div class="row">
     <br />
     <iframe width="1024px"
             height="840px"
@@ -171,63 +174,64 @@
     </div>
 </div>
 
-<!-- 添加上这个<div>标签之后可以防止在高度比较低的时候出现错位的现象 -->
-<!--
-	2018-1-1
-	原来的标签数据为
-	<div id="push"></div>
-	
-	在这里将push字符串替换为一个变量来进行内容格式的控制
--->
-<div id="push"></div>
+		<!-- 添加上这个<div>标签之后可以防止在高度比较低的时候出现错位的现象 -->
+		<!--
+			2018-1-1
+			原来的标签数据为
+			<div id="push"></div>
+			
+			在这里将push字符串替换为一个变量来进行内容格式的控制
+		-->
+		<div id="push"></div>
 
-</div>
-
-<footer>
-<div class="row">
-  <div class="small-12 columns">
-	<div class="left">
-	  <font size=2>© Art Design 2018 <a href="https://github.com/mono/website">Mono-project</a> | <a href="mailto://xie.guigang@gcmodeller.org">xie.guigang@gcmodeller.org</a></font>
-	  <br>
-	  <div id="footer-notes">
-		<font face="Microsoft YaHei" size="2">| SMRUCC genomics · 中國 桂林</font>
-	  </div>
 	</div>
-	<div class="right">
-	  <a href="RSS" title="RSS feed">
-		  <i class="fa fa-rss fa-2x"></i>
-		</a> &nbsp;
-	  <a href="https://github.com/SMRUCC" title="GitHub repository">
-		  <i class="fa fa-github fa-2x"></i>
-		</a>
-	</div>
-  </div>
-</div>
-</footer>
 
-<script src="lib/jquery.js"></script>
+	<footer>
+		<div class="row">
+	<div class="small-12 columns">
+		<div class="left">
+			<font size=2>© Art Design 2018 <a href="https://github.com/mono/website">Mono-project</a> | <a href="mailto://xie.guigang@gcmodeller.org">xie.guigang@gcmodeller.org</a></font>
+			<br>
+			<div id="footer-notes">
+				<font face="Microsoft YaHei" size="2">| SMRUCC genomics · 中國 桂林</font>
+			</div>
+		</div>
+		<div class="right">
+			<a href="RSS" title="RSS feed">
+				<i class="fa fa-rss fa-2x"></i>
+			</a> &nbsp;
+			<a href="https://github.com/SMRUCC" title="GitHub repository">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</div>
+	</div>
+</div>
+	</footer>
+
+	<script src="lib/jquery.js"></script>
 <script src="lib/foundation.js"></script>
 <script src="lib/highlight.js"></script>
 <script src="lib/jquery_002.js"></script>
 
 <script>
-// allow sub pages to run custom code
-if (typeof runScripts == 'function') {
-  runScripts();
-}
+  // allow sub pages to run custom code
+  if (typeof runScripts == 'function') {
+    runScripts();
+  }
 
-$(document).foundation();
-hljs.initHighlightingOnLoad();
-$(document).ready(function () {
-  $('.image-link').magnificPopup({
-	disableOn: 400,
-	image: { verticalFit: false },
-	type: 'image'
+  $(document).foundation();
+  hljs.initHighlightingOnLoad();
+  $(document).ready(function () {
+    $('.image-link').magnificPopup({
+      disableOn: 400,
+      image: { verticalFit: false },
+      type: 'image'
+    });
   });
-});
 </script>
 
 </body>
+
 </html>
 
 
