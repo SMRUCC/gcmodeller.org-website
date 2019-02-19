@@ -7,7 +7,9 @@
 			border="0" 
 			frameborder="no" 
 			framespacing="0" 
-			allowfullscreen="true"> 
+			allowfullscreen="true" 
+			width="720" 
+			height="480"> 
 		</iframe>
 		
     </div>
