@@ -11,6 +11,7 @@
 			<!-- Right Nav Section -->
 			<ul class="left">
 				<li class="$index_active"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+				<li class="$code_active"><a href="development.html"><i class="fa fa-code"></i> Development</a></li>
 				<li class="$download_active"><a href="download.html"><i class="fa fa-download"></i> Download</a></li>
 				<li class="$community_active"><a href="community.html"><i class="fa fa-github"></i> Community</a></li>
 			</ul>
