@@ -1,7 +1,7 @@
 <link type="text/css" rel="stylesheet" href="styles/vscode.css" />
 
 <script type="text/javascript" src="lib/linq.js"></script>
-<script type="text/javascript" src="lib/code.js"></script>
+<script type="text/javascript" src="lib/vbcode.js"></script>
 
 <div class="row">
     <div class="small-12 columns">
@@ -17,9 +17,12 @@
 			height="480"> 
 		</iframe>
 		
-		<pre class="vbnet">
-		
-		</pre>
+<pre class="vbnet">
+Imports SMRUCC.genomics.SequenceModel.FASTA
+
+' Read fasta file with GCModeller library
+Dim fasta As FastaFile = FastaFile.Read("seq.fasta")
+</pre>
 		
     </div>
 </div>
