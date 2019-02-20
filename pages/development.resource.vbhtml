@@ -1,3 +1,8 @@
+<link type="text/css" rel="stylesheet" href="styles/vscode.css" />
+
+<script type="text/javascript" src="lib/linq.js"></script>
+<script type="text/javascript" src="lib/code.js"></script>
+
 <div class="row">
     <div class="small-12 columns">
 
@@ -12,5 +17,11 @@
 			height="480"> 
 		</iframe>
 		
+		<pre class="vbnet">
+		
+		</pre>
+		
     </div>
 </div>
+
+<script type="text/javascript">vscode.highlightVB();</script>
