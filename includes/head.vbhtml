@@ -30,7 +30,7 @@
 	function searchURL() {
 		var term = document.getElementById("bing").value;
 		var query = term + "+site%3Agcmodeller.org";
-		var url = "http://cn.bing.com/search?q=" + query;
+		var url = "https://cn.bing.com/search?q=" + query;
 
 		window.location = url;
 	}

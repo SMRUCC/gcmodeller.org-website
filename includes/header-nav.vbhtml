@@ -17,7 +17,7 @@
 			</ul>
 			<ul class="right">
 				<li class="has-form right">
-					<form id="header-searchform" action="http://bing.com" method="get">
+					<form id="header-searchform" action="https://cn.bing.com/" method="get">
 						<div class="row collapse">
 							<div class="small-11 medium-9 large-10 columns">
 								<input name="q" placeholder="Search..." type="text" id="bing" />
