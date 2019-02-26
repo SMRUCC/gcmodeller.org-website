@@ -1,13 +1,6 @@
-<script src="lib/jquery.js"></script>
-<script src="lib/foundation.js"></script>
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script type="text/javascript" src="lib/foundation.js"></script>
 
-<script>
-  $(document).foundation();
-  $(document).ready(function () {
-    $('.image-link').magnificPopup({
-      disableOn: 400,
-      image: { verticalFit: false },
-      type: 'image'
-    });
-  });
+<script type="text/javascript">
+	$(document).foundation();
 </script>

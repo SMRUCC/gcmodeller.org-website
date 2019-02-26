@@ -26,7 +26,6 @@
 <link rel="stylesheet" href="styles/css.css">
 <link rel="stylesheet" href="styles/main.css">
 
-<script src="lib/modernizr.js"></script>
 <script type="text/javascript">
 	function searchURL() {
 		var term = document.getElementById("bing").value;
