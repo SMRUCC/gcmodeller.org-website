@@ -23,8 +23,6 @@
 <link rel="stylesheet" href="styles/normalize.css">
 <link rel="stylesheet" href="styles/foundation.css">
 <link rel="stylesheet" href="styles/font-awesome.css">
-<link rel="stylesheet" href="styles/github.css">
-<link rel="stylesheet" href="styles/magnific-popup.css">
 <link rel="stylesheet" href="styles/css.css">
 <link rel="stylesheet" href="styles/main.css">
 
