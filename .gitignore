@@ -9,3 +9,4 @@ publish/
 
 node_modules/
 obj/
+*.dll
