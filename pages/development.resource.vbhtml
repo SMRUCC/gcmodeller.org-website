@@ -28,3 +28,4 @@ Dim fasta As FastaFile = FastaFile.Read("seq.fasta")
 </div>
 
 <script type="text/javascript">vscode.highlightVB();</script>
+<script type="text/javascript" src="/lib/resize.js"></script>
