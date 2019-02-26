@@ -1,0 +1,12 @@
+{
+  "name": "resize",
+  "version": "0.0.0",
+  "description": "resize",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.14"
+  }
+}

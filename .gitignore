@@ -6,3 +6,6 @@
 App/
 publish/
 *.sqlite-journal
+
+node_modules/
+obj/
