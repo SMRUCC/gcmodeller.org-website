@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\lib"
   ],
-  "SelectedNode": "\\Cytoscape",
+  "SelectedNode": "\\lib\\vbcode.js",
   "PreviewInSolutionExplorer": false
 }
