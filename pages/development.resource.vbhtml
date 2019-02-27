@@ -1,4 +1,4 @@
-<!-- <link type="text/css" rel="stylesheet" href="styles/vscode.css" /> -->
+<link type="text/css" rel="stylesheet" href="styles/vscode.css" />
 
 <script type="text/javascript" src="lib/linq.js"></script>
 <script type="text/javascript" src="lib/vbcode.js"></script>
