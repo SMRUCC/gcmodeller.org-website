@@ -5,7 +5,7 @@ $ts(function () {
     let iframe = document.getElementsByTagName("iframe");
 
     // fix for padding
-    size[0] = size[0] * 0.9;
+    size[0] = size[0] * 0.95;
 
     if (size[0] <= 500) {
         for (var i = 0; i < iframe.length; i++) {
