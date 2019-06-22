@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset >
+    <url>
+        <loc>
+            https://gcmodeller.org/
+        </loc>
+        <lastmod>Sat Jun 22 20:09:53 GMT 2019</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>
+            https://gcmodeller.org/index.html
+        </loc>
+        <lastmod>Sat Jun 22 20:09:53 GMT 2019</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0,8</priority>
+    </url>
+    <url>
+        <loc>
+            https://gcmodeller.org/download.html
+        </loc>
+        <lastmod>Sat Jun 22 20:09:53 GMT 2019</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0,8</priority>
+    </url>
+    <url>
+        <loc>
+            https://gcmodeller.org/community.html
+        </loc>
+        <lastmod>Sat Jun 22 20:09:53 GMT 2019</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0,8</priority>
+    </url>
+    <url>
+        <loc>
+            https://gcmodeller.org/gallery-slider/index.html
+        </loc>
+        <lastmod>Sat Jun 22 20:09:53 GMT 2019</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0,7</priority>
+    </url>
+    <url>
+        <loc>
+            https://gcmodeller.org/development.html
+        </loc>
+        <lastmod>Sat Jun 22 20:09:53 GMT 2019</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0,8</priority>
+    </url>
+    <url>
+        <loc>
+            https://gcmodeller.org/cytoscape.html
+        </loc>
+        <lastmod>Sat Jun 22 20:09:53 GMT 2019</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0,8</priority>
+    </url>
+    <url>
+        <loc>
+            https://gcmodeller.org/Cytoscape/index.html
+        </loc>
+        <lastmod>Sat Jun 22 20:09:53 GMT 2019</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0,7</priority>
+    </url>
+</urlset>
