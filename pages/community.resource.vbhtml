@@ -101,7 +101,12 @@
                 <p>
                     This open source project is funding by <a href="http://www.bionovogene.com/">BioNovoGene</a> company.
                 </p>
+		    <p>			    
+		    <img src="http://www.biodeep.cn/images/logo@2x_2.png" width="30%" />
+			    <br />
+			    Visit our public <a href="http://www.biodeep.cn">BioDeep<sup>TM</sup></a> metabolomics analysis platforms
+		    </p>
             </div>
-        </div>     
+        </div>       
     </div>
 </div>
