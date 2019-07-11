@@ -8,7 +8,7 @@
     <div class="small-12 columns">
 
         <h1>Videos</h1>
-        <iframe src="https://player.bilibili.com/player.html?aid=34529020&cid=60489773&page=1" 
+        <iframe src="//player.bilibili.com/player.html?aid=58675156&cid=102313656&page=1" 
 			scrolling="no" 
 			border="0" 
 			frameborder="no" 
@@ -17,7 +17,7 @@
 			width="720" 
 			height="480"> 
 		</iframe>
-		
+
 <pre class="vbnet">
 Imports SMRUCC.genomics.SequenceModel.FASTA
 
