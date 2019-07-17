@@ -1,3 +1,20 @@
+declare module Activator {
+    /**
+     * @param properties 如果这个属性定义集合是一个object，则应该是一个IProperty接口的字典对象
+    */
+    function CreateInstance(properties: object | NamedValue<IProperty>[]): any;
+    /**
+    * 利用一个名称字符串集合创建一个js对象
+    *
+    * @param names object的属性名称列表
+    * @param init 使用这个函数为该属性指定一个初始值
+   */
+    function EmptyObject<V>(names: string[] | IEnumerator<string>, init: (() => V) | V): object;
+    /**
+     * 从键值对集合创建object对象，键名或者名称属性会作为object对象的属性名称
+    */
+    function CreateObject<V>(nameValues: NamedValue<V>[] | IEnumerator<NamedValue<V>> | MapTuple<string, V>[] | IEnumerator<MapTuple<string, V>>): object;
+}
 declare namespace data.sprintf {
     /**
      * 对占位符的匹配结果
@@ -39,7 +56,10 @@ declare namespace data.sprintf {
      *
     */
     const placeholder: RegExp;
-    function parseFormat(string: string, arguments: any[]): {
+    /**
+     * @param argumentList ERROR - "arguments" cannot be redeclared in strict mode
+    */
+    function parseFormat(string: string, argumentList: any[]): {
         matches: match[];
         convCount: number;
         strings: string[];
@@ -119,6 +139,8 @@ interface IPopulated<T> {
  * The linq pipline implements at here. (在这个模块之中实现具体的数据序列算法)
 */
 declare module Enumerable {
+    function Range(from: number, to: number, steps?: number): number[];
+    function Min(...v: number[]): number;
     /**
      * 进行数据序列的投影操作
      *
@@ -234,6 +256,7 @@ declare class IEnumerator<T> extends LINQIterator<T> {
      *     element test pass by the ``predicate`` function.
     */
     Where(predicate: (e: T) => boolean): IEnumerator<T>;
+    Which(predicate: (e: T) => boolean, first?: boolean): number | IEnumerator<number>;
     /**
      * Get the min value in current sequence.
      * (求取这个序列集合的最小元素，使用这个函数要求序列之中的元素都必须能够被转换为数值)
@@ -392,14 +415,14 @@ declare class DOMEnumerator<T extends HTMLElement> extends IEnumerator<T> {
      * @returns 函数总是会返回所设置的或者读取得到的属性值的字符串集合
     */
     attr(attrName: string, val?: string | IEnumerator<string> | string[] | ((x: T) => string)): IEnumerator<string>;
-    AddClass(className: string): DOMEnumerator<T>;
-    AddEvent(eventName: string, handler: (sender: T, event: Event) => void): void;
+    addClass(className: string): DOMEnumerator<T>;
+    addEvent(eventName: string, handler: (sender: T, event: Event) => void): void;
     onChange(handler: (sender: T, event: Event) => void): void;
     /**
      * 为当前的html节点集合添加鼠标点击事件处理函数
     */
     onClick(handler: (sender: T, event: MouseEvent) => void): void;
-    RemoveClass(className: string): DOMEnumerator<T>;
+    removeClass(className: string): DOMEnumerator<T>;
     /**
      * 通过设置css之中的display值来将集合之中的所有的节点元素都隐藏掉
     */
@@ -411,7 +434,7 @@ declare class DOMEnumerator<T extends HTMLElement> extends IEnumerator<T> {
     /**
      * 将所选定的节点批量删除
     */
-    Delete(): void;
+    delete(): void;
 }
 declare namespace Internal.Handlers {
     function hasKey(object: object, key: string): boolean;
@@ -498,6 +521,10 @@ declare module DataExtensions {
      * 所以在这里，函数会需要一个实例对象来取得类型值
     */
     function AsNumeric<T>(obj: T): (x: T) => number;
+    /**
+     * @param fill 进行向量填充的初始值，可能不适用于引用类型，推荐应用于初始的基元类型
+    */
+    function Dim<T>(len: number, fill?: T): T[];
 }
 /**
  * 描述了一个键值对集合
@@ -629,6 +656,10 @@ declare module Strings {
     */
     function GetTagValue(str: string, tag?: string): NamedValue<string>;
     /**
+     * 取出大文本之中指定的前n行文本
+    */
+    function PeekLines(text: string, n: number): string[];
+    /**
      * Get all regex pattern matches in target text value.
     */
     function getAllMatches(text: string, pattern: string | RegExp): RegExpExecArray[];
@@ -673,10 +704,12 @@ declare module Strings {
      * @description > https://jsperf.com/convert-string-to-char-code-array/9
      *    经过测试，使用数组push的效率最高
      *
+     * @param charCode 返回来的数组是否应该是一组字符的ASCII值而非字符本身？默认是返回字符数组的。
+     *
      * @returns A character array, all of the string element in the array
      *      is one character length.
     */
-    function ToCharArray(str: string): string[];
+    function ToCharArray(str: string, charCode?: boolean): string[] | number[];
     /**
      * Measure the string length, a null string value or ``undefined``
      * variable will be measured as ZERO length.
@@ -690,7 +723,7 @@ declare module Strings {
     /**
      * @param charsPerLine 每一行文本之中的字符数量的最大值
     */
-    function WrappingLines(text: string, charsPerLine?: number): string;
+    function WrappingLines(text: string, charsPerLine?: number, lineTrim?: boolean): string;
 }
 /**
  * 类似于反射类型
@@ -748,20 +781,9 @@ declare class TypeInfo {
     static GetObjectMethods<T>(obj: T): string[];
     toString(): string;
     /**
-     * 利用一个名称字符串集合创建一个js对象
-     *
-     * @param names object的属性名称列表
-     * @param init 使用这个函数为该属性指定一个初始值
-    */
-    static EmptyObject<V>(names: string[] | IEnumerator<string>, init: () => V): object;
-    /**
-     * 从键值对集合创建object对象，键名或者名称属性会作为object对象的属性名称
-    */
-    static CreateObject<V>(nameValues: NamedValue<V>[] | IEnumerator<NamedValue<V>> | MapTuple<string, V>[] | IEnumerator<MapTuple<string, V>>): object;
-    /**
      * MetaReader对象和字典相似，只不过是没有类型约束，并且为只读集合
     */
-    static CreateMetaReader<V>(nameValues: NamedValue<V>[] | IEnumerator<NamedValue<V>>): TsLinq.MetaReader;
+    static CreateMetaReader<V>(nameValues: NamedValue<V>[] | IEnumerator<NamedValue<V>>): TypeScript.Data.MetaReader;
 }
 /**
  * JavaScript MD5 1.0.1
@@ -871,9 +893,9 @@ declare namespace Internal {
         */
         appendTable<T extends {}>(rows: T[] | IEnumerator<T>, div: string, headers?: string[] | IEnumerator<string> | IEnumerator<MapTuple<string, string>> | MapTuple<string, string>[], attrs?: Internal.TypeScriptArgument): void;
         /**
-         * 将目标序列转换为一个表格HTML节点元素
+         * 将目标序列转换为一个HTML节点元素
         */
-        evalHTML<T extends {}>(rows: T[] | IEnumerator<T>, headers?: string[] | IEnumerator<string> | IEnumerator<MapTuple<string, string>> | MapTuple<string, string>[], attrs?: Internal.TypeScriptArgument): HTMLTableElement;
+        evalHTML: HtmlDocumentDeserializer;
         <T>(array: T[]): IEnumerator<T>;
         /**
          * query meta tag by name attribute value for its content.
@@ -900,7 +922,7 @@ declare namespace Internal {
          * @param iframe ``#xxx``编号查询表达式
          * @param fun 目标函数，请注意，这个函数应该是尽量不引用依赖其他对象的
         */
-        inject(iframe: string, fun: (Delegate.Func | string)[] | string | Delegate.Func): void;
+        inject(iframe: string, fun: (Delegate.Func<any> | string)[] | string | Delegate.Func<any>): void;
         /**
          * 动态加载脚本
          *
@@ -909,6 +931,8 @@ declare namespace Internal {
         */
         eval(script: string, lzw_decompress?: boolean, callback?: () => void): void;
         /**
+         * 从当前的html页面之中选择一个指定的节点，然后将节点内的文本以json格式进行解析
+         *
          * @param id HTML元素的id，可以同时兼容编号和带``#``的编号
         */
         loadJSON(id: string): any;
@@ -917,6 +941,13 @@ declare namespace Internal {
          * @param htmlText 主要是针对``<pre>``标签之中的VB.NET代码
         */
         text(id: string, htmlText?: boolean): string;
+        /**
+         * 这个函数主要是应用于``<input>``, ``<textarea>``以及``<select>``标签对象
+         * 的value属性值的读取操作
+         *
+         * @param id 目标``<input>``标签对象的``id``编号
+        */
+        value(id: string): any;
         /**
          * isNullOrUndefined
         */
@@ -944,6 +975,12 @@ declare namespace Internal {
         */
         get<T>(url: string, callback?: ((response: IMsg<T>) => void)): void;
         /**
+         * GET a text file on your web server.
+        */
+        getText(url: string, callback: (text: string) => void, options?: {
+            nullForNotFound: boolean;
+        }): void;
+        /**
          * File upload helper
          *
          * @param url 目标数据源，这个参数也支持meta标签查询语法
@@ -951,7 +988,7 @@ declare namespace Internal {
         upload<T>(url: string, file: File, callback?: ((response: IMsg<T>) => void)): void;
         /**
          * Get the url location of current window page.
-         * (获取当前的页面的URL字符串解析模型)
+         * (获取当前的页面的URL字符串解析模型，这个只读属性可以接受一个变量名参数来获取得到对应的GET参数值)
         */
         readonly location: IURL;
         /**
@@ -997,91 +1034,8 @@ declare namespace Internal {
         withExtensionName(path: string, ext: string): boolean;
         doubleRange(x: number[] | IEnumerator<number>): data.NumericRange;
     }
-    interface IURL {
-        /**
-         * 获取得到GET参数
-        */
-        (arg: string, caseSensitive?: boolean, Default?: string): string;
-        readonly path: string;
-        readonly fileName: string;
-        /**
-         * 获取当前的url之中的hash值，这个返回来的哈希标签是默认不带``#``符号前缀的
-         *
-         * @returns 这个函数不会返回空值或者undefined，只会返回空字符串或者hash标签值
-        */
-        hash(trimprefix?: boolean): string;
-    }
-    interface GotoOptions {
-        currentFrame?: boolean;
-        lambda?: boolean;
-    }
-    interface IquerySelector {
-        <T extends HTMLElement>(query: string, context?: Window): DOMEnumerator<T>;
-        /**
-         * query参数应该是节点id查询表达式
-        */
-        getSelectedOptions(query: string, context?: Window): DOMEnumerator<HTMLOptionElement>;
-        /**
-         * 获取得到select控件的选中的选项值，没做选择则返回null
-         *
-         * @param query id查询表达式，这个函数只支持单选模式的结果，例如select控件以及radio控件
-         * @returns 返回被选中的项目的value属性值
-        */
-        getOption(query: string, context?: Window): string;
-    }
-    interface IcsvHelperApi {
-        /**
-         * 将csv文档文本进行解析，然后反序列化为js对象的集合
-        */
-        toObjects<T>(data: string): IEnumerator<T>;
-        /**
-         * 将js的对象序列进行序列化，构建出csv格式的文本文档字符串数据
-        */
-        toText<T>(data: IEnumerator<T> | T[]): string;
-    }
-    /**
-     * 这个参数对象模型主要是针对创建HTML对象的
-    */
-    interface TypeScriptArgument {
-        /**
-         * HTML节点对象的编号（通用属性）
-        */
-        id?: string;
-        /**
-         * HTML节点对象的CSS样式字符串（通用属性）
-        */
-        style?: string;
-        /**
-         * HTML节点对象的class类型（通用属性）
-        */
-        class?: string | string[];
-        type?: string;
-        href?: string;
-        target?: string;
-        src?: string;
-        width?: string | number;
-        height?: string | number;
-        /**
-         * 进行查询操作的上下文环境，这个主要是针对iframe环境之中的操作的
-        */
-        context?: Window;
-        title?: string;
-        name?: string;
-        /**
-         * HTML的输入控件的预设值
-        */
-        value?: string | number | boolean;
-        for?: string;
-        /**
-         * 处理HTML节点对象的点击事件，这个属性值应该是一个无参数的函数来的
-        */
-        onclick?: () => void;
-        "data-toggle"?: string;
-        "data-target"?: string;
-        "aria-hidden"?: boolean;
-    }
 }
-declare namespace TsLinq {
+declare namespace Internal {
     /**
      * 程序的堆栈追踪信息
      *
@@ -1210,6 +1164,10 @@ declare namespace TypeScript {
         */
         static JumpToHash(hash: string): void;
         /**
+         * Set url hash without url jump in document
+        */
+        static SetHash(hash: string): void;
+        /**
          * 获取得到当前的url
         */
         static WindowLocation(): URL;
@@ -1267,15 +1225,6 @@ declare enum Modes {
 */
 declare namespace DOM {
     /**
-     * Query meta tag content value by name
-     *
-     * @param allowQueryParent 当当前的文档之中不存在目标meta标签的时候，
-     *    如果当前文档为iframe文档，则是否允许继续往父节点的文档做查询？
-     *    默认为False，即只在当前文档环境之中进行查询操作
-     * @param Default 查询失败的时候所返回来的默认值
-    */
-    function metaValue(name: string, Default?: string, allowQueryParent?: boolean): string;
-    /**
      * File download helper
      *
      * @param name The file save name for download operation
@@ -1287,13 +1236,13 @@ declare namespace DOM {
     */
     function clientSize(): number[];
     /**
-     * return array containing references to selected option elements
-    */
-    function getSelectedOptions(sel: HTMLSelectElement): HTMLOptionElement[];
-    /**
      * 向指定id编号的div添加select标签的组件
+     *
+     * @param containerID 这个编号不带有``#``前缀，这个容器可以是一个空白的div或者目标``<select>``标签对象的编号，
+     *                    如果目标容器是一个``<select>``标签的时候，则要求selectName和className都必须要是空值
+     * @param items 这个数组应该是一个``[title => value]``的键值对列表
     */
-    function AddSelectOptions(items: MapTuple<string, string>[], div: string, selectName: string, className?: string): void;
+    function AddSelectOptions(items: MapTuple<string, string>[], containerID: string, selectName?: string, className?: string): void;
     /**
      * @param headers 表格之中所显示的表头列表，也可以通过这个参数来对表格之中
      *   所需要进行显示的列进行筛选以及显示控制：
@@ -1310,26 +1259,36 @@ declare namespace DOM {
      * @param attrs ``<table>``的属性值，包括id，class等
     */
     function AddHTMLTable<T extends {}>(rows: T[] | IEnumerator<T>, div: string, headers?: string[] | IEnumerator<string> | IEnumerator<MapTuple<string, string>> | MapTuple<string, string>[], attrs?: Internal.TypeScriptArgument): void;
-    /**
-     * Execute a given function when the document is ready.
-     * It is called when the DOM is ready which can be prior to images and other external content is loaded.
-     *
-     * 可以处理多个函数作为事件，也可以通过loadComplete函数参数来指定准备完毕的状态
-     * 默认的状态是interactive即只需要加载完DOM既可以开始立即执行函数
-     *
-     * @param fn A function that without any parameters
-     * @param loadComplete + ``interactive``: The document has finished loading. We can now access the DOM elements.
-     *                     + ``complete``: The page is fully loaded.
-    */
-    function ready(fn: () => void, loadComplete?: string[]): void;
-    /**
-     * 向一个给定的HTML元素或者HTML元素的集合之中的对象添加给定的事件
-     *
-     * @param el HTML节点元素或者节点元素的集合
-     * @param type 事件的名称字符串
-     * @param fn 对事件名称所指定的事件进行处理的工作函数，这个工作函数应该具备有一个事件对象作为函数参数
-    */
-    function addEvent(el: any, type: string, fn: (event: Event) => void): void;
+}
+declare namespace DOM {
+    module InputValueGetter {
+        /**
+         * Query meta tag content value by name
+         *
+         * @param allowQueryParent 当当前的文档之中不存在目标meta标签的时候，
+         *    如果当前文档为iframe文档，则是否允许继续往父节点的文档做查询？
+         *    默认为False，即只在当前文档环境之中进行查询操作
+         * @param Default 查询失败的时候所返回来的默认值
+        */
+        function metaValue(name: string, Default?: string, allowQueryParent?: boolean): string;
+        function getValue(id: string, strict?: boolean): any;
+        function inputValue(input: HTMLInputElement): any;
+        /**
+         * 这个函数所返回来的值是和checkbox的数量相关的，
+         * 1. 如果有多个checkbox，则会返回一个数组
+         * 2. 反之如果只有一个checkbox，则只会返回一个逻辑值，用来表示是否选中该选项
+        */
+        function checkboxInput(input: HTMLInputElement): boolean | any[];
+        /**
+         * 获取被选中的选项的值的列表
+        */
+        function selectOptionValues(input: HTMLSelectElement): any;
+        /**
+         * return array containing references to selected option elements
+        */
+        function getSelectedOptions(sel: HTMLSelectElement): HTMLOptionElement[];
+        function largeText(text: HTMLTextAreaElement): any;
+    }
 }
 declare namespace data {
     /**
@@ -1389,18 +1348,6 @@ declare namespace data {
 */
 declare namespace Internal {
     const StringEval: Handlers.stringEval;
-    /**
-     * 应用程序的开发模式：只会输出框架的警告信息
-    */
-    function outputWarning(): boolean;
-    /**
-     * 框架开发调试模式：会输出所有的调试信息到终端之上
-    */
-    function outputEverything(): boolean;
-    /**
-     * 生产模式：只会输出错误信息
-    */
-    function outputError(): boolean;
     /**
      * 对``$ts``对象的内部实现过程在这里
     */
@@ -1521,12 +1468,22 @@ declare function $image(query: string, args?: Internal.TypeScriptArgument): IHTM
 */
 declare function $input(query: string, args?: Internal.TypeScriptArgument): IHTMLInputElement;
 declare function $link(query: string, args?: Internal.TypeScriptArgument): IHTMLLinkElement;
+interface IProperty {
+    get: () => any;
+    set: (value: any) => void;
+}
 declare namespace TypeExtensions {
+    /**
+     * Warning message of Nothing
+    */
     const objectIsNothing: string;
     /**
      * 字典类型的元素类型名称字符串
     */
     const DictionaryMap: string;
+    /**
+     * Make sure target input is a number
+    */
     function ensureNumeric(x: number | string): number;
 }
 /**
@@ -1568,6 +1525,19 @@ declare class List<T> extends IEnumerator<T> {
      * 返回列表之中的第一个元素，然后删除第一个元素，剩余元素整体向前平移一个单位
     */
     Pop(): T;
+}
+declare class Matrix<T> extends IEnumerator<T[]> {
+    readonly rows: number;
+    readonly columns: number;
+    /**
+     * [m, n], m列n行
+    */
+    constructor(m: number, n: number, fill?: T);
+    private static emptyMatrix;
+    M(i: number, j: number, val?: T): T;
+    column(i: number, set?: T[] | IEnumerator<T>): T[];
+    row(i: number, set?: T[] | IEnumerator<T>): T[];
+    toString(): string;
 }
 /**
  * A data sequence object with a internal index pointer.
@@ -1618,6 +1588,77 @@ declare class SlideWindow<T> extends IEnumerator<T> {
     */
     static Split<T>(src: T[] | IEnumerator<T>, winSize: number, step?: number): IEnumerator<SlideWindow<T>>;
 }
+/**
+ * 序列之中的元素下标的操作方法集合
+*/
+declare namespace Which {
+    /**
+     * 查找出所给定的逻辑值集合之中的所有true的下标值
+    */
+    function Is(booleans: boolean[] | IEnumerator<boolean>): IEnumerator<number>;
+    /**
+     * 默认的通用类型的比较器对象
+    */
+    class DefaultCompares<T> {
+        /**
+         * 一个用于比较通用类型的数值转换器对象
+        */
+        private as_numeric;
+        compares(a: T, b: T): number;
+        static default<T>(): (a: T, b: T) => number;
+    }
+    /**
+     * 查找出序列之中最大的元素的序列下标编号
+     *
+     * @param x 所给定的数据序列
+     * @param compare 默认是将x序列之中的元素转换为数值进行大小的比较的
+    */
+    function Max<T>(x: IEnumerator<T>, compare?: (a: T, b: T) => number): number;
+    /**
+     * 查找出序列之中最小的元素的序列下标编号
+     *
+     * @param x 所给定的数据序列
+     * @param compare 默认是将x序列之中的元素转换为数值进行大小的比较的
+    */
+    function Min<T>(x: IEnumerator<T>, compare?: (a: T, b: T) => number): number;
+}
+declare namespace DOM {
+    class Query {
+        type: QueryTypes;
+        singleNode: boolean;
+        /**
+         * Name of the return value is the trimmed expression
+        */
+        expression: string;
+        /**
+         * + ``#`` by id
+         * + ``.`` by claSS
+         * + ``&`` SINGLE NODE
+         * + ``@`` read meta tag
+         * + ``&lt;>`` create new tag
+        */
+        static parseQuery(expr: string): Query;
+        /**
+         * by node id
+        */
+        private static getById;
+        /**
+         * by class name
+        */
+        private static getByClass;
+        /**
+         * by tag name
+        */
+        private static getByTag;
+        /**
+         * create new node
+        */
+        private static createElement;
+        private static queryMeta;
+        private static isSelectorQuery;
+        private static parseExpression;
+    }
+}
 declare namespace DOM {
     /**
      * HTML文档节点的查询类型
@@ -1656,41 +1697,30 @@ declare namespace DOM {
         */
         QueryMeta = 200
     }
-    class Query {
-        type: QueryTypes;
-        singleNode: boolean;
-        /**
-         * Name of the return value is the trimmed expression
-        */
-        expression: string;
-        /**
-         * + ``#`` by id
-         * + ``.`` by claSS
-         * + ``&`` SINGLE NODE
-         * + ``@`` read meta tag
-         * + ``&lt;>`` create new tag
-        */
-        static parseQuery(expr: string): Query;
-        /**
-         * by node id
-        */
-        private static getById;
-        /**
-         * by class name
-        */
-        private static getByClass;
-        /**
-         * by tag name
-        */
-        private static getByTag;
-        /**
-         * create new node
-        */
-        private static createElement;
-        private static queryMeta;
-        private static isSelectorQuery;
-        private static parseExpression;
-    }
+}
+declare namespace DOM.Events {
+    /**
+     * Execute a given function when the document is ready.
+     * It is called when the DOM is ready which can be prior to images and other external content is loaded.
+     *
+     * 可以处理多个函数作为事件，也可以通过loadComplete函数参数来指定准备完毕的状态
+     * 默认的状态是interactive即只需要加载完DOM既可以开始立即执行函数
+     *
+     * @param fn A function that without any parameters
+     * @param loadComplete + ``interactive``: The document has finished loading. We can now access the DOM elements.
+     *                     + ``complete``: The page is fully loaded.
+     * @param iframe Event execute on document from target iframe.
+     *
+    */
+    function ready(fn: () => void, loadComplete?: string[], iframe?: HTMLIFrameElement): void;
+    /**
+     * 向一个给定的HTML元素或者HTML元素的集合之中的对象添加给定的事件
+     *
+     * @param el HTML节点元素或者节点元素的集合
+     * @param type 事件的名称字符串
+     * @param fn 对事件名称所指定的事件进行处理的工作函数，这个工作函数应该具备有一个事件对象作为函数参数
+    */
+    function addEvent(el: any, type: string, fn: (event: Event) => void): void;
 }
 declare namespace DOM {
     class node {
@@ -1784,7 +1814,7 @@ declare class HTMLTsElement {
      * @param html 当这个参数为一个无参数的函数的时候，主要是用于生成一个比较复杂的文档节点而使用的;
      *    如果为字符串文本类型，则是直接将文本当作为HTML代码赋值给当前的这个节点对象的innerHTML属性;
     */
-    display(html: string | HTMLElement | HTMLTsElement | (() => HTMLElement)): HTMLTsElement;
+    display(html: string | number | boolean | HTMLElement | HTMLTsElement | (() => HTMLElement)): HTMLTsElement;
     /**
      * Clear all of the contents in current html element node.
     */
@@ -1820,7 +1850,7 @@ declare namespace TypeExtensions {
     */
     function Extends(node: HTMLElement): HTMLElement;
 }
-declare namespace TsLinq {
+declare namespace TypeScript.Data {
     /**
      * 这个对象可以自动的将调用者的函数名称作为键名进行对应的键值的读取操作
     */
@@ -1983,27 +2013,33 @@ declare module LZW {
     */
     function decode(s: string): string;
 }
-declare namespace TsLinq {
-    /**
-     * 调用堆栈之中的某一个栈片段信息
-    */
-    class StackFrame {
-        caller: string;
-        file: string;
-        memberName: string;
-        line: number;
-        column: number;
-        toString(): string;
-        static Parse(line: string): StackFrame;
-        private static getFileName;
+declare namespace Levenshtein {
+    interface IScoreFunc {
+        insert(c: string | number): number;
+        delete(c: string | number): number;
+        substitute(s: string | number, t: string | number): number;
     }
+    function DistanceMatrix(source: string, target: string, score?: IScoreFunc): number[][];
+    function ComputeDistance(source: string, target: string, score?: IScoreFunc): number;
 }
 declare class StringBuilder {
     private buffer;
     private newLine;
+    /**
+     * 返回得到当前的缓冲区的字符串数据长度大小
+    */
     readonly Length: number;
+    /**
+     * @param newLine 换行符的文本，默认为纯文本格式，也可以指定为html格式的换行符``<br />``
+    */
     constructor(str?: string | StringBuilder, newLine?: string);
+    /**
+     * 向当前的缓冲之中添加目标文本
+    */
     Append(text: string): StringBuilder;
+    /**
+     * 向当前的缓冲之中添加目标文本病在最末尾添加一个指定的换行符
+    */
     AppendLine(text?: string): StringBuilder;
     toString(): string;
 }
@@ -2096,25 +2132,25 @@ declare namespace Delegate {
     /**
      * 不带参数的函数指针
     */
-    interface Func {
+    interface Func<V> {
         <V>(): V;
     }
     /**
      * 带有一个函数参数的函数指针
     */
-    interface Func {
+    interface Func<V> {
         <T, V>(arg: T): V;
     }
-    interface Func {
+    interface Func<V> {
         <T1, T2, V>(arg1: T1, arg2: T2): V;
     }
-    interface Func {
+    interface Func<V> {
         <T1, T2, T3, V>(arg1: T1, arg2: T2, arg3: T3): V;
     }
-    interface Func {
+    interface Func<V> {
         <T1, T2, T3, T4, V>(arg1: T1, arg2: T2, arg3: T3, arg4: T4): V;
     }
-    interface Func {
+    interface Func<V> {
         <T1, T2, T3, T4, T5, V>(arg1: T1, arg2: T2, arg3: T3, arg4: T4, arg5: T5): V;
     }
 }
@@ -2140,8 +2176,27 @@ declare namespace Framework.Extensions {
     */
     function extend<V>(from: V, to?: V): V;
 }
-declare namespace Framework {
-    module logging {
+declare namespace TypeScript {
+    function gc(): {};
+}
+declare namespace TypeScript {
+    /**
+     * Console logging helper
+    */
+    class logging {
+        /**
+         * 应用程序的开发模式：只会输出框架的警告信息
+        */
+        static readonly outputWarning: boolean;
+        /**
+         * 框架开发调试模式：会输出所有的调试信息到终端之上
+        */
+        static readonly outputEverything: boolean;
+        /**
+         * 生产模式：只会输出错误信息
+        */
+        static readonly outputError: boolean;
+        static log(obj: any, color?: string): void;
     }
 }
 /**
@@ -2184,39 +2239,16 @@ declare module Router {
     */
     function goto(link: string, appId: string, hashKey: (link: string) => string, stack?: Window): void;
 }
-/**
- * 序列之中的元素下标的操作方法集合
-*/
-declare namespace Which {
+declare namespace TypeScript {
     /**
-     * 查找出所给定的逻辑值集合之中的所有true的下标值
+     * https://github.com/natewatson999/js-gc
     */
-    function Is(booleans: boolean[] | IEnumerator<boolean>): IEnumerator<number>;
-    /**
-     * 默认的通用类型的比较器对象
-    */
-    class DefaultCompares<T> {
+    module garbageCollect {
         /**
-         * 一个用于比较通用类型的数值转换器对象
+         * try to do garbageCollect by invoke this function
         */
-        private as_numeric;
-        compares(a: T, b: T): number;
-        static default<T>(): (a: T, b: T) => number;
+        const handler: Delegate.Func<any>;
     }
-    /**
-     * 查找出序列之中最大的元素的序列下标编号
-     *
-     * @param x 所给定的数据序列
-     * @param compare 默认是将x序列之中的元素转换为数值进行大小的比较的
-    */
-    function Max<T>(x: IEnumerator<T>, compare?: (a: T, b: T) => number): number;
-    /**
-     * 查找出序列之中最小的元素的序列下标编号
-     *
-     * @param x 所给定的数据序列
-     * @param compare 默认是将x序列之中的元素转换为数值进行大小的比较的
-    */
-    function Min<T>(x: IEnumerator<T>, compare?: (a: T, b: T) => number): number;
 }
 declare namespace Internal {
     class Arguments {
@@ -2255,7 +2287,134 @@ declare namespace Linq.TsQuery {
 }
 declare namespace Internal {
 }
-declare namespace TsLinq {
+declare namespace Internal {
+    interface IURL {
+        /**
+         * 获取得到GET参数
+        */
+        (arg: string, caseSensitive?: boolean, Default?: string): string;
+        readonly path: string;
+        readonly fileName: string;
+        /**
+         * 获取当前的url之中的hash值，这个返回来的哈希标签是默认不带``#``符号前缀的
+         *
+         * @param arg 如果参数urlHash不为空，则这个参数表示是否进行文档内跳转？
+         *    如果为空的话，则表示解析hash字符串的时候是否应该去掉前缀的``#``符号
+         *
+         * @returns 这个函数不会返回空值或者undefined，只会返回空字符串或者hash标签值
+        */
+        hash(arg?: hashArgument | boolean, urlhash?: string): string;
+    }
+    interface HtmlDocumentDeserializer {
+        /**
+         * 将目标序列转换为一个表格HTML节点元素
+        */
+        table: <T extends {}>(rows: T[] | IEnumerator<T>, headers?: string[] | IEnumerator<string> | IEnumerator<MapTuple<string, string>> | MapTuple<string, string>[], attrs?: Internal.TypeScriptArgument) => HTMLTableElement;
+        /**
+         * 向指定id编号的div添加select标签的组件
+         *
+         * @param containerID 这个编号不带有``#``前缀，这个容器可以是一个空白的div或者目标``<select>``标签对象的编号，
+         *                    如果目标容器是一个``<select>``标签的时候，则要求selectName和className都必须要是空值
+         * @param items 这个数组应该是一个``[title => value]``的键值对列表
+        */
+        selectOptions: (items: MapTuple<string, string>[], containerID: string, selectName?: string, className?: string) => void;
+    }
+    interface hashArgument {
+        doJump?: boolean;
+        trimprefix?: boolean;
+    }
+    interface GotoOptions {
+        currentFrame?: boolean;
+        lambda?: boolean;
+    }
+    interface IquerySelector {
+        <T extends HTMLElement>(query: string, context?: Window): DOMEnumerator<T>;
+        /**
+         * query参数应该是节点id查询表达式
+        */
+        getSelectedOptions(query: string, context?: Window): DOMEnumerator<HTMLOptionElement>;
+        /**
+         * 获取得到select控件的选中的选项值，没做选择则返回null
+         *
+         * @param query id查询表达式，这个函数只支持单选模式的结果，例如select控件以及radio控件
+         * @returns 返回被选中的项目的value属性值
+        */
+        getOption(query: string, context?: Window): string;
+    }
+    interface IcsvHelperApi {
+        /**
+         * 将csv文档文本进行解析，然后反序列化为js对象的集合
+        */
+        toObjects<T>(data: string): IEnumerator<T>;
+        /**
+         * 将js的对象序列进行序列化，构建出csv格式的文本文档字符串数据
+        */
+        toText<T>(data: IEnumerator<T> | T[]): string;
+    }
+    /**
+     * 这个参数对象模型主要是针对创建HTML对象的
+    */
+    interface TypeScriptArgument {
+        /**
+         * HTML节点对象的编号（通用属性）
+        */
+        id?: string;
+        /**
+         * HTML节点对象的CSS样式字符串（通用属性）
+        */
+        style?: string | CSSStyleDeclaration;
+        /**
+         * HTML节点对象的class类型（通用属性）
+        */
+        class?: string | string[];
+        type?: string;
+        href?: string;
+        text?: string;
+        visible?: boolean;
+        /**
+         * 应用于``<a>``标签进行文件下载重命名文件所使用的
+        */
+        download?: string;
+        target?: string;
+        src?: string;
+        width?: string | number;
+        height?: string | number;
+        /**
+         * 进行查询操作的上下文环境，这个主要是针对iframe环境之中的操作的
+        */
+        context?: Window;
+        title?: string;
+        name?: string;
+        /**
+         * HTML的输入控件的预设值
+        */
+        value?: string | number | boolean;
+        for?: string;
+        /**
+         * 处理HTML节点对象的点击事件，这个属性值应该是一个无参数的函数来的
+        */
+        onclick?: Delegate.Sub | string;
+        "data-toggle"?: string;
+        "data-target"?: string;
+        "aria-hidden"?: boolean;
+    }
+}
+declare namespace Internal {
+    /**
+     * 调用堆栈之中的某一个栈片段信息
+    */
+    class StackFrame {
+        caller: string;
+        file: string;
+        memberName: string;
+        line: number;
+        column: number;
+        toString(): string;
+        static Parse(line: string): StackFrame;
+        private static getFileName;
+    }
+}
+declare namespace TypeScript {
     /**
      * 性能计数器
     */
@@ -2269,8 +2428,18 @@ declare namespace TsLinq {
      * 单位都是毫秒
     */
     class CheckPoint {
+        /**
+         * 性能计数器起始的时间，这个时间点在所有的由同一个性能计数器对象所产生的checkpoint之间都是一样的
+        */
         start: number;
+        /**
+         * 创建当前的这个checkpoint的时候的时间戳
+        */
         time: number;
+        /**
+         * 创建这个checkpoint时间点的时候与上一次创建checkpoint的时间点之间的长度
+         * 性能计数主要是查看这个属性值
+        */
         sinceLastCheck: number;
         sinceFromStart: number;
         /**
@@ -2473,6 +2642,9 @@ declare namespace HttpHelpers {
         */
         www: string;
     };
+    interface httpCallback {
+        (response: string, code: number, contentType: string): void;
+    }
     function measureContentType(obj: any): string;
     /**
      * 这个函数只会返回200成功代码的响应内容，对于其他的状态代码都会返回null
@@ -2484,7 +2656,7 @@ declare namespace HttpHelpers {
      *
      * @param callback ``callback(http.responseText, http.status)``
     */
-    function GetAsyn(url: string, callback: (response: string, code: number) => void): void;
+    function GetAsyn(url: string, callback: httpCallback): void;
     function POST(url: string, postData: PostData, callback: (response: string, code: number) => void): void;
     /**
      * 使用multipart form类型的数据进行文件数据的上传操作
@@ -2579,7 +2751,11 @@ declare namespace csv {
          *                 如果这个参数不是空值，则以异步的方式工作，此时函数会返回空值
          * @param parseText 如果url返回来的数据之中还包含有其他的信息，则会需要这个参数来进行csv文本数据的解析
         */
-        static Load(url: string, callback?: (csv: dataframe) => void, parseText?: (response: string) => content): dataframe;
+        static Load(url: string, callback?: (csv: dataframe) => void, parseText?: (response: string, contentType?: string) => content): dataframe;
+        private static isTsv;
+        /**
+         * 默认是直接加个csv标签将格式设为默认的csv文件
+        */
         private static defaultContent;
         /**
          * 将所给定的文本文档内容解析为数据框对象
