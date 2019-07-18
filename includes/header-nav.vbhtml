@@ -23,7 +23,8 @@
 								<input name="q" placeholder="Search..." type="text" id="bing" />
 							</div>
 							<div class="small-1 medium-3 large-2 columns">
-								<button type="submit" class="postfix button" href="#"><i class="fa fa-search"></i></button>
+								<button type="submit" class="postfix button" href="#"><i
+										class="fa fa-search"></i></button>
 							</div>
 						</div>
 					</form>

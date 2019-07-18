@@ -89,5 +89,5 @@
     </div>
 </div>
 
-<script type="text/javascript" src="/lib/linq.js"></script>
+<script type="text/javascript" src="/lib/linq.min.js"></script>
 <script type="text/javascript" src="/lib/resize.js"></script>
