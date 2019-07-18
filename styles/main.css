@@ -66,6 +66,10 @@ code {
   margin: 0px;
 }
 
+.bilibili-player-video-recommend{
+  display: none;
+}
+
 #push {
   height: 140px;
 }

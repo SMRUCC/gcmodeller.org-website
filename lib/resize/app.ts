@@ -23,26 +23,26 @@ $ts(function () {
         }
     }
 
-    for (var i = 0; i < iframe.length; i++) {
-        let frame = iframe.item(i);
+    //for (var i = 0; i < iframe.length; i++) {
+    //    let frame = iframe.item(i);
 
-        if (TypeScript.logging.outputEverything) {
-            console.log(frame);
-        }
+    //    if (TypeScript.logging.outputEverything) {
+    //        console.log(frame);
+    //    }
 
-        setTimeout(removeAD(frame), 3000);
-    }
+    //    setTimeout(removeAD(frame), 3000);
+    //}
 });
 
-function removeAD(frame: HTMLIFrameElement) {
-    return function () {
-        $ts(function () {
-            // 移除推荐div
-            let div = frame.contentDocument.getElementsByClassName("bilibili-player-video-recommend").item(0)
-            let container = div.parentElement;
+//function removeAD(frame: HTMLIFrameElement) {
+//    return function () {
+//        $ts(function () {
+//            // 移除推荐div
+//            let div = frame.contentDocument.getElementsByClassName("bilibili-player-video-recommend").item(0)
+//            let container = div.parentElement;
 
-            container.removeChild(div);
+//            container.removeChild(div);
 
-        }, frame);
-    }
-}
+//        }, frame);
+//    }
+//}
