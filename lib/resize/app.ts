@@ -30,6 +30,12 @@ $ts(function () {
             console.log(frame);
         }
 
+        setTimeout(removeAD(frame), 3000);
+    }
+});
+
+function removeAD(frame: HTMLIFrameElement) {
+    return function () {
         $ts(function () {
             // 移除推荐div
             let div = frame.contentDocument.getElementsByClassName("bilibili-player-video-recommend").item(0)
@@ -39,4 +45,4 @@ $ts(function () {
 
         }, frame);
     }
-});
+}
