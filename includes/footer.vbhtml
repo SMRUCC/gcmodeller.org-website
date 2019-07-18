@@ -1,11 +1,12 @@
 <div class="row">
 	<div class="small-12 columns">
 		<div class="left">
-			<span style="font-size: 12px;">© 2019 <strong>| SMRUCC genomics · 中國 桂林</strong></span>
+			<span style="font-family: 'Microsoft YaHei'; font-size: 12px;">© 2019 <strong>| SMRUCC genomics · 中國
+					桂林</strong></span>
 			<br>
 			<div id="footer-notes">
-				<font face="Microsoft YaHei" size="2"><a
-						href="mailto://xie.guigang@gcmodeller.org">xie.guigang@gcmodeller.org</a></font>
+				<span style="font-size:12px;"><a
+						href="mailto://xie.guigang@gcmodeller.org">xie.guigang@gcmodeller.org</a></span>
 			</div>
 		</div>
 		<div class="right">
