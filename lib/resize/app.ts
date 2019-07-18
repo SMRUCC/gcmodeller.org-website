@@ -1,5 +1,6 @@
 ﻿/// <reference path="../linq.d.ts" />
 
+$ts.mode = Modes.debug;
 $ts(function () {
     let size = DOM.clientSize();
     let iframe = document.getElementsByTagName("iframe");
