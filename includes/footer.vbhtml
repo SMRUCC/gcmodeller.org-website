@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="small-12 columns">
 		<div class="left">
-			<font size=2>© 2019 <strong>| SMRUCC genomics · 中國 桂林</strong></font>
+			<span style="font-size: 12px;">© 2019 <strong>| SMRUCC genomics · 中國 桂林</strong></span>
 			<br>
 			<div id="footer-notes">
 				<font face="Microsoft YaHei" size="2"><a
