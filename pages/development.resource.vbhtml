@@ -55,7 +55,8 @@
 					border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="720" height="480">
 				</iframe>
 			</div>
-
+		</p>
+		<p>
 			2. Reverse engineering is a very common method we currently use to study and analyze the target genome.
 			Through reverse engineering, we perform functional annotation of protein components in the target genome,
 			and then build a blueprint (which is so called pathway) for biological functions based on these annotated
