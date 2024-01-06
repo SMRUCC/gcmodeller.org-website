@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>write the gene expression data matrix file</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>write.expr_matrix {geneExpression}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>write the gene expression data matrix file</h2>
+
+        <h3>Description</h3>
+
+        
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>write.expr_matrix</strong>(<i>expr</i>, <i>file</i>,
+    <i>id</i> = <span style='color: brown;'><strong>"geneID"</strong></span>,
+    <i>binary</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>expr</dt>
+<dd><p><p>The gene expression matrix object</p></p></dd>
+
+
+<dt>file</dt>
+<dd><p><p>The file path to a csv matrix file that used <br />
+ for export the given <strong><code>expr</code></strong> matrix data.</p></p></dd>
+
+
+<dt>id</dt>
+<dd><p><p>The string content inside the first cell</p></p></dd>
+
+
+<dt>binary</dt>
+<dd><p><p>write matrix data in binary data format? default value <br />
+ is False means write matrix as csv matrix file.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+        <h3 style="display: bloc">Authors</h3>
+
+        
+
+        <h3>Value</h3>
+
+        <p>A logical vector for indicates that the expression <br />
+ matrix save success or not.</p><h4>clr value class</h4><ul><li>boolean</li></ul>
+
+        <h3 style="display: block;">Examples</h3>
+
+        <pre><code id="example_r"> geneExpression::write.expr_matrix(expr_mat, file = "/path/to/matrix.csv", id = "gene_id");</code></pre>
+
+        <hr />
+        <div style="text-align: center;">[Package <em>geneExpression</em> version 1.0.0.0 <a
+                href="../geneExpression.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>
