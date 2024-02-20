@@ -1,5 +1,5 @@
 # gcmodeller.org-website
 
-HOME page of http://gcmodeller.org website
+<img src="./logo.png" width="200px" />
 
-![](./logo.png)
+HOME page of [https://gcmodeller.org](https://gcmodeller.org) website
