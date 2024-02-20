@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <p>An abstract biological pathway model</p><br /><p>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/XmlDataModel.html">XmlDataModel</a> class.</p>
+        <p>An abstract biological pathway model</p>
 
         <h3>Declare</h3>        
 
@@ -30,19 +30,28 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.ComponentModel.Annotation
 export class PathwayBrief extends <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/XmlDataModel.html">XmlDataModel</a> {
+   # 和具体的物种的编号无关的在KEGG数据库之中的参考对象的编号
+   briteID: string;
+   # the function description text of the current pathway object
+   description: string;
    # the reference id of the current pathway object
    EntryId: string;
    # The map title display name
    name: string;
-   # the function description text of the current pathway object
-   description: string;
-   # 和具体的物种的编号无关的在KEGG数据库之中的参考对象的编号
-   briteID: string;
    Stylesheet: <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/XmlStyleProcessor.html">XmlStyleProcessor</a>;
    TypeComment: <a href="/vignettes/clr/System/Xml/XmlComment.html">XmlComment</a>;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/XmlDataModel.html">XmlDataModel</a> class: <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/XmlDataModel.html">XmlDataModel</a></li>
+<li>use by <i>property</i> member <code>Stylesheet</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/XmlStyleProcessor.html">XmlStyleProcessor</a></li>
+<li>use by <i>property</i> member <code>TypeComment</code>: <a href="/vignettes/clr/System/Xml/XmlComment.html">XmlComment</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

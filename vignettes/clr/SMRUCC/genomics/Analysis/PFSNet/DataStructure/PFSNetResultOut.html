@@ -30,17 +30,25 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.Analysis.PFSNet.DataStructure
 export class PFSNetResultOut {
-   # The data tag value for the current PfsNET evaluation.(本次计算结果的数据标签)
-   tag: string;
    class1: string;
    class2: string;
    # The mutation phenotype 1 evaluation data for the significant sub network.(Class1)
    phenotype1: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/PFSNet/DataStructure/PFSNetGraph.html">PFSNetGraph[]</a>;
    # The another mutation phenotype evaluation data for the significant sub network.(Class2)
    phenotype2: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/PFSNet/DataStructure/PFSNetGraph.html">PFSNetGraph[]</a>;
+   # The data tag value for the current PfsNET evaluation.(本次计算结果的数据标签)
+   tag: string;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>phenotype1</code>: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/PFSNet/DataStructure/PFSNetGraph.html">PFSNetGraph</a></li>
+<li>use by <i>property</i> member <code>phenotype2</code>: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/PFSNet/DataStructure/PFSNetGraph.html">PFSNetGraph</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

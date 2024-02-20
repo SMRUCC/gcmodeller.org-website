@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <br /><p>this class extends from <a href="/vignettes/clr/SMRUCC/genomics/Assembly/KEGG/DBGET/bGetObject/ReactionCompoundTransform.html">ReactionCompoundTransform</a> class.</p>
+        
 
         <h3>Declare</h3>        
 
@@ -30,20 +30,27 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.Model.Network.KEGG.ReactionNetwork
 export class ReactionClassTable extends <a href="/vignettes/clr/SMRUCC/genomics/Assembly/KEGG/DBGET/bGetObject/ReactionCompoundTransform.html">ReactionCompoundTransform</a> {
-   # entry id of current reaction class
-   rId: string;
    # the reaction class
    category: string;
+   # reaction class definition
+   define: string;
    # a list of kegg reaction id which are belongs to
    #  current reaction class data model.
    fluxId: string;
-   # reaction class definition
-   define: string;
    from: string;
+   # entry id of current reaction class
+   rId: string;
    to: string;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/SMRUCC/genomics/Assembly/KEGG/DBGET/bGetObject/ReactionCompoundTransform.html">ReactionCompoundTransform</a> class: <a href="/vignettes/clr/SMRUCC/genomics/Assembly/KEGG/DBGET/bGetObject/ReactionCompoundTransform.html">ReactionCompoundTransform</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

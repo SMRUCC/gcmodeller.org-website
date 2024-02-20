@@ -28,7 +28,7 @@
  这个对象可以同时用来表示核酸序列或者蛋白质序列上面的位置)</p>
 
 <p>字符串中的字符在计算机程序语言中是从零开始的<br />
- 但是生物分子序列中的残基的起始是从1开始的</p><br /><p>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/Ranges/Model/IntRange.html">IntRange</a> class.</p>
+ 但是生物分子序列中的残基的起始是从1开始的</p>
 
         <h3>Declare</h3>        
 
@@ -36,22 +36,30 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.ComponentModel.Loci
 export class Location extends <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/Ranges/Model/IntRange.html">IntRange</a> {
-   # <a href="/vignettes/clr/SMRUCC/genomics/ComponentModel/Loci/Location.html">Location</a>: Gets or set the left start value of the segment on the target sequence.(目标片段的左端起始区域，与链的方向无关)
-   left: integer;
-   # <a href="/vignettes/clr/SMRUCC/genomics/ComponentModel/Loci/Location.html">Location</a>: Gets or set the right ends value of the segment on the target sequence.(目标片段的右端结束区域，与链的方向无关)
-   right: integer;
-   Tag: <a href="/vignettes/clr/Microsoft/VisualBasic/My/JavaScript/JavaScriptObject.html">JavaScriptObject</a>;
-   # 当前的这个位置数据是否为左边小于右边的正常状态
-   IsNormalized: boolean;
    Center: integer;
    # The segment length of this location object.(目标序列片段区域的片段长度)
    FragmentSize: integer;
-   Min: integer;
-   Max: integer;
    Interval: integer;
+   # 当前的这个位置数据是否为左边小于右边的正常状态
+   IsNormalized: boolean;
+   # <a href="/vignettes/clr/SMRUCC/genomics/ComponentModel/Loci/Location.html">Location</a>: Gets or set the left start value of the segment on the target sequence.(目标片段的左端起始区域，与链的方向无关)
+   left: integer;
+   Max: integer;
+   Min: integer;
+   # <a href="/vignettes/clr/SMRUCC/genomics/ComponentModel/Loci/Location.html">Location</a>: Gets or set the right ends value of the segment on the target sequence.(目标片段的右端结束区域，与链的方向无关)
+   right: integer;
+   Tag: <a href="/vignettes/clr/Microsoft/VisualBasic/My/JavaScript/JavaScriptObject.html">JavaScriptObject</a>;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/Ranges/Model/IntRange.html">IntRange</a> class: <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/Ranges/Model/IntRange.html">IntRange</a></li>
+<li>use by <i>property</i> member <code>Tag</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/My/JavaScript/JavaScriptObject.html">JavaScriptObject</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

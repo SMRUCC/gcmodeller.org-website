@@ -30,20 +30,25 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.Assembly.KEGG.DBGET.bGetObject.Organism
 export class Organism {
+   Class: string;
+   # KEGG里面的物种的简称代码
+   KEGGId: string;
    Kingdom: string;
    Phylum: string;
-   Class: string;
+   # FTP url on NCBI
+   RefSeq: string;
    # 物种全称
    Species: string;
    # T code for KEGG www_bfind
    Tcode: string;
-   # KEGG里面的物种的简称代码
-   KEGGId: string;
-   # FTP url on NCBI
-   RefSeq: string;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        this clr type has no other .net clr type reference.
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

@@ -24,7 +24,7 @@
 
         <p>The FASTA format file of a bimolecular sequence.(Notice that this file is <br />
  only contains on sequence.)<br />
- FASTA格式的生物分子序列文件。(但是请注意：文件中只包含一条序列的情况，假若需要自定义所生成的FASTA文件的标题的格式，请复写<a href="/vignettes/clr/SMRUCC/genomics/SequenceModel/FASTA/FastaSeq.html">FastaSeq</a>.<a href="#">ToString</a>方法)</p><br /><p>this class extends from <a href="/vignettes/clr/SMRUCC/genomics/SequenceModel/ISequenceModel.html">ISequenceModel</a> class.</p>
+ FASTA格式的生物分子序列文件。(但是请注意：文件中只包含一条序列的情况，假若需要自定义所生成的FASTA文件的标题的格式，请复写<a href="/vignettes/clr/SMRUCC/genomics/SequenceModel/FASTA/FastaSeq.html">FastaSeq</a>.<a href="#">ToString</a>方法)</p>
 
         <h3>Declare</h3>        
 
@@ -38,18 +38,25 @@ export class FastaSeq extends <a href="/vignettes/clr/SMRUCC/genomics/SequenceMo
    #  specific loader and gets some well organized information about the sequence. The format of the header is 
    #  usually different between each biological database.(这个FASTA文件的属性头，标题的格式通常在不同的数据库之间是具有很大差异的)
    Headers: string;
+   IsProtSource: boolean;
+   # Get the sequence length of this Fasta object.(获取序列的长度)
+   Length: integer;
+   locus_tag: string;
    # The sequence data that contains in this FASTA file.
    #  (包含在这个FASTA文件之中的序列数据)
    SequenceData: string;
-   # Get the sequence length of this Fasta object.(获取序列的长度)
-   Length: integer;
    # The first character ">" is not included in the title string data.(标题之中是不包含有FASTA数据的第一个>字符的)
    Title: string;
-   locus_tag: string;
-   IsProtSource: boolean;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/SMRUCC/genomics/SequenceModel/ISequenceModel.html">ISequenceModel</a> class: <a href="/vignettes/clr/SMRUCC/genomics/SequenceModel/ISequenceModel.html">ISequenceModel</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
