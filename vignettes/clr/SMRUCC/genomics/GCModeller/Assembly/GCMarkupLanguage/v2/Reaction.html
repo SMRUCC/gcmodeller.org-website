@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        
+        <p>the reaction graph model</p>
 
         <h3>Declare</h3>        
 
@@ -30,20 +30,28 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2
 export class Reaction {
-   # [forward, reverse]
+   # [forward, reverse] boundary of the reaction speed
    bounds: double;
-   Equation: string;
+   # the debug view of the current equation model
+   equation: string;
+   # unique reference id of current reaction link
    ID: string;
    # 这个反应模型是否是需要酶促才会发生了生化反应过程？
    is_enzymatic: boolean;
    name: string;
+   note: string;
+   product: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/CompoundFactor.html">CompoundFactor[]</a>;
+   substrate: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/CompoundFactor.html">CompoundFactor[]</a>;
 }
 </code>
         </pre>
 
         <h3>.NET clr type reference tree</h3>
 
-        this clr type has no other .net clr type reference.
+        <ol>
+<li>use by <i>property</i> member <code>product</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/CompoundFactor.html">CompoundFactor</a></li>
+<li>use by <i>property</i> member <code>substrate</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/CompoundFactor.html">CompoundFactor</a></li>
+</ol>
 
 
         <hr />
