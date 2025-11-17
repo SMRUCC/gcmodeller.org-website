@@ -30,9 +30,12 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.Analysis.SequenceTools.SequencePatterns
 export class Probability {
+   name: string;
    pvalue: double;
+   # the PWM matrix data
    region: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/SequenceTools/SequencePatterns/Residue.html">Residue[]</a>;
    score: double;
+   width: integer;
 }
 </code>
         </pre>
@@ -55,4 +58,4 @@ export class Probability {
 <script type="text/javascript" src="https://gcmodeller.org/lib/highlights.js"></script>
 <script type="text/javascript">r_highlights("clr_ts");</script>
 
-</html>
+</html>

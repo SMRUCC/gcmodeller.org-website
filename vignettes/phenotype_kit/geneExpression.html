@@ -112,6 +112,12 @@ table caption {font-size:14px;font-weight:bolder;}
   <td><p>convert the matrix into row gene list</p></td>
 </tr>
 <tr>
+  <td id="expression_vector">
+    <a href="./geneExpression/expression_vector.html">expression_vector</a>
+  </td>
+  <td><p>get gene expression vector data</p></td>
+</tr>
+<tr>
   <td id="setTag">
     <a href="./geneExpression/setTag.html">setTag</a>
   </td>
@@ -353,10 +359,26 @@ table caption {font-size:14px;font-weight:bolder;}
   <td><p>log scale of the HTS raw matrix</p></td>
 </tr>
 <tr>
+  <td id="minmax01Norm">
+    <a href="./geneExpression/minmax01Norm.html">minmax01Norm</a>
+  </td>
+  <td><p>min max normalization
+ 
+ (row - min(row)) / (max(row) - min(row))
+ 
+ this normalization method is usually used for the metabolomics data</p></td>
+</tr>
+<tr>
+  <td id="take_shuffle">
+    <a href="./geneExpression/take_shuffle.html">take_shuffle</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
   <td id="geneId">
     <a href="./geneExpression/geneId.html">geneId</a>
   </td>
-  <td><p>get gene Id list</p></td>
+  <td><p>get gene Id list or byref set of the gene id alias set.</p></td>
 </tr>
 <tr>
   <td id="as.deg">
@@ -368,7 +390,7 @@ table caption {font-size:14px;font-weight:bolder;}
   <td id="deg.class">
     <a href="./geneExpression/deg.class.html">deg.class</a>
   </td>
-  <td></td>
+  <td><p>set deg class label</p></td>
 </tr>
 <tr>
   <td id="joinSample">
@@ -399,4 +421,4 @@ table caption {font-size:14px;font-weight:bolder;}
     <hr />
     <div style="text-align: center;">[<a href="../index.html">Document Index</a>]</div>
   </body>
-</html>
+</html>
