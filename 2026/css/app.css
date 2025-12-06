@@ -7715,8 +7715,9 @@ header {
 }
 @media (min-width: 768px) {
   .footer-tentacles {
-    background: url(/favicon.png) no-repeat 0 100%;
+    background: url(/img/nav-logo.png) no-repeat 0 100%;
     background-size: contain;
+    max-height: 300px;
   }
   .bg-main,
   .top-union {
@@ -7754,7 +7755,7 @@ header {
   background: hsla(251, 7%, 51%, 0.2) !important;
 }
 .logo {
-  height: 1.5em;
+  height: 4em;
 }
 .text-primary {
   -webkit-text-fill-color: transparent;

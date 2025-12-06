@@ -12,27 +12,18 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
-    <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="favicon.png" color="#272531">
     <meta name="msapplication-TileColor" content="#272531">
     <meta name="theme-color" content="#272531">
 
-
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/app.css?id=fdf453464b364088fc4203cb77580f7f">
 
-
     <title>GCModeller: genomics CAD(Computer Assistant Design) Modeller system in .NET language</title>
-
 
     <meta name="title" content="GCModeller: genomics CAD(Computer Assistant Design) Modeller system in .NET language">
     <meta name="description"
         content="Free Laravel package that abstracts standard business logic and allows code-driven rapid application development of back office applications like admin panels and dashboards.">
-
-
-
-
-
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://orchid.software" />
@@ -51,8 +42,6 @@
         content="Free Laravel package that abstracts standard business logic and allows code-driven rapid application development of back office applications like admin panels and dashboards.">
     <meta name="twitter:image" content="https://github.com/orchidsoftware/art/raw/master/orchid-share.jpg">
 
-    <meta http-equiv="Content-Security-Policy"
-        content="frame-ancestors metrika.yandex.ru metrika.yandex.by metrica.yandex.com metrica.yandex.com.tr webvisor.com *.webvisor.com;">
     <meta name="view-transition" content="same-origin">
 
     <link rel="alternate" href="https://orchid.software/ru/" hreflang="ru" />
@@ -61,8 +50,6 @@
 
     <meta name="author" content="Alexandr Chernyaev">
     <meta property="og:site_name" content="Orchid - Laravel Admin Panel" />
-    <meta name="yandex-verification" content="23bb1990414a4f0e" />
-    <meta name="google-site-verification" content="EWv-U0_XG4_ck_eYWIAhKzyZeHWvow4EsYexXE1q0mc" />
 </head>
 
 <body>
@@ -70,17 +57,18 @@
     <div class="bg-dark bg-main position-relative">
 
         <div class="d-none d-md-block position-absolute start-0 end-0 bottom-0 top-0 overflow-hidden pe-none">
-            <img src="img/next/menu-tentacli.svg" class="position-absolute" style="right: 25vw;top: -3em;">
+
+            <!-- <img src="img/next/menu-tentacli.svg" class="position-absolute" style="right: 25vw;top: -3em;">
             <img src="img/next/main-tentacli-left.svg" class="position-absolute" style="left: 16vw;bottom: -1em;">
-            <img src="img/next/main-tentacli-right.svg" class="position-absolute" style="right: 7vw;bottom: -7em;">
+            <img src="img/next/main-tentacli-right.svg" class="position-absolute" style="right: 7vw;bottom: -7em;"> -->
+
         </div>
 
 
         <div class="container pt-md-4 pt-2 position-relative" style="z-index: 1">
             <header class="d-flex flex-wrap align-items-center justify-content-center py-3 mb-4 px-4 position-relative">
                 <a href="/" class="d-flex align-items-center mb-0 me-md-auto text-dark text-decoration-none">
-                    <span class="logo"
-                        style="color: white;font-family: var(--bs-body-font-family); font-size: 2rem;">GCModeller</span>
+                    <img class="logo" src="img/nav-logo.png">
                 </a>
 
                 <ul class="nav nav-pills mx-auto align-items-center d-none d-md-inline-flex">
@@ -127,10 +115,12 @@
 
             <div class="px-3 py-md-5 my-md-5 text-md-center text-white">
                 <div class="col-xl-6 col-lg-8 mx-auto mb-5 pb-5 pt-3 pt-md-0">
-                    <h1 class="display-5 fw-bold mb-md-5 mb-3 text-balance">GCModeller
+                    <h1 class="display-5 fw-bold mb-md-5 mb-3 text-balance">Genomics CAD Modeller system
                     </h1>
                     <p class="lead mb-md-5 pb-md-5 mb-3 text-balance">
-                        GCModeller: genomics CAD(Computer Assistant Design) Modeller system in .NET language
+                        GCModeller is an open source systems biology software which implemented by the latest
+                        Microsoft's .NET technology: written in the VisualBasic.NET language. Developed based on
+                        the sciBASC# scientific computing Framework. 
                     </p>
                 </div>
             </div>
@@ -196,8 +186,10 @@
                 </h1>
 
                 <p class="lead text-muted mb-md-5 mb-3 opacity-slow intersection px-3 text-balance">
-                    Stop wasting time building admin panels from scratch. Orchid simplifies the process, letting you
-                    focus on what matters most — your application's core features.
+                    GCModeller is designed for create workflows for
+                    make genomics component annotation, cellular network construction and links the different
+                    cellular component as model object for run virtual cell experiment and perferman the downstream
+                    data analysis.
                 </p>
             </div>
         </div>
@@ -245,7 +237,7 @@
                             <div class="card-body d-flex flex-column p-5 h-100">
 
                                 <div class="mb-auto">
-                                    <p class="h2 mb-3">Screens</p>
+                                    <p class="h2 mb-3">R# Package</p>
 
                                     <p>
                                         Build modern apps that are 80% in PHP, and spend less time fiddling with tools
@@ -273,7 +265,7 @@
                         </div>
 
                         <div class="col-12 col-md-7 hero-code">
-                            <pre><code data-lang="php" class="notranslate"><span class="hl-keyword">use</span> Orchid\Screen\<span class="hl-type">Screen</span>;
+                            <pre><code data-lang="php" class="notranslate"><span class="hl-keyword">require</span>(<span class="hl-type">GCModeller</span>);
 
 <span class="hl-keyword">class</span> <span class="hl-type">Task</span> <span class="hl-keyword">extends</span> <span class="hl-template">Screen</span>
 {
@@ -570,13 +562,6 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
     <div class="footer bg-dark">
         <div class="container">
             <div class="row">
@@ -618,7 +603,7 @@
 
     <script src="js/app.js?id=226a26f2e78e9e07674730e9bb9e200f"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    
+
 </body>
 
 </html>
