@@ -7715,7 +7715,7 @@ header {
 }
 @media (min-width: 768px) {
   .footer-tentacles {
-    background: url(../img/next/footer-tentacli.svg) no-repeat 0 100%;
+    background: url(/favicon.png) no-repeat 0 100%;
     background-size: contain;
   }
   .bg-main,
