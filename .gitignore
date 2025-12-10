@@ -10,3 +10,4 @@ publish/
 node_modules/
 obj/
 *.dll
+logs/xvba_debug.log
