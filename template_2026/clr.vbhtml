@@ -312,46 +312,27 @@
                             <body>
                                 <table style="width: 100%;">
                                     <tr>
-                                        <td>{$name_title} {{$package}}</td>
-                                        <td style="text-align: right;">R Documentation</td>
+                                        <td>{$name_title} {{$namespace}}</td>
+                                        <td style="text-align: right;">.NET clr documentation</td>
                                     </tr>
                                 </table>
-
-                                <h2>{$title}</h2>
-
+                        
+                                <h2>{$name_title}</h2>
+                        
                                 <h3>Description</h3>
-
+                        
                                 {$summary}
-
-                                <h3>Usage</h3>
-
-                                <div style="width: 100%; padding-left: 3%; color: black;">
-                                    <pre><code class='language-R' style="color: black; font-weight:normal;">{$usage};</code></pre>
-                                </div>
-
-                                <h3>Arguments</h3>
-
-                                <table>
-                                    {$arguments}
-                                </table>
-
-
-                                <h3 style="display: {$show_details};">Details</h3>
-
-                                {$details}
-
-                                <h3 style="display: {$show_authors}">Authors</h3>
-
-                                {$authors}
-
-                                <h3>Value</h3>
-
-                                {$value}
-
-                                <h3 style="display: {$show_examples};">Examples</h3>
-
-                                {$examples}
-
+                        
+                                <h3>Declare</h3>        
+                        
+                                <pre>
+                                    <code id="clr_ts">{$declare}</code>
+                                </pre>
+                        
+                                <h3>.NET clr type reference tree</h3>
+                        
+                                {$clr_tree}
+                        
                                 <hr />
                                 <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
                                         href="../{$package}.html">Index</a>]
