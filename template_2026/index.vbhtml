@@ -2,270 +2,152 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/svg+xml" sizes="any" href="favicon.png">
-    <link rel="icon" type="image/svg+xml" sizes="64x64" href="favicon.png">
-    <link rel="icon" type="image/svg+xml" sizes="32x32" href="favicon.png">
-    <link rel="icon" type="image/svg+xml" sizes="16x16" href="favicon.png">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
-    <link rel="mask-icon" href="favicon.png" color="#272531">
-    <meta name="msapplication-TileColor" content="#272531">
-    <meta name="theme-color" content="#272531">
-
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/app.css?id=fdf453464b364088fc4203cb77580f7f">
-
-    <title>GCModeller: genomics CAD(Computer Assistant Design) Modeller system in .NET language</title>
-
-    <meta name="title" content="GCModeller: genomics CAD(Computer Assistant Design) Modeller system in .NET language">
-    <meta name="description"
-        content="Free Laravel package that abstracts standard business logic and allows code-driven rapid application development of back office applications like admin panels and dashboards.">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://orchid.software" />
-    <meta property="og:locale" content="en" />
-    <meta property="og:title"
-        content="GCModeller: genomics CAD(Computer Assistant Design) Modeller system in .NET language" />
-    <meta property="og:description"
-        content="Free Laravel package that abstracts standard business logic and allows code-driven rapid application development of back office applications like admin panels and dashboards.">
-    <meta property="og:image" content="https://github.com/orchidsoftware/art/raw/master/orchid-share.jpg">
-
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://orchid.software">
-    <meta name="twitter:title" content="Orchid - Laravel Admin Panel">
-    <meta name="twitter:description"
-        content="Free Laravel package that abstracts standard business logic and allows code-driven rapid application development of back office applications like admin panels and dashboards.">
-    <meta name="twitter:image" content="https://github.com/orchidsoftware/art/raw/master/orchid-share.jpg">
-
-    <meta name="view-transition" content="same-origin">
-
-    <link rel="alternate" href="https://orchid.software/ru/" hreflang="ru" />
-    <link rel="alternate" href="https://orchid.software/en/" hreflang="en" />
-    <link rel="alternate" href="https://orchid.software/en/" hreflang="x-default" />
-
-    <meta name="author" content="Alexandr Chernyaev">
-    <meta property="og:site_name" content="Orchid - Laravel Admin Panel" />
+    <%= ./includes/head.vbhtml %>
 </head>
 
 <body>
 
-    <div class="bg-dark bg-main position-relative">
+    <%= ./includes/nav.vbhtml %>
 
-        <div class="d-none d-md-block position-absolute start-0 end-0 bottom-0 top-0 overflow-hidden pe-none">
-
-            <!-- <img src="img/next/menu-tentacli.svg" class="position-absolute" style="right: 25vw;top: -3em;">
-            <img src="img/next/main-tentacli-left.svg" class="position-absolute" style="left: 16vw;bottom: -1em;">
-            <img src="img/next/main-tentacli-right.svg" class="position-absolute" style="right: 7vw;bottom: -7em;"> -->
-
+        <div class="container position-relative d-none d-md-block" style="margin-top: -13em; z-index: 3">
+            <div class="col-lg-10 mx-auto">
+                <div id="carouselExampleCaptions" class="carousel carousel-dark slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/Xor.png" class="d-block w-100 pe-none img-fluid rounded-3">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>First slide label</h5>
+                                <p>Some representative placeholder content for the first slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/pxocgx01_blastx-lightbox.png"
+                                class="d-block w-100 pe-none img-fluid rounded-3">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Second slide label</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/circos.png" class="d-block w-100 pe-none img-fluid rounded-3">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Third slide label</h5>
+                                <p>Some representative placeholder content for the third slide.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
         </div>
 
-
-        <div class="container pt-md-4 pt-2 position-relative" style="z-index: 1">
-            <header class="d-flex flex-wrap align-items-center justify-content-center py-3 mb-4 px-4 position-relative">
-                <a href="/" class="d-flex align-items-center mb-0 me-md-auto text-dark text-decoration-none">
-                    <img class="logo" src="img/nav-logo.png">
-                </a>
-
-                <ul class="nav nav-pills mx-auto align-items-center d-none d-md-inline-flex">
-
-                    <li class="nav-item">
-                        <a href="/en/donations" class="nav-link">
-                            Donation
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/en/hig" class="nav-link">
-                            Design
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/en/discussions" class="nav-link">
-                            Discussion
-                        </a>
-                    </li>
-
-                    <li class="nav-item"><a href="https://github.com/orchidsoftware" class="nav-link">
-                            <svg width="1.5em" height="1.5em" viewBox="0 0 30 29" fill="currentColor"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10.1367 23.0703C10.1367 22.9531 10.0195 22.8359 9.84375 22.8359C9.66797 22.8359 9.55078 22.9531 9.55078 23.0703C9.55078 23.1875 9.66797 23.3047 9.84375 23.2461C10.0195 23.2461 10.1367 23.1875 10.1367 23.0703ZM8.32031 22.7773C8.32031 22.8945 8.4375 23.0703 8.61328 23.0703C8.73047 23.1289 8.90625 23.0703 8.96484 22.9531C8.96484 22.8359 8.90625 22.7188 8.73047 22.6602C8.55469 22.6016 8.37891 22.6602 8.32031 22.7773ZM10.957 22.7188C10.7812 22.7188 10.6641 22.8359 10.6641 23.0117C10.6641 23.1289 10.8398 23.1875 11.0156 23.1289C11.1914 23.0703 11.3086 23.0117 11.25 22.8945C11.25 22.7773 11.0742 22.6602 10.957 22.7188ZM14.7656 0.21875C6.67969 0.21875 0.46875 6.42969 0.46875 14.5156C0.46875 21.0195 4.51172 26.5859 10.3711 28.5781C11.1328 28.6953 11.3672 28.2266 11.3672 27.875C11.3672 27.4648 11.3672 25.4727 11.3672 24.2422C11.3672 24.2422 7.26562 25.1211 6.38672 22.4844C6.38672 22.4844 5.74219 20.7852 4.80469 20.375C4.80469 20.375 3.45703 19.4375 4.86328 19.4375C4.86328 19.4375 6.32812 19.5547 7.14844 20.9609C8.4375 23.2461 10.5469 22.6016 11.4258 22.1914C11.543 21.2539 11.8945 20.6094 12.3633 20.1992C9.08203 19.8477 5.74219 19.3789 5.74219 13.7539C5.74219 12.1133 6.21094 11.3516 7.14844 10.2969C6.97266 9.88672 6.50391 8.36328 7.32422 6.3125C8.49609 5.96094 11.3672 7.89453 11.3672 7.89453C12.5391 7.54297 13.7695 7.42578 15 7.42578C16.2891 7.42578 17.5195 7.54297 18.6914 7.89453C18.6914 7.89453 21.5039 5.90234 22.7344 6.3125C23.5547 8.36328 23.0273 9.88672 22.9102 10.2969C23.8477 11.3516 24.4336 12.1133 24.4336 13.7539C24.4336 19.3789 20.9766 19.8477 17.6953 20.1992C18.2227 20.668 18.6914 21.5469 18.6914 22.9531C18.6914 24.8867 18.6328 27.3477 18.6328 27.8164C18.6328 28.2266 18.9258 28.6953 19.6875 28.5195C25.5469 26.5859 29.5312 21.0195 29.5312 14.5156C29.5312 6.42969 22.9102 0.21875 14.7656 0.21875ZM6.15234 20.4336C6.03516 20.4922 6.09375 20.668 6.15234 20.7852C6.26953 20.8438 6.38672 20.9023 6.50391 20.8438C6.5625 20.7852 6.5625 20.6094 6.44531 20.4922C6.32812 20.4336 6.21094 20.375 6.15234 20.4336ZM5.50781 19.9648C5.44922 20.082 5.50781 20.1406 5.625 20.1992C5.74219 20.2578 5.85938 20.2578 5.91797 20.1406C5.91797 20.082 5.85938 20.0234 5.74219 19.9648C5.625 19.9062 5.56641 19.9062 5.50781 19.9648ZM7.38281 22.0742C7.32422 22.1328 7.32422 22.3086 7.5 22.4258C7.61719 22.543 7.79297 22.6016 7.85156 22.4844C7.91016 22.4258 7.91016 22.25 7.79297 22.1328C7.67578 22.0156 7.5 21.957 7.38281 22.0742ZM6.73828 21.1953C6.62109 21.2539 6.62109 21.4297 6.73828 21.5469C6.85547 21.6641 6.97266 21.7227 7.08984 21.6641C7.14844 21.6055 7.14844 21.4297 7.08984 21.3125C6.97266 21.1953 6.85547 21.1367 6.73828 21.1953Z" />
-                            </svg>
-                        </a>
-                    </li>
-
-
-                    <li class="nav-item d-none d-xxl-flex align-items-center px-3">
-                        <input class="form-control" type="search" name="search" id="docsearch" autocomplete="off"
-                            size="32" placeholder='/ Search docs...'>
-                    </li>
-
-                </ul>
-
-                <ul class="nav nav-pills ms-auto">
-                    <li class="nav-item"><a href="./docs.html"
-                            class="btn btn-outline-primary">Documentation</a></li>
-                </ul>
-            </header>
-
-
-            <div class="px-3 py-md-5 my-md-5 text-md-center text-white">
-                <div class="col-xl-6 col-lg-8 mx-auto mb-5 pb-5 pt-3 pt-md-0">
-                    <h1 class="display-5 fw-bold mb-md-5 mb-3 text-balance">Genomics CAD Modeller system
+        <div class="container">
+            <div class="row my-3 my-md-5">
+                <div class="col-12 col-md-9 col-xl-6 mx-auto text-md-center">
+                    <h1 class="display-5 fw-bold px-3">
+                        <span class="d-block d-md-inline-block ">Say <span class="text-primary">goodbye</span></span>
+                        <small class="d-block">to Tedious Development</small>
                     </h1>
-                    <p class="lead mb-md-5 pb-md-5 mb-3 text-balance">
-                        GCModeller is an open source systems biology software which implemented by the latest
-                        Microsoft's .NET technology: written in the VisualBasic.NET language. Developed based on
-                        the sciBASC# scientific computing framework.
+
+                    <p class="lead text-muted mb-md-5 mb-3 opacity-slow intersection px-3 text-balance">
+                        GCModeller is designed for create workflows for
+                        make genomics component annotation, cellular network construction and links the different
+                        cellular component as model object for run virtual cell experiment and perferman the downstream
+                        data analysis.
                     </p>
                 </div>
             </div>
-        </div>
-    </div>
 
+            <div class="row g-4 g-xxl-5 g-lg-4 g-md-3 text-balance">
 
-    <div class="container position-relative d-none d-md-block" style="margin-top: -13em; z-index: 3">
-        <div class="col-lg-10 mx-auto">
-            <div id="carouselExampleCaptions" class="carousel carousel-dark slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/Xor.png" class="d-block w-100 pe-none img-fluid rounded-3">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/pxocgx01_blastx-lightbox.png" class="d-block w-100 pe-none img-fluid rounded-3">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/circos.png" class="d-block w-100 pe-none img-fluid rounded-3">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="container">
-        <div class="row my-3 my-md-5">
-            <div class="col-12 col-md-9 col-xl-6 mx-auto text-md-center">
-                <h1 class="display-5 fw-bold px-3">
-                    <span class="d-block d-md-inline-block ">Say <span class="text-primary">goodbye</span></span>
-                    <small class="d-block">to Tedious Development</small>
-                </h1>
-
-                <p class="lead text-muted mb-md-5 mb-3 opacity-slow intersection px-3 text-balance">
-                    GCModeller is designed for create workflows for
-                    make genomics component annotation, cellular network construction and links the different
-                    cellular component as model object for run virtual cell experiment and perferman the downstream
-                    data analysis.
-                </p>
-            </div>
-        </div>
-
-        <div class="row g-4 g-xxl-5 g-lg-4 g-md-3 text-balance">
-
-            <div class="col-12 col-xl-4">
-                <div class="card shadow-sm h-100 position-relative card-feature" style="background-image: url(img/next/rocket.svg);
+                <div class="col-12 col-xl-4">
+                    <div class="card shadow-sm h-100 position-relative card-feature" style="background-image: url(img/next/rocket.svg);
     background-position: -20% 120%;
     background-repeat: no-repeat;">
 
-                    <div class="card-body d-flex flex-column p-5">
+                        <div class="card-body d-flex flex-column p-5">
 
-                        <div class="mb-auto">
-                            <p class="h2 mb-3">Quick Start</p>
+                            <div class="mb-auto">
+                                <p class="h2 mb-3">Quick Start</p>
 
-                            <p>
-                                Orchid ship with the necessary technical documentation and examples for a quick and
-                                successful implementation
-                            </p>
-                        </div>
+                                <p>
+                                    Orchid ship with the necessary technical documentation and examples for a quick and
+                                    successful implementation
+                                </p>
+                            </div>
 
 
-                        <div class="mt-auto">
-                            <a href="/en/docs"
-                                class="link-secondary text-end d-block stretched-link text-decoration-none link-more">
-                                Documentation
-                                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor"
-                                    viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
+                            <div class="mt-auto">
+                                <a href="/en/docs"
+                                    class="link-secondary text-end d-block stretched-link text-decoration-none link-more">
+                                    Documentation
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor"
+                                        viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-xl-8">
-                <div class="card shadow-sm h-100 position-relative card-feature overflow-hidden">
+                <div class="col-12 col-xl-8">
+                    <div class="card shadow-sm h-100 position-relative card-feature overflow-hidden">
 
 
-                    <div class="row h-100">
+                        <div class="row h-100">
 
-                        <div class="col-12 col-md-5">
-                            <div class="card-body d-flex flex-column p-5 h-100">
+                            <div class="col-12 col-md-5">
+                                <div class="card-body d-flex flex-column p-5 h-100">
 
-                                <div class="mb-auto">
-                                    <p class="h2 mb-3">R# Package</p>
+                                    <div class="mb-auto">
+                                        <p class="h2 mb-3">R# Package</p>
 
-                                    <p>
-                                        Build modern apps that are 80% in PHP, and spend less time fiddling with tools
-                                        and updating incompatible libraries.
-                                        Focus on what matters most: creating exceptional features for your users.
-                                    </p>
-                                </div>
+                                        <p>
+                                            Build modern apps that are 80% in PHP, and spend less time fiddling with
+                                            tools
+                                            and updating incompatible libraries.
+                                            Focus on what matters most: creating exceptional features for your users.
+                                        </p>
+                                    </div>
 
 
-                                <div class="mt-auto">
+                                    <div class="mt-auto">
 
-                                    <a href="/en/docs/screens"
-                                        class="link-secondary d-block stretched-link text-decoration-none link-more">
-                                        Learn About Screens
+                                        <a href="/en/docs/screens"
+                                            class="link-secondary d-block stretched-link text-decoration-none link-more">
+                                            Learn About Screens
 
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
-                                            fill="currentColor" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                        </svg>
-                                    </a>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
+                                                fill="currentColor" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                            </svg>
+                                        </a>
 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="col-12 col-md-7 hero-code">
-                            <pre><code data-lang="php" class="notranslate"><span class="hl-keyword">require</span>(<span class="hl-type">GCModeller</span>);
+                            <div class="col-12 col-md-7 hero-code">
+                                <pre><code data-lang="php" class="notranslate"><span class="hl-keyword">require</span>(<span class="hl-type">GCModeller</span>);
 
 <span class="hl-keyword">class</span> <span class="hl-type">Task</span> <span class="hl-keyword">extends</span> <span class="hl-template">Screen</span>
 {
@@ -289,320 +171,288 @@
     }
 }
 </code></pre>
+                            </div>
+
                         </div>
+
 
                     </div>
-
-
                 </div>
-            </div>
 
-            <div class="col-12 col-xl-8">
-                <div class="card shadow-sm h-100 position-relative card-feature overflow-hidden">
-
-
-                    <div class="row h-100">
-
-                        <div class="col-12 col-md-6">
-                            <div class="card-body d-flex flex-column p-5 h-100">
-
-                                <div class="mb-auto">
-                                    <p class="h2 mb-3">UI components</p>
-
-                                    <p>
-                                        Orchid offers a vast selection of stunning UI components, including form inputs,
-                                        dialogs, data grids, and visualizations.
-                                        These components can be easily extended, and you can even create compositions
-                                        directly in your code.
-                                    </p>
-                                </div>
+                <div class="col-12 col-xl-8">
+                    <div class="card shadow-sm h-100 position-relative card-feature overflow-hidden">
 
 
-                                <div class="mt-auto">
+                        <div class="row h-100">
 
-                                    <p class="text-muted mb-2">Browse components:</p>
+                            <div class="col-12 col-md-6">
+                                <div class="card-body d-flex flex-column p-5 h-100">
 
+                                    <div class="mb-auto">
+                                        <p class="h2 mb-3">UI components</p>
 
-
-                                    <a href="/en/docs/field"
-                                        class="link-secondary d-inline-flex align-items-center mb-1 text-decoration-none link-more">
-                                        Form Elements
-
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
-                                            fill="currentColor" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                        </svg>
-                                    </a>
-
-
-                                    <a href="/en/docs/table"
-                                        class="link-secondary d-inline-flex align-items-center mb-1 text-decoration-none link-more">
-                                        Tables
-
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
-                                            fill="currentColor" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                        </svg>
-                                    </a>
+                                        <p>
+                                            Orchid offers a vast selection of stunning UI components, including form
+                                            inputs,
+                                            dialogs, data grids, and visualizations.
+                                            These components can be easily extended, and you can even create
+                                            compositions
+                                            directly in your code.
+                                        </p>
+                                    </div>
 
 
-                                    <a href="/en/docs/legend"
-                                        class="link-secondary d-inline-flex align-items-center mb-1 text-decoration-none link-more">
-                                        Legend
+                                    <div class="mt-auto">
 
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
-                                            fill="currentColor" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                        </svg>
-                                    </a>
+                                        <p class="text-muted mb-2">Browse components:</p>
 
 
-                                    <a href="/en/docs/charts"
-                                        class="link-secondary d-inline-flex align-items-center mb-1 text-decoration-none link-more">
-                                        Charts
 
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
-                                            fill="currentColor" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                        </svg>
-                                    </a>
+                                        <a href="/en/docs/field"
+                                            class="link-secondary d-inline-flex align-items-center mb-1 text-decoration-none link-more">
+                                            Form Elements
 
-
-                                    <a href="/en/docs/modals"
-                                        class="link-secondary d-inline-flex align-items-center mb-1 text-decoration-none link-more">
-                                        Modals
-
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
-                                            fill="currentColor" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                        </svg>
-                                    </a>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
+                                                fill="currentColor" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                            </svg>
+                                        </a>
 
 
+                                        <a href="/en/docs/table"
+                                            class="link-secondary d-inline-flex align-items-center mb-1 text-decoration-none link-more">
+                                            Tables
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
+                                                fill="currentColor" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                            </svg>
+                                        </a>
+
+
+                                        <a href="/en/docs/legend"
+                                            class="link-secondary d-inline-flex align-items-center mb-1 text-decoration-none link-more">
+                                            Legend
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
+                                                fill="currentColor" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                            </svg>
+                                        </a>
+
+
+                                        <a href="/en/docs/charts"
+                                            class="link-secondary d-inline-flex align-items-center mb-1 text-decoration-none link-more">
+                                            Charts
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
+                                                fill="currentColor" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                            </svg>
+                                        </a>
+
+
+                                        <a href="/en/docs/modals"
+                                            class="link-secondary d-inline-flex align-items-center mb-1 text-decoration-none link-more">
+                                            Modals
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
+                                                fill="currentColor" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                            </svg>
+                                        </a>
+
+
+                                    </div>
                                 </div>
                             </div>
+
+                            <div class="d-none d-md-block col-md-6">
+                                <div class="pt-5 pe-5">
+                                    <img src="img/next/table.svg" class="img-fluid">
+                                </div>
+                            </div>
+
                         </div>
 
-                        <div class="d-none d-md-block col-md-6">
-                            <div class="pt-5 pe-5">
-                                <img src="img/next/table.svg" class="img-fluid">
-                            </div>
-                        </div>
 
                     </div>
-
-
                 </div>
-            </div>
-            <div class="col-12 col-lg-6 col-xl-4">
-                <div class="card shadow-sm h-100 position-relative card-feature" style="background-image: url(img/next/shield.svg);
+                <div class="col-12 col-lg-6 col-xl-4">
+                    <div class="card shadow-sm h-100 position-relative card-feature" style="background-image: url(img/next/shield.svg);
     background-position: -10% 101%;
     background-repeat: no-repeat;">
 
-                    <div class="card-body d-flex flex-column p-5">
+                        <div class="card-body d-flex flex-column p-5">
 
-                        <div class="mb-auto">
-                            <p class="h2 mb-3">Permissions</p>
+                            <div class="mb-auto">
+                                <p class="h2 mb-3">Permissions</p>
 
-                            <p>
-                                Manage user permissions and ensure application security effortlessly.
-                                Backed by an intuitive interface, it's easy to set up and manage roles, without complex
-                                coding or external plugins.
-                            </p>
-                        </div>
+                                <p>
+                                    Manage user permissions and ensure application security effortlessly.
+                                    Backed by an intuitive interface, it's easy to set up and manage roles, without
+                                    complex
+                                    coding or external plugins.
+                                </p>
+                            </div>
 
 
-                        <div class="mt-auto">
-                            <a href="/en/docs/access"
-                                class="link-secondary text-end d-block stretched-link text-decoration-none link-more">
-                                Learn About Permissions
+                            <div class="mt-auto">
+                                <a href="/en/docs/access"
+                                    class="link-secondary text-end d-block stretched-link text-decoration-none link-more">
+                                    Learn About Permissions
 
-                                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor"
-                                    viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor"
+                                        viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
 
 
-            <div class="col-12 col-lg-6 col-xl-4">
-                <div class="card shadow-sm h-100 position-relative card-feature" style="background-image: url(img/next/attachments.svg);
+                <div class="col-12 col-lg-6 col-xl-4">
+                    <div class="card shadow-sm h-100 position-relative card-feature" style="background-image: url(img/next/attachments.svg);
     background-position: 50% 70%;
     background-repeat: no-repeat;">
 
-                    <div class="card-body d-flex flex-column p-5">
+                        <div class="card-body d-flex flex-column p-5">
 
-                        <div class="mb-auto">
-                            <p class="h2 mb-3">Attachments</p>
+                            <div class="mb-auto">
+                                <p class="h2 mb-3">Attachments</p>
 
-                            <p>
-                                Easily attach any file to a record with Orchid’s flexible attachment system.
-                                Keep your data organized and streamline workflows by associating files with any model in
-                                your app.
-                            </p>
-                        </div>
+                                <p>
+                                    Easily attach any file to a record with Orchid’s flexible attachment system.
+                                    Keep your data organized and streamline workflows by associating files with any
+                                    model in
+                                    your app.
+                                </p>
+                            </div>
 
 
-                        <div class="mt-auto">
-                            <a href="/en/docs/attachments"
-                                class="link-secondary text-end d-block stretched-link text-decoration-none link-more">
-                                Learn About Attachment
+                            <div class="mt-auto">
+                                <a href="/en/docs/attachments"
+                                    class="link-secondary text-end d-block stretched-link text-decoration-none link-more">
+                                    Learn About Attachment
 
-                                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor"
-                                    viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor"
+                                        viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-lg-6 col-xl-4">
-                <div class="card shadow-sm h-100 position-relative card-feature" style="background-image: url(img/next/draw.svg);
+                <div class="col-12 col-lg-6 col-xl-4">
+                    <div class="card shadow-sm h-100 position-relative card-feature" style="background-image: url(img/next/draw.svg);
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: contain;">
 
-                    <div class="card-body d-flex flex-column p-5">
+                        <div class="card-body d-flex flex-column p-5">
 
-                        <div class="mb-auto">
-                            <p class="h2 mb-3">Design Guidelines</p>
+                            <div class="mb-auto">
+                                <p class="h2 mb-3">Design Guidelines</p>
 
-                            <p>
-                                Investing in a good user experience not only increases employee engagement, but also
-                                prevents expensive mistakes.
-                                That's why we place a high priority on providing detailed documentation to assist you in
-                                creating exceptional apps.
-                            </p>
-                        </div>
+                                <p>
+                                    Investing in a good user experience not only increases employee engagement, but also
+                                    prevents expensive mistakes.
+                                    That's why we place a high priority on providing detailed documentation to assist
+                                    you in
+                                    creating exceptional apps.
+                                </p>
+                            </div>
 
 
-                        <div class="mt-auto">
-                            <a href="/en/hig"
-                                class="link-secondary text-end d-block stretched-link text-decoration-none link-more">
-                                Read Guideline
+                            <div class="mt-auto">
+                                <a href="/en/hig"
+                                    class="link-secondary text-end d-block stretched-link text-decoration-none link-more">
+                                    Read Guideline
 
-                                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor"
-                                    viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor"
+                                        viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-lg-6 col-xl-4">
-                <div class="card shadow-sm h-100 position-relative card-feature">
+                <div class="col-12 col-lg-6 col-xl-4">
+                    <div class="card shadow-sm h-100 position-relative card-feature">
 
-                    <img src="img/next/feature3-tentacli.svg" class="d-none d-md-block pe-none position-absolute" style="
+                        <img src="img/next/feature3-tentacli.svg" class="d-none d-md-block pe-none position-absolute"
+                            style="
     top: 16em;
     left: -1.8em;
     height: 10em;">
 
-                    <div class="card-body d-flex flex-column p-5">
+                        <div class="card-body d-flex flex-column p-5">
 
-                        <div class="mb-auto">
-                            <p class="h2 mb-3">Never limited by the framework abstraction</p>
+                            <div class="mb-auto">
+                                <p class="h2 mb-3">Never limited by the framework abstraction</p>
 
-                            <p>
-                                Relies entirely on browser and W3C standards, providing customization options to bring
-                                your vision to life.
-                            </p>
+                                <p>
+                                    Relies entirely on browser and W3C standards, providing customization options to
+                                    bring
+                                    your vision to life.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
-    </div>
-
-    <div class="container">
-
-
-        <div class="row align-items-center my-3 py-3 my-md-5 py-md-5">
-
-            <div class="col-12 col-md-6 col-xl-5">
-
-                <h2 class="display-5 fw-bold px-3">Free & <span class="text-primary">Open Source</span>
-                    <span class="d-block">for any purposes</span>
-                </h2>
-                <p class="lead px-lg-8 text-muted opacity-slow intersection px-3 text-balance">
-                    Everything that we do is 100% composed of open and free code, jointly developed by people from all
-                    over the world.
-                </p>
-
-                <a href="/en/license" class="link-secondary d-block text-decoration-none link-more px-3">View License
-                    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor"
-                        viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z">
-                        </path>
-                    </svg>
-                </a>
-
-            </div>
-
-            <div class="d-none d-md-block col-md-6 col-xl-7">
-                <div class="d-block text-decoration-none">
-
-                </div>
             </div>
         </div>
-    </div>
 
-    <div class="footer bg-dark">
         <div class="container">
-            <div class="row">
 
-                <div class="col-md-5 footer-tentacles"></div>
+            <div class="row align-items-center my-3 py-3 my-md-5 py-md-5">
 
-                <div class="col-12 col-md-7">
-                    <div class="px-md-4 py-lg-5 my-lg-5 pb-5 px-3">
-                        <h1 class="display-4 fw-bold mb-4 mb-md-5 text-balance">
-                            <span class="text-primary">Discover</span> even more.
-                        </h1>
-                        <div class="col-lg-7 me-md-auto ms-md-0 mx-auto">
-                            <p class="mb-0">
-                                <a href="/en/community/code-of-conduct" class="btn btn-outline-primary mb-3">Community
-                                    Guidelines</a>
+                <div class="col-12 col-md-6 col-xl-5">
 
-                                <a href="https://opencollective.com/orchid"
-                                    class="btn btn-outline-primary mb-3">Donation</a>
-                            </p>
-                            <p>
-                                <a href="https://github.com/orchidsoftware"
-                                    class="btn btn-outline-primary mb-3">GitHub</a>
-                                <a href="/en/discussions" class="btn btn-outline-primary mb-3">Discussion</a>
-                                <a href="/en/hig" class="btn btn-outline-primary mb-3">HIG</a>
-                                <a href="/en/license" class="btn btn-outline-primary mb-3">License</a>
+                    <h2 class="display-5 fw-bold px-3">Free & <span class="text-primary">Open Source</span>
+                        <span class="d-block">for any purposes</span>
+                    </h2>
+                    <p class="lead px-lg-8 text-muted opacity-slow intersection px-3 text-balance">
+                        Everything that we do is 100% composed of open and free code, jointly developed by people from
+                        all
+                        over the world.
+                    </p>
 
-                            </p>
-                        </div>
-                        <small class="mt-5 mb-0">
-                            <a href="/en/docs" class="text-white">English</a> /
-                            <a href="/ru/docs" class="text-muted">中文</a>
-                        </small>
-                    </div>
+                    <a href="/en/license" class="link-secondary d-block text-decoration-none link-more px-3">View
+                        License
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z">
+                            </path>
+                        </svg>
+                    </a>
+
                 </div>
 
+                <div class="d-none d-md-block col-md-6 col-xl-7">
+                    <div class="d-block text-decoration-none">
+
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <script src="js/app.js?id=226a26f2e78e9e07674730e9bb9e200f"></script>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+        <%= ./includes/footer.vbhtml %>
 
 </body>
 
