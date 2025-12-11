@@ -1,22 +1,15 @@
 <div class="bg-dark bg-main position-relative">
 
     <div class="d-none d-md-block position-absolute start-0 end-0 bottom-0 top-0 overflow-hidden pe-none">
-
-        <!-- <img src="img/next/menu-tentacli.svg" class="position-absolute" style="right: 25vw;top: -3em;">
-        <img src="img/next/main-tentacli-left.svg" class="position-absolute" style="left: 16vw;bottom: -1em;">
-        <img src="img/next/main-tentacli-right.svg" class="position-absolute" style="right: 7vw;bottom: -7em;"> -->
-
     </div>
-
 
     <div class="container pt-md-4 pt-2 position-relative" style="z-index: 1">
         <header class="d-flex flex-wrap align-items-center justify-content-center py-3 mb-4 px-4 position-relative">
             <a href="/" class="d-flex align-items-center mb-0 me-md-auto text-dark text-decoration-none">
-                <img class="logo" src="img/nav-logo.png">
+                <img class="logo" src="/img/nav-logo.png">
             </a>
 
             <ul class="nav nav-pills mx-auto align-items-center d-none d-md-inline-flex">
-
                 <li class="nav-item">
                     <a href="/en/donations" class="nav-link">
                         Donation
@@ -51,7 +44,7 @@
             </ul>
 
             <ul class="nav nav-pills ms-auto">
-                <li class="nav-item"><a href="./docs.html" class="btn btn-outline-primary">Documentation</a></li>
+                <li class="nav-item"><a href="/docs.html" class="btn btn-outline-primary">Documentation</a></li>
             </ul>
         </header>
 
