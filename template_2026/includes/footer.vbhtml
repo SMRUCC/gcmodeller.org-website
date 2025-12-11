@@ -27,7 +27,7 @@
                     </div>
                     <small class="mt-5 mb-0">
                         <a href="/en/docs" class="text-white">English</a> /
-                        <a href="/ru/docs" class="text-muted">中文</a>
+                        <a href="/zh/docs" class="text-muted">中文</a>
                     </small>
                 </div>
             </div>
@@ -36,5 +36,5 @@
     </div>
 </div>
 
-<script src="js/app.js?id=226a26f2e78e9e07674730e9bb9e200f"></script>
-<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/js/app.js?id=226a26f2e78e9e07674730e9bb9e200f"></script>
+<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
