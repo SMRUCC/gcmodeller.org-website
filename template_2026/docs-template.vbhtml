@@ -272,7 +272,7 @@
                         <main class="py-2 px-3 py-md-2 px-md-4 px-xl-5 ms-lg-4 me-lg-auto order-md-first overflow-auto">
 
                             <div class="d-flex align-items-center mb-3 mt-3">
-                                <h1 class="me-3">{$title}</h1>
+                                <h1 class="me-3">@title</h1>
 
                                 <a href="https://github.com/orchidsoftware/orchid.software/edit/master/docs/en/docs/index.md"
                                     class="btn btn-outline-dark ms-auto d-none d-md-flex align-items-center text-decoration-none text-nowrap"
@@ -318,7 +318,7 @@
 
                             <body>
                                 
-                                {$docs}
+                                @docs
 
                             </body>
 

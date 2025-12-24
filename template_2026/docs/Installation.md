@@ -2,7 +2,7 @@
 
 ### .NET application development
 
-install the gcmodeller via install nuget package from visual studio: [gcmodeller nuget packages](http://nuget.xieguigang.me:8848/?q=gcmodeller)
+Use the gcmodeller library for develop your bioinformatics software. just install the gcmodeller via install nuget package from visual studio: [gcmodeller nuget packages](http://nuget.xieguigang.me:8848/?q=gcmodeller)
 
 ### Use Docker Image
 

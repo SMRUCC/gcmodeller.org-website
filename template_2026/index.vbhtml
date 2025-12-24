@@ -121,10 +121,7 @@
                                         <p class="h2 mb-3">R# Package</p>
 
                                         <p>
-                                            Build modern apps that are 80% in PHP, and spend less time fiddling with
-                                            tools
-                                            and updating incompatible libraries.
-                                            Focus on what matters most: creating exceptional features for your users.
+                                            Write script file in R script style programming language for run processing of your data, run bioinformatics analysis and do data visualization.
                                         </p>
                                     </div>
 

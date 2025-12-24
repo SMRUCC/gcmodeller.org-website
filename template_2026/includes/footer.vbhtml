@@ -17,7 +17,7 @@
                     </h1>
                     <div class="col-lg-7 me-md-auto ms-md-0 mx-auto">
                         <p class="mb-0">
-                            <a href="/en/community/code-of-conduct" class="btn btn-outline-primary mb-3">Community
+                            <a href="https://github.com/SMRUCC/GCModeller/blob/master/CODE_OF_CONDUCT.md" class="btn btn-outline-primary mb-3">Community
                                 Guidelines</a>
 
                             <a href="https://opencollective.com/orchid"
