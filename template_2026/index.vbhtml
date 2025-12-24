@@ -429,7 +429,7 @@
                         over the world.
                     </p>
 
-                    <a href="/en/license" class="link-secondary d-block text-decoration-none link-more px-3">View
+                    <a href="/license.html" class="link-secondary d-block text-decoration-none link-more px-3">View
                         License
                         <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor"
                             viewBox="0 0 16 16">
