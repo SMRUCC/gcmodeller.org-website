@@ -1,0 +1,6 @@
+{
+  "markdown": {
+    "template": "docs-template.vbhtml",
+    "source": "docs"
+  }
+}
