@@ -4,10 +4,11 @@
     "template": "docs-template.vbhtml",
     "source": "docs",
     "menu": {
+      // config menu html
       "section": "<p class='h5 font-weight-normal my-lg-3 my-2 me-2 me-lg-0 d-none d-md-inline-block' style='color: #22184D8C'>@section</p>",
       "list": {
         "list": "<ul>@list</ul>",
-        "item": "<li class='border-start border-3 px-2 px-lg-3 py-1 border-primary active-doc-menu'>@item</li>"
+        "item": "<li class='border-start border-3 px-2 px-lg-3 py-1'><a href='/docs/@section/@item.html' class='text-decoration-none'>@item</a></li>"
       }
     }
   }

@@ -30,46 +30,8 @@
 
                     <div class="col-12 col-lg-auto bg-grey py-lg-3 d-flex flex-column text-balance"
                         style="background:#F9F9FE;z-index: 2">
-                        <nav class="nav-docs px-lg-5 py-2 px-3">
-                            <p class="h5 font-weight-normal my-lg-3 my-2 me-2 me-lg-0 d-none d-md-inline-block"
-                                style="color: #22184D8C">Get Started</p>
-
-                            <ul>
-                                <li class="border-start border-3 px-2 px-lg-3 py-1 border-primary active-doc-menu">
-                                    <a href="/en/docs" class="text-decoration-none text-primary">
-                                        Introduction
-                                    </a>
-                                </li>
-                                <li class="border-start border-3 px-2 px-lg-3 py-1 ">
-                                    <a href="/en/docs/installation" class="text-decoration-none ">
-                                        Installation
-                                    </a>
-                                </li>
-                                <li class="border-start border-3 px-2 px-lg-3 py-1 ">
-                                    <a href="/en/docs/configuration" class="text-decoration-none ">
-                                        Configuration
-                                    </a>
-                                </li>
-                                <li class="border-start border-3 px-2 px-lg-3 py-1 ">
-                                    <a href="/en/docs/structure" class="text-decoration-none ">
-                                        Directory Structure
-                                    </a>
-                                </li>
-                                <li class="border-start border-3 px-2 px-lg-3 py-1 ">
-                                    <a href="/en/docs/brand" class="text-decoration-none ">
-                                        Basic Branding
-                                    </a>
-                                </li>
-                                <li class="border-start border-3 px-2 px-lg-3 py-1 ">
-                                    <a href="/en/docs/upgrade" class="text-decoration-none ">
-                                        Upgrade Guide
-                                    </a>
-                                </li>
-                            </ul>
-
-
-                        </nav>
-
+                        
+                        <nav class="nav-docs px-lg-5 py-2 px-3">@menu</nav>
 
                         <div class="d-none d-xl-block h-100 position-relative pt-5">
                             <a href="#" title="Scroll to the top of the page" class="stretched-link"></a>
@@ -124,7 +86,7 @@
                             </div>
 
                             <body>
-                                
+
                                 @docs
 
                             </body>
@@ -134,22 +96,7 @@
 
                     <div class="d-none d-xxl-block col-xxl-auto bg-white">
                         <div class="pt-5 d-none d-lg-flex flex-column mb-3">
-                            <p class="mb-1 d-none d-md-inline-block text-dark opacity-75 text-center small">
-                                Our Friends
-                            </p>
 
-                            <div class="d-flex flex-column friends">
-                                <!-- <a href="https://github.com/Assisted-Mindfulness?utm_source=orchid&utm_medium=docs&utm_campaign=friends"
-                                class="mt-2 py-3 rounded-3 mx-4" target="_blank" style="background: #2624300f;">
-                                <img src="/img/sponsors/assisted-mindfulness-logo.svg" class="rounded-3" height="40px">
-                            </a>
-
-                            <a href="https://sajya.github.io?utm_source=orchid&utm_medium=docs&utm_campaign=friends"
-                                class="mt-2 py-3 rounded-3 mx-4" target="_blank" style="background: #2624300f;">
-                                <img src="/img/sponsors/sajya.svg" class="rounded-3" height="40px">
-                            </a> -->
-
-                            </div>
                         </div>
                     </div>
                 </div>
