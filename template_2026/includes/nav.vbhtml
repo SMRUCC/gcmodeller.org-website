@@ -26,7 +26,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item"><a href="https://github.com/orchidsoftware" class="nav-link">
+                <li class="nav-item"><a href="https://github.com/SMRUCC/GCModeller" class="nav-link">
                         <svg width="1.5em" height="1.5em" viewBox="0 0 30 29" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -51,7 +51,7 @@
 
         <div class="px-3 py-md-5 my-md-5 text-md-center text-white">
             <div class="col-xl-6 col-lg-8 mx-auto mb-5 pb-5 pt-3 pt-md-0">
-                <h1 class="display-5 fw-bold mb-md-5 mb-3 text-balance">Genomics CAD Modeller system
+                <h1 class="display-5 fw-bold mb-md-5 mb-3 text-balance">Genomics CAD Modeller System
                 </h1>
                 <p class="lead mb-md-5 pb-md-5 mb-3 text-balance">
                     GCModeller is an open source systems biology software which implemented by the latest

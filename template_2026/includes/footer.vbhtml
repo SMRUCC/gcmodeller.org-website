@@ -2,7 +2,13 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-md-5 footer-tentacles"></div>
+            <div class="col-md-5 footer-tentacles">
+
+                <span>© 2026 | SMRUCC genomics · 中國 桂林</span>
+                <br />
+                <a href="mailto://xie.guigang@gcmodeller.org"><span
+                        style="color: white;">xie.guigang@gcmodeller.org</span></a>
+            </div>
 
             <div class="col-12 col-md-7">
                 <div class="px-md-4 py-lg-5 my-lg-5 pb-5 px-3">
@@ -18,10 +24,10 @@
                                 class="btn btn-outline-primary mb-3">Donation</a>
                         </p>
                         <p>
-                            <a href="https://github.com/orchidsoftware" class="btn btn-outline-primary mb-3">GitHub</a>
+                            <a href="https://github.com/SMRUCC/GCModeller" class="btn btn-outline-primary mb-3">GitHub</a>
                             <a href="/en/discussions" class="btn btn-outline-primary mb-3">Discussion</a>
                             <a href="/en/hig" class="btn btn-outline-primary mb-3">HIG</a>
-                            <a href="/en/license" class="btn btn-outline-primary mb-3">License</a>
+                            <a href="/license.html" class="btn btn-outline-primary mb-3">License</a>
 
                         </p>
                     </div>
