@@ -95,7 +95,7 @@
 
 
                             <div class="mt-auto">
-                                <a href="/en/docs"
+                                <a href="/docs.html"
                                     class="link-secondary text-end d-block stretched-link text-decoration-none link-more">
                                     Documentation
                                     <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor"
