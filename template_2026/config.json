@@ -1,4 +1,5 @@
 {
+  "ignores": ["clr.vbhtml"],
   // flutebuild  /compile /view G:\gcmodeller.org-website\template_2026 /wwwroot Z:/html --listen
   "markdown": {
     "template": "docs-template.vbhtml",
