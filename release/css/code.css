@@ -1,0 +1,33 @@
+.character {
+    color: brown;
+}
+
+.comment {
+    color: green;
+    font-style: italic;
+}
+
+.number {
+    color: skyblue;
+}
+
+.keyword {
+    color: blue;
+    font-weight: bold;
+}
+
+.operator {
+    color: gray;
+    font-weight: bold;
+}
+
+.bracket {
+    color: rgb(197, 1, 197);
+    font-weight: bold;
+}
+
+.logical {
+    color: fuchsia;
+    font-style: italic;
+}
+
