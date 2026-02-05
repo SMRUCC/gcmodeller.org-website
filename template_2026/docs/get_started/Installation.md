@@ -12,6 +12,9 @@ docker pull xieguigang/gcmodeller-env:alpha-0.0.43
 
 ## Install in R# environment
 
-```
+```bash
+# Download and install R# runtime
+dpkg -i renv_1.0.0_amd64.deb
+# and then install the gcmodeller package into the R# runtime system
 R# --install.packages ./gcmodeller.zip
 ```
