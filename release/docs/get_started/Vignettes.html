@@ -19,7 +19,7 @@
 <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/css/app.css?id=fdf453464b364088fc4203cb77580f7f">
 
-<title>Motif Finding</title>
+<title>Vignettes</title>
 
 <meta name="title" content="GCModeller: genomics CAD(Computer Assistant Design) Modeller system in .NET language">
 <meta name="description" content="GCModeller: genomics CAD(Computer Assistant Design) Modeller system in .NET language">
@@ -154,7 +154,7 @@
                         <main class="py-2 px-3 py-md-2 px-md-4 px-xl-5 ms-lg-4 me-lg-auto order-md-first overflow-auto">
 
                             <div class="d-flex align-items-center mb-3 mt-3">
-                                <h1 class="me-3">Motif Finding</h1>
+                                <h1 class="me-3">Vignettes</h1>
 
                                 <a href="https://github.com/orchidsoftware/orchid.software/edit/master/docs/en/docs/index.md"
                                     class="btn btn-outline-dark ms-auto d-none d-md-flex align-items-center text-decoration-none text-nowrap"
@@ -200,40 +200,9 @@
 
                             <body>
 
-                                <h1>Motif Finding</h1>
+                                <h1>Vignettes</h1>
 
-<p>
-
-<pre><code class="r">require(GCModeller);
-
-imports "bioseq.patterns" from "seqtoolkit";
-imports "bioseq.fasta" from "seqtoolkit";
-
-# read sequence data and found motif via gibbs scan method
-let raw = read.fasta("Staphylococcaceae_LexA___Staphylococcaceae.fasta");
-let motif = gibbs_scan(raw, width = 18);
-
-# draw sequence logo of the generated motif
-bitmap(file = "LexA.png") {
-    plot.seqLogo(motif, title = "LexA");
-}
-svg(file = "LexA.svg") {
-    plot.seqLogo(motif, title = "LexA");
-}
-pdf(file = "LexA.pdf") {    
-    plot.seqLogo(motif, title = "LexA");
-}
-
-# cast motif data result as dataframe and export to table file
-motif = as.data.frame(motif);
-motif = motif[order(motif$score),];
-
-print(motif, max.print = 13);
-
-write.csv(motif, file = "LexA.csv");
-</code></pre>
-
-</p>
+<p>View the R# language api documentations of GCModeller package, visit the <a href='/vignettes/index.html' title='vignettes index page'>vignettes index page</a>;</p>
 
                             </body>
 

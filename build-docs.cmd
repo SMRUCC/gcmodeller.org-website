@@ -3,4 +3,4 @@
 SET js_url="https://gcmodeller.org/lib/R_syntax.js"
 SET Rscript="\GCModeller\src\R-sharp\App\net8.0\Rscript.exe"
 
-%Rscript% --build /src "G:\GCModeller\src\workbench\pkg" --skip-src-build --github-page %js_url% --doc-template G:\gcmodeller.org-website\release\vignettes.html
+%Rscript% --build /src "G:\GCModeller\src\workbench\pkg" --skip-src-build --github-page %js_url% --doc-template G:\gcmodeller.org-website\release\vignettes.html --clr-template G:\gcmodeller.org-website\release\clr.html

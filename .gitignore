@@ -11,3 +11,5 @@ node_modules/
 obj/
 *.dll
 psd/~$46046-life science ppt templates.pptx
+
+release/vignettes

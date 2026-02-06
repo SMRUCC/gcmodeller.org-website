@@ -4,7 +4,7 @@
 <head>
     <%= ./includes/head.vbhtml %>
 
-        <link rel="stylesheet" type="text/css" href="%r_css%">
+    <link rel="stylesheet" type="text/css" href="/css/code.css">
 </head>
 
 <body>
