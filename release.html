@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    :root {
+      --color-primary: #9B1B30; /* 印泥红 */
+      --color-accent-blue: #5B9BD5; /* 科学蓝 */
+      --color-bg-soft: #f5f5f5;
+      --color-text: #1F1F1F;
+    }
+
+    .changelog-container {
+      max-width: 800px;
+      margin: 120px auto 40px;
+      padding: 0 1.5rem;
+    }
+
+    .changelog-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    /* 垂直时间轴 */
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #e0e0e0; /* 时间轴线 */
+    }
+
+    .version-entry {
+      position: relative;
+      margin-bottom: 3rem;
+    }
+
+    /* 红色印章节点 */
+    .version-entry::before {
+      content: '';
+      position: absolute;
+      left: -29px;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      background: var(--color-primary);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(155, 27, 48, 0.2); /* 印章晕染效果 */
+    }
+
+    .version-card {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .version-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .version-number {
+      font-family: var(--font-heading, Georgia, serif);
+      font-size: 1.4rem;
+      color: var(--color-primary);
+      font-weight: bold;
+    }
+
+    .version-date {
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    .change-category {
+      margin-bottom: 1rem;
+    }
+
+    .category-label {
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .category-label.added { color: var(--color-primary); }
+    .category-label.changed { color: var(--color-accent-blue); }
+    .category-label.fixed { color: #666; }
+
+    .change-item {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .change-item::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="changelog-container">
+    <div class="changelog-header">
+      <h2>Evolution Log</h2>
+      <p>Trace the evolution of GCModeller. Every update brings us closer to the virtual cell.</p>
+    </div>
+
+    <div class="timeline">
+      <!-- 版本 v2.5.0 -->
+      <div class="version-entry">
+        <div class="version-card">
+          <div class="version-title">
+            <span class="version-number">v2.5.0</span>
+            <span class="version-date">2023-10-27</span>
+          </div>
+
+          <div class="change-category">
+            <div class="category-label added">🧬 Added (New Features)</div>
+            <div class="change-item">
+              <strong>Dynamic FBA module for virtual cell:</strong> Implemented time-series flux balance analysis in <code>GCModeller.VirtualCell</code>, allowing in-silico gene knockout simulations via R# scripts.
+            </div>
+            <div class="change-item">
+              Added support for parsing latest KEGG orthology database format.
+            </div>
+          </div>
+
+          <div class="change-category">
+            <div class="category-label changed">🛠 Changed (Improvements)</div>
+            <div class="change-item">
+              Optimized memory allocation for genome-scale metabolic models. 30% faster loading for large models.
+            </div>
+          </div>
+
+          <div class="change-category">
+            <div class="category-label fixed">🐛 Fixed (Bug Fixes)</div>
+            <div class="change-item">
+              Fixed a parsing error in transcriptomics data input when handling missing values.
+            </div>
+          </div>
+          
+          <a href="#" style="font-size:0.85rem; color: var(--color-accent-blue);">View full commit log on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- 版本 v2.4.0 -->
+      <div class="version-entry">
+        <!-- 重复上述结构... -->
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
