@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>GCModeller – Open CAD for Virtual Cell Engineering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --color-primary: #9B1B30;
+      /* seal red */
+      --color-primary-soft: rgba(155, 27, 48, 0.92);
+      --color-text: #1F1F1F;
+      --color-bg: #ffffff;
+      --color-bg-soft: #f5f5f5;
+      --color-accent-pink: #E5C6D0;
+      /* inner seal color */
+      --color-accent-blue: #5B9BD5;
+      /* science accent */
+      --font-heading: "Georgia", serif;
+      --font-body: "Inter", "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      color: var(--color-text);
+      background: var(--color-bg);
+    }
+
+    /* NAVBAR */
+    nav.site-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 0.5rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: transparent;
+      transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      color: #ffffff;
+    }
+
+    nav.site-nav.scrolled {
+      background: var(--color-primary-soft);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    nav.site-nav a {
+      color: inherit;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: 500;
+    }
+
+    nav.site-nav a:first-child {
+      margin-left: 0;
+    }
+
+    /* HERO */
+    header.hero {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 1.5rem 2rem;
+      background: radial-gradient(circle at top, #2b0a12 0, #1f0b12 40%, #050505 100%);
+      color: #ffffff;
+      position: relative;
+    }
+
+    header.hero h1 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      max-width: 640px;
+      margin-bottom: 0.75rem;
+    }
+
+    header.hero p {
+      max-width: 640px;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      color: #e5e5e5;
+    }
+
+    header.hero .cta-group {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      border: none;
+      background: var(--color-primary);
+      color: #ffffff;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .btn-secondary {
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      background: transparent;
+      color: #ffffff;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    /* CAROUSEL */
+    section.carousel-section {
+      padding: 2rem 1.5rem;
+      background: var(--color-bg-soft);
+    }
+
+    .carousel-container {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+    }
+
+    .carousel-slide {
+      flex: 0 0 80%;
+      scroll-snap-align: center;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1100;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-size: 2rem;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    .lightbox-content {
+      text-align: center;
+      max-width: 90vw;
+      max-height: 90vh;
+    }
+
+    .lightbox-content img {
+      max-width: 100%;
+      max-height: 80vh;
+      margin-bottom: 0.5rem;
+    }
+
+    .lightbox-caption {
+      color: #e5e5e5;
+      font-size: 0.9rem;
+    }
+
+    /* THEMES */
+    section.themes {
+      padding: 3rem 1.5rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .theme-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .theme-card {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+      border-top: 4px solid var(--color-primary);
+    }
+
+    .theme-card h3 {
+      font-family: var(--font-heading);
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      color: var(--color-primary);
+    }
+
+    .theme-card p {
+      margin-bottom: 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    /* HOW IT WORKS */
+    section.how-it-works {
+      padding: 3rem 1.5rem;
+      background: var(--color-bg-soft);
+    }
+
+    .how-it-works-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .how-it-works h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .how-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .how-step h3 {
+      font-family: var(--font-heading);
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .how-step p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+
+    /* GET STARTED */
+    section.get-started {
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    .get-started-inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .get-started p {
+      margin-bottom: 1.25rem;
+    }
+
+    .get-started .cta-group {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* FOOTER */
+    footer.site-footer {
+      padding: 1.5rem;
+      background: var(--color-primary);
+      color: #ffffff;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.85rem;
+    }
+
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .footer-logo {
+      height: 40px;
+      width: auto;
+    }
+
+    .footer-center {
+      flex: 1;
+      min-width: 200px;
+      margin: 0.5rem 0;
+    }
+
+    .footer-slogan {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .footer-right a {
+      color: #ffffff;
+      margin-left: 0.75rem;
+      text-decoration: none;
+    }
+
+    .footer-right a:first-child {
+      margin-left: 0;
+    }
+
+    @media (max-width: 768px) {
+      header.hero h1 {
+        font-size: 2rem;
+      }
+
+      .carousel-slide {
+        flex: 0 0 90%;
+      }
+
+      nav.site-nav {
+        padding: 0.4rem 1rem;
+      }
+
+      footer.site-footer {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="site-nav" id="siteNav">
+    <div>
+     <img src="logo.png" style="max-width: 5%;"> <strong>GCModeller</strong>
+    </div>
+    <div>
+      <a href="/index.html">Home</a>
+      <a href="/development.html">Development</a>
+      <a href="/download.html">Download</a>
+      <a href="/community.html">Community</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Design Life. Simulate Cells. Engineer Genomes.</h1>
+    <p>
+      GCModeller is an open‑source CAD platform for virtual cell engineering and multi‑omics analysis,
+      built for systems biology and synthetic biology workflows. Script your models with R# and run
+      reproducible in‑silico experiments at genome scale.
+    </p>
+    <div class="cta-group">
+      <a href="/download" class="btn-primary">Download</a>
+      <a href="https://github.com/SMRUCC/GCModeller" target="_blank" class="btn-secondary">View on GitHub</a>
+    </div>
+  </header>
+
+  <!-- CAROUSEL -->
+  <section class="carousel-section">
+    <div class="carousel-container" id="carousel">
+      <div class="carousel-slide">
+        <img src="img/demo-cell-model.png" alt="Virtual cell model visualization">
+      </div>
+      <div class="carousel-slide">
+        <img src="img/demo-rsharp-script.png" alt="R# script calling GCModeller functions">
+      </div>
+      <div class="carousel-slide">
+        <img src="img/demo-simulation-plot.png" alt="Simulation output time course and omics plots">
+      </div>
+      <div class="carousel-slide">
+        <img src="img/demo-workflow.png" alt="GCModeller workflow: design, simulate, analyze">
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="carouselLightbox" class="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="">
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- THEMES -->
+  <section class="themes">
+    <div class="theme-grid">
+      <div class="theme-card">
+        <h3>Open Source by Nature</h3>
+        <p>
+          GCModeller is fully open source, with code hosted on GitHub. We believe transparency and
+          community contributions are essential for building trustworthy scientific software.
+        </p>
+      </div>
+      <div class="theme-card">
+        <h3>Life Science in the Loop</h3>
+        <p>
+          From pathogen virulence pathways to multi‑omics analysis of bacterial stress responses,
+          GCModeller is grounded in real‑world life science problems. We integrate genomics,
+          transcriptomics, and metabolomics into a unified virtual cell framework.
+        </p>
+      </div>
+      <div class="theme-card">
+        <h3>Industrial‑Grade CAD for Biology</h3>
+        <p>
+          Inspired by engineering CAD tools, GCModeller provides a robust, scriptable toolchain
+          for designing, simulating, and debugging cellular systems. With .NET and Rust at its core,
+          it’s designed for stability, reproducibility, and performance at scale.
+        </p>
+      </div>
+      <div class="theme-card">
+        <h3>Virtual Cells, Real Insights</h3>
+        <p>
+          Build whole‑cell models, simulate their behavior, and analyze multi‑omics outputs to
+          understand emergent phenotypes. GCModeller supports both forward engineering of synthetic
+          genomes and reverse engineering of natural ones.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works">
+    <div class="how-it-works-inner">
+      <h2>How GCModeller Works</h2>
+      <div class="how-steps">
+        <div class="how-step">
+          <h3>Design &amp; Annotate</h3>
+          <p>
+            Define your cellular model by annotating cell components and assembling a complete
+            data model. GCModeller provides annotation protocols and a structured environment for
+            building whole‑cell blueprints.
+          </p>
+        </div>
+        <div class="how-step">
+          <h3>Simulate &amp; Compute</h3>
+          <p>
+            Run simulated calculations on your annotated cell model. Store simulation trajectories
+            and multi‑omics states for later analysis, enabling in‑silico experiments under genetic
+            or environmental perturbations.
+          </p>
+        </div>
+        <div class="how-step">
+          <h3>Analyze &amp; Redesign</h3>
+          <p>
+            Analyze simulation outputs with built‑in tools for omics data interpretation, then
+            refine your model. Export designed cell models to full‑length genome sequences for
+            synthetic or experimental validation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET STARTED -->
+  <section class="get-started">
+    <div class="get-started-inner">
+      <h2>Get Started with GCModeller</h2>
+      <p>
+        Download the latest release and run your first virtual cell model in minutes. Explore the
+        documentation, try example workflows, and join the community to shape the future of open
+        CAD for life.
+      </p>
+      <div class="cta-group">
+        <a href="/download" class="btn-primary">Download</a>
+        <a href="/docs" class="btn-secondary">Read the Docs</a>
+        <a href="/community" class="btn-secondary">Join the Community</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-left">
+      <img src="logo.png" alt="GCModeller Logo" class="footer-logo">
+    </div>
+    <div class="footer-center">
+      <p class="footer-slogan">From Code to Cell – Open CAD for Life</p>
+      <p>GCModeller: open‑source CAD for virtual cell engineering and multi‑omics analysis.</p>
+    </div>
+    <div class="footer-right">
+      <a href="/index.html">Home</a>
+      <a href="/development.html">Development</a>
+      <a href="/download.html">Download</a>
+      <a href="/community.html">Community</a>
+      <span>© 2026 GCModeller</span>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky navbar on scroll
+    const nav = document.getElementById('siteNav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 0) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // Carousel lightbox
+    const carousel = document.getElementById('carousel');
+    const lightbox = document.getElementById('carouselLightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    carousel.addEventListener('click', e => {
+      const img = e.target.closest('img');
+      if (!img) return;
+      lightboxImg.src = img.src;
+      lightboxCaption.textContent = img.alt;
+      lightbox.style.display = 'flex';
+    });
+
+    lightboxClose.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) lightbox.style.display = 'none';
+    });
+  </script>
+</body>
+
+</html>
