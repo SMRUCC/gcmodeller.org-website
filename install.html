@@ -1,197 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="color-scheme" content="dark" />
-<meta name="description" content="Install GCModeller: pull the xieguigang/gcmodeller-env Docker image and drive the system with R# scripts." />
-<title>Install — GCModeller</title>
-<link rel="icon" type="image/png" href="assets/img/favicon.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/theme.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="description"
+    content="Install GCModeller: pull the xieguigang/gcmodeller-env Docker image and drive the system with R# scripts." />
+  <title>Install — GCModeller</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/theme.css" />
 </head>
+
 <body>
 
-<header class="nav">
-  <a class="brand" href="index.html">
-    <img src="assets/img/logo.png" alt="GCModeller logo" />
-    <span class="brand-txt">
-      <strong>GCModeller</strong>
-      <em>genomics CAD · Modeller System</em>
-    </span>
-  </a>
-  <nav class="links">
-    <a href="index.html">Overview</a>
-    <a href="science.html">The Science</a>
-    <a href="install.html" class="active">Install</a>
-    <a href="docs.html">Docs</a>
-    <a class="gh" href="https://github.com/SMRUCC/GCModeller" target="_blank" rel="noopener">GitHub ↗</a>
-  </nav>
-</header>
+  <header class="nav">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo.png" alt="GCModeller logo" />
+      <span class="brand-txt">
+        <strong>GCModeller</strong>
+        <em>genomics CAD · Modeller System</em>
+      </span>
+    </a>
+    <nav class="links">
+      <a href="index.html">Overview</a>
+      <a href="science.html">The Science</a>
+      <a href="install.html" class="active">Install</a>
+      <a href="docs.html">Docs</a>
+      <a class="gh" href="https://github.com/SMRUCC/GCModeller" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </header>
 
-<main class="page">
-  <div class="wrap">
+  <main class="page">
+    <div class="wrap">
 
-    <div class="page-hero">
-      <div class="kicker">Get Started</div>
-      <h1>Install GCModeller</h1>
-      <p class="lead">
-        GCModeller runs as a program distribution inside an <strong>Ubuntu Linux Docker container</strong>
-        and is driven through <strong>R# scripting</strong>: R# code imports the GCModeller library modules
-        and wires them into complete workflows. One pull, and the whole environment is on your machine.
-      </p>
-    </div>
-
-    <!-- resource cards -->
-    <div class="grid c3" style="margin-top:44px;">
-      <a class="card link" href="https://github.com/SMRUCC/GCModeller" target="_blank" rel="noopener">
-        <div class="ic">⌥</div>
-        <h3>GitHub Repository</h3>
-        <p>Full source code, releases and issue tracker for the SMRUCC/GCModeller project.</p>
-        <span class="go mono">github.com/SMRUCC/GCModeller ↗</span>
-      </a>
-      <a class="card link" href="https://hub.docker.com/r/xieguigang/gcmodeller-env/tags" target="_blank" rel="noopener">
-        <div class="ic">◇</div>
-        <h3>Docker Hub Image</h3>
-        <p>Browse all tagged versions of the <span class="mono-inline">gcmodeller-env</span> environment image.</p>
-        <span class="go mono">hub.docker.com/r/xieguigang/gcmodeller-env ↗</span>
-      </a>
-      <a class="card link" href="https://gcmodeller.org/vignettes/index.html" target="_blank" rel="noopener">
-        <div class="ic">▣</div>
-        <h3>R# Vignettes</h3>
-        <p>The function reference for every GCModeller module — parameters and runnable examples.</p>
-        <span class="go mono">gcmodeller.org/vignettes ↗</span>
-      </a>
-    </div>
-
-    <!-- steps -->
-    <section class="sec" style="margin-top:76px;">
-      <div class="sec-head">
-        <span class="sec-num">01</span>
-        <h2>Pull the container image</h2>
-      </div>
-      <div class="code">
-        <div class="code-bar"><span class="tb r"></span><span class="tb y"></span><span class="tb g"></span><span class="code-title">terminal — bash</span></div>
-        <pre><code><span class="p">$</span> docker pull xieguigang/gcmodeller-env</code></pre>
-      </div>
-      <div class="prose">
-        <p>
-          The <span class="mono-inline">xieguigang/gcmodeller-env</span> image bundles the Linux toolchain that
-          GCModeller drives, including the <strong>MEME suite</strong> for motif analysis and
-          <strong>Mothur</strong> for OTU construction, on top of the GCModeller runtime and its R#
-          script environment. All tagged versions are listed on the
-          <a href="https://hub.docker.com/r/xieguigang/gcmodeller-env/tags" target="_blank" rel="noopener">Docker Hub tags page</a>.
+      <div class="page-hero">
+        <div class="kicker">Get Started</div>
+        <h1>Install GCModeller</h1>
+        <p class="lead">
+          GCModeller runs as a program distribution inside an <strong>Ubuntu Linux Docker container</strong>
+          and is driven through <strong>R# scripting</strong>: R# code imports the GCModeller library modules
+          and wires them into complete workflows. One pull, and the whole environment is on your machine.
         </p>
       </div>
-    </section>
 
-    <section class="sec">
-      <div class="sec-head">
-        <span class="sec-num">02</span>
-        <h2>Start a workspace container</h2>
+      <!-- resource cards -->
+      <div class="grid c3" style="margin-top:44px;">
+        <a class="card link" href="https://github.com/SMRUCC/GCModeller" target="_blank" rel="noopener">
+          <div class="ic">⌥</div>
+          <h3>GitHub Repository</h3>
+          <p>Full source code, releases and issue tracker for the SMRUCC/GCModeller project.</p>
+          <span class="go mono">github.com/SMRUCC/GCModeller ↗</span>
+        </a>
+        <a class="card link" href="https://hub.docker.com/r/xieguigang/gcmodeller-env/tags" target="_blank"
+          rel="noopener">
+          <div class="ic">◇</div>
+          <h3>Docker Hub Image</h3>
+          <p>Browse all tagged versions of the <span class="mono-inline">gcmodeller-env</span> environment image.</p>
+          <span class="go mono">hub.docker.com/r/xieguigang/gcmodeller-env ↗</span>
+        </a>
+        <a class="card link" href="https://gcmodeller.org/vignettes/index.html" target="_blank" rel="noopener">
+          <div class="ic">▣</div>
+          <h3>R# Vignettes</h3>
+          <p>The function reference for every GCModeller module — parameters and runnable examples.</p>
+          <span class="go mono">gcmodeller.org/vignettes ↗</span>
+        </a>
       </div>
-      <div class="code">
-        <div class="code-bar"><span class="tb r"></span><span class="tb y"></span><span class="tb g"></span><span class="code-title">terminal — bash</span></div>
-        <pre><code><span class="p">$</span> mkdir work
+
+      <!-- steps -->
+      <section class="sec" style="margin-top:76px;">
+        <div class="sec-head">
+          <span class="sec-num">01</span>
+          <h2>Pull the container image</h2>
+        </div>
+        <div class="code">
+          <div class="code-bar"><span class="tb r"></span><span class="tb y"></span><span class="tb g"></span><span
+              class="code-title">terminal — bash</span></div>
+          <pre><code><span class="p">$</span> docker pull xieguigang/gcmodeller-env</code></pre>
+        </div>
+        <div class="prose">
+          <p>
+            The <span class="mono-inline">xieguigang/gcmodeller-env</span> image bundles the Linux toolchain that
+            GCModeller drives, including the <strong>MEME suite</strong> for motif analysis and
+            <strong>Mothur</strong> for OTU construction, on top of the GCModeller runtime and its R#
+            script environment. All tagged versions are listed on the
+            <a href="https://hub.docker.com/r/xieguigang/gcmodeller-env/tags" target="_blank" rel="noopener">Docker Hub
+              tags page</a>.
+          </p>
+        </div>
+      </section>
+
+      <section class="sec">
+        <div class="sec-head">
+          <span class="sec-num">02</span>
+          <h2>Start a workspace container</h2>
+        </div>
+        <div class="code">
+          <div class="code-bar"><span class="tb r"></span><span class="tb y"></span><span class="tb g"></span><span
+              class="code-title">terminal — bash</span></div>
+          <pre><code><span class="p">$</span> mkdir work
 <span class="p">$</span> docker run -it --rm -v "$PWD/work:/workspace" xieguigang/gcmodeller-env</code></pre>
-      </div>
-      <div class="prose">
-        <p>
-          This opens an interactive Ubuntu Linux session with your local
-          <span class="mono-inline">work/</span> folder mounted at <span class="mono-inline">/workspace</span>.
-          Files written there persist on the host after the container exits. For long-running
-          analyses, run the container detached (<span class="mono-inline">-d</span>) and attach as needed.
-        </p>
-      </div>
-    </section>
+        </div>
+        <div class="prose">
+          <p>
+            This opens an interactive Ubuntu Linux session with your local
+            <span class="mono-inline">work/</span> folder mounted at <span class="mono-inline">/workspace</span>.
+            Files written there persist on the host after the container exits. For long-running
+            analyses, run the container detached (<span class="mono-inline">-d</span>) and attach as needed.
+          </p>
+        </div>
+      </section>
 
-    <section class="sec">
-      <div class="sec-head">
-        <span class="sec-num">03</span>
-        <h2>Script your workflow in R#</h2>
-      </div>
-      <div class="code">
-        <div class="code-bar"><span class="tb r"></span><span class="tb y"></span><span class="tb g"></span><span class="code-title">workflow.R — R# script (illustrative)</span></div>
-        <pre><code><span class="c"># R# scripting: GCModeller modules are imported as libraries</span>
+      <section class="sec">
+        <div class="sec-head">
+          <span class="sec-num">03</span>
+          <h2>Script your workflow in R#</h2>
+        </div>
+        <div class="code">
+          <div class="code-bar"><span class="tb r"></span><span class="tb y"></span><span class="tb g"></span><span
+              class="code-title">workflow.R — R# script (illustrative)</span></div>
+          <pre><code><span class="c"># R# scripting: GCModeller modules are imported as libraries</span>
 <span class="k">imports</span> <span class="s">"genomics"</span> <span class="k">from</span> <span class="s">"gcmodeller"</span>;
 
 <span class="c"># annotate a genome, then feed the result downstream —</span>
 <span class="c"># every stage of the workflow is a scriptable function call</span>
 <span class="k">let</span> ORFs  <span class="o">=</span> <span class="f">prodigal</span>(<span class="s">"/workspace/genome.fna"</span>);
 <span class="f">print</span>(ORFs);</code></pre>
-      </div>
-      <div class="prose">
-        <p>
-          The snippet above is <strong>illustrative</strong> — the exact module and function names, together
-          with their parameters and runnable examples, are documented module by module in the
-          <a href="https://gcmodeller.org/vignettes/index.html" target="_blank" rel="noopener">R# vignettes</a>,
-          which serve as the complete API reference for scripting GCModeller.
-        </p>
-      </div>
-    </section>
-
-    <!-- requirements -->
-    <section class="sec">
-      <div class="sec-head">
-        <span class="sec-num">04</span>
-        <h2>Requirements &amp; notes</h2>
-      </div>
-      <div class="grid c3" style="margin-top:34px;">
-        <div class="card">
-          <div class="ic">◆</div>
-          <h3>Docker 20.10+</h3>
-          <p>Runs on Linux servers natively, and on macOS or Windows through Docker Desktop. No other runtime dependency is required on the host.</p>
         </div>
-        <div class="card">
-          <div class="ic">◇</div>
-          <h3>Ubuntu Linux container</h3>
-          <p>GCModeller is developed and shipped as an Ubuntu Linux program distribution; the container guarantees a consistent environment on every machine.</p>
+        <div class="prose">
+          <p>
+            The snippet above is <strong>illustrative</strong> — the exact module and function names, together
+            with their parameters and runnable examples, are documented module by module in the
+            <a href="https://gcmodeller.org/vignettes/index.html" target="_blank" rel="noopener">R# vignettes</a>,
+            which serve as the complete API reference for scripting GCModeller.
+          </p>
         </div>
-        <div class="card">
-          <div class="ic">◈</div>
-          <h3>Open source · GPL-3.0</h3>
-          <p>Source code is public at GitHub. Some GCModeller features require these Linux tools even when the host runs Windows — the container is the recommended way to run everything.</p>
+      </section>
+
+      <!-- requirements -->
+      <section class="sec">
+        <div class="sec-head">
+          <span class="sec-num">04</span>
+          <h2>Requirements &amp; notes</h2>
+        </div>
+        <div class="grid c3" style="margin-top:34px;">
+          <div class="card">
+            <div class="ic">◆</div>
+            <h3>Docker 20.10+</h3>
+            <p>Runs on Linux servers natively, and on macOS or Windows through Docker Desktop. No other runtime
+              dependency is required on the host.</p>
+          </div>
+          <div class="card">
+            <div class="ic">◇</div>
+            <h3>Ubuntu Linux container</h3>
+            <p>GCModeller is developed and shipped as an Ubuntu Linux program distribution; the container guarantees a
+              consistent environment on every machine.</p>
+          </div>
+          <div class="card">
+            <div class="ic">◈</div>
+            <h3>Open source · GPL-3.0</h3>
+            <p>Source code is public at GitHub. Some GCModeller features require these Linux tools even when the host
+              runs Windows — the container is the recommended way to run everything.</p>
+          </div>
+        </div>
+        <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:46px;">
+          <a class="btn" href="https://github.com/SMRUCC/GCModeller" target="_blank" rel="noopener">Star on GitHub <span
+              class="arr">↗</span></a>
+          <a class="btn ghost" href="docs.html">Next: the Documentation <span class="arr">→</span></a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div class="foot-brand">
+        <img src="assets/img/logo.png" alt="" />
+        <div>
+          <strong>GCModeller</strong>
+          <p>genomics CAD (Computer Assistant Design) Modeller System — an open-source systems biology platform
+            implemented from scratch in .NET.</p>
         </div>
       </div>
-      <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:46px;">
-        <a class="btn" href="https://github.com/SMRUCC/GCModeller" target="_blank" rel="noopener">Star on GitHub <span class="arr">↗</span></a>
-        <a class="btn ghost" href="docs.html">Next: the Documentation <span class="arr">→</span></a>
-      </div>
-    </section>
-
-  </div>
-</main>
-
-<footer class="site-footer">
-  <div class="wrap foot-grid">
-    <div class="foot-brand">
-      <img src="assets/img/logo.png" alt="" />
-      <div>
-        <strong>GCModeller</strong>
-        <p>genomics CAD (Computer Assistant Design) Modeller System — an open-source systems biology platform implemented from scratch in .NET.</p>
+      <nav class="foot-links">
+        <p class="foot-h">Site</p>
+        <a href="index.html">Overview</a>
+        <a href="science.html">The Science</a>
+        <a href="install.html">Install</a>
+        <a href="docs.html">Documentation</a>
+      </nav>
+      <div class="foot-contact">
+        <p class="foot-h">Contact</p>
+        <p><a href="mailto:xie.guigang@gcmodeller.org">xie.guigang@gcmodeller.org</a></p>
+        <p>SMRUCC genomics · Guilin, China</p>
+        <p><a href="https://github.com/SMRUCC/GCModeller" target="_blank"
+            rel="noopener">github.com/SMRUCC/GCModeller</a></p>
       </div>
     </div>
-    <nav class="foot-links">
-      <p class="foot-h">Site</p>
-      <a href="index.html">Overview</a>
-      <a href="science.html">The Science</a>
-      <a href="install.html">Install</a>
-      <a href="docs.html">Documentation</a>
-    </nav>
-    <div class="foot-contact">
-      <p class="foot-h">Contact</p>
-      <p><a href="mailto:xie.guigang@gcmodeller.org">xie.guigang@gcmodeller.org</a></p>
-      <p>SMRUCC genomics · Guilin, China</p>
-      <p><a href="https://github.com/SMRUCC/GCModeller" target="_blank" rel="noopener">github.com/SMRUCC/GCModeller</a></p>
+    <div class="wrap foot-legal">
+      <span>© 2026 SMRUCC · GPL-3.0 open source</span>
+      <span class="mono">doi: 10.5281/zenodo.159947</span>
     </div>
-  </div>
-  <div class="wrap foot-legal">
-    <span>© 2026 SMRUCC · GPL-3.0 open source</span>
-    <span class="mono">doi: 10.5281/zenodo.159947</span>
-  </div>
-</footer>
+  </footer>
 
 </body>
+
 </html>
