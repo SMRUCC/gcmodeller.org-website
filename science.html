@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark" />
+<meta name="description" content="The virtual cell: a scientific perspective on simulating life in silico — and where GCModeller fits in." />
+<title>The Science — GCModeller</title>
+<link rel="icon" type="image/png" href="assets/img/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/theme.css" />
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="index.html">
+    <img src="assets/img/logo.png" alt="GCModeller logo" />
+    <span class="brand-txt">
+      <strong>GCModeller</strong>
+      <em>genomics CAD · Modeller System</em>
+    </span>
+  </a>
+  <nav class="links">
+    <a href="index.html">Overview</a>
+    <a href="science.html" class="active">The Science</a>
+    <a href="install.html">Install</a>
+    <a href="docs.html">Docs</a>
+    <a class="gh" href="https://github.com/SMRUCC/GCModeller" target="_blank" rel="noopener">GitHub ↗</a>
+  </nav>
+</header>
+
+<main class="page">
+  <div class="wrap">
+
+    <div class="page-hero">
+      <div class="kicker">Scientific Perspective</div>
+      <h1>Simulating life <strong>before</strong> the bench</h1>
+      <p class="lead">
+        A century of reaction kinetics, three decades of whole-cell computation, and a new generation
+        of AI have converged on a single ambition: to run biology <strong>in silico</strong> first — and go to the
+        laboratory only to confirm what the model has already discovered.
+      </p>
+    </div>
+
+    <!-- 01 · history -->
+    <section class="sec">
+      <div class="sec-head">
+        <span class="sec-num">01</span>
+        <h2>From enzymes to entire cells</h2>
+      </div>
+      <div class="prose">
+        <p>
+          The idea that a living process can be captured as mathematics is old. In 1913,
+          <span class="hl">Michaelis and Menten</span> reduced enzyme catalysis to a two-parameter law —
+          the first demonstration that biochemistry could be predicted, not merely observed.
+          Half a century later, <span class="hl">Jacob and Monod</span> showed that gene expression is
+          <em>regulated</em>: the cell is not a bag of reactions but a circuit of logic, with switches,
+          repressors and feedback loops.
+        </p>
+      </div>
+      <div class="tl">
+        <div class="tl-item">
+          <span class="tl-year">1999</span>
+          <h3>E-Cell — computing a whole cell</h3>
+          <p>Tomita and colleagues built one of the first software platforms to simulate a cell from a catalog of its molecular components, launching the field of whole-cell modeling.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-year">2000</span>
+          <h3>Constraint-based metabolism</h3>
+          <p>Edwards &amp; Palsson reconstructed the metabolic network of <em>E. coli</em>. Flux balance analysis (FBA) turned network stoichiometry into quantitative predictions of growth and secretion — without requiring a single kinetic parameter.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-year">2003</span>
+          <h3>SBML and cumulative systems biology</h3>
+          <p>The Systems Biology Markup Language made models portable and re-runnable. Simulation stopped being a collection of one-off papers and became a cumulative, community-driven discipline.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-year">2012</span>
+          <h3>The complete Mycoplasma cell model</h3>
+          <p>Karr et al. linked 28 submodels into a whole-cell model of <em>Mycoplasma genitalium</em>, covering all of its 525 annotated genes — a living cell computed through its entire life cycle, including cell division.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-year">Now</span>
+          <h3>The AI virtual cell</h3>
+          <p>Graph neural networks such as GEARS predict transcriptional responses to genetic perturbations that were never measured. Neural ODEs, deep generative models and foundation models are teaching simulators the physics of regulation directly from data — the virtual cell is becoming a predictive engine, not just a descriptive one.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 · why -->
+    <section class="sec">
+      <div class="sec-head">
+        <span class="sec-num">02</span>
+        <h2>Why run life in a computer</h2>
+      </div>
+      <div class="prose">
+        <p>
+          A virtual cell is not a replacement for experiments — it is a <strong>filter</strong> placed in
+          front of them. Thousands of designs, knockouts and culture conditions can be screened in
+          silico overnight; the wet laboratory is then spent only on the handful of candidates worth
+          physically testing. Experiments that are lethal, slow, expensive or simply impossible —
+          a genome-wide deletion series, a decade of evolution, a stress condition that kills the
+          organism — become routine when the organism is software.
+        </p>
+        <p>
+          Equally important is <strong>interpretation</strong>. Single-gene statistics cannot explain why a
+          pathway reroutes when one enzyme is inhibited; network-level simulation can. And because a
+          simulation logs every flux, every state and every parameter, it is perfectly reproducible —
+          the scientific ideal that bench biology can only approximate.
+        </p>
+      </div>
+      <div class="pull">
+        <p>“Draft in the computer, verify at the bench.” <b>—</b> In a CAD system for genomics, the design–build–test–learn cycle of engineering finally applies to living systems.</p>
+      </div>
+    </section>
+
+    <!-- 03 · simulation meets measurement -->
+    <section class="sec">
+      <div class="sec-head">
+        <span class="sec-num">03</span>
+        <h2>Simulation must meet measurement</h2>
+      </div>
+      <div class="prose">
+        <p>
+          A simulation that cannot be compared with data is only a story. This is the practical bridge
+          between modeling and biology: a virtual perturbation experiment produces
+          <strong>transcriptomic, proteomic and metabolomic tables with exactly the same structure</strong> as
+          the assays run on real samples. The same statistics — differential expression, pathway
+          enrichment, dimensionality reduction — must therefore operate identically on both.
+        </p>
+        <p>
+          When the analysis stack is shared, model and measurement can be tested against each other
+          directly: discrepancies point to missing biology, agreement builds confidence in predictions
+          that have not yet been validated. <strong>The pipeline that analyzes the virtual cell must be the
+          pipeline that analyzes the real one.</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- 04 · where GCModeller fits -->
+    <section class="sec">
+      <div class="sec-head">
+        <span class="sec-num">04</span>
+        <h2>Where GCModeller fits</h2>
+      </div>
+      <div class="prose">
+        <p>
+          GCModeller — <strong>genomics CAD (Computer Assistant Design) Modeller System</strong> — is an
+          open-source systems-biology platform that implements this entire loop as one integrated
+          toolchain. Every algorithm it uses, from sequence alignment to flux analysis to graph neural
+          networks, is implemented from first principles in VB.NET on the .NET runtime and the
+          sciBASIC# scientific computing framework: nothing is a black box, everything is auditable,
+          and the full source is available under GPL-3.0.
+        </p>
+      </div>
+      <div class="grid c4" style="margin-top:34px;">
+        <div class="card">
+          <div class="ic">◍</div>
+          <h3>Genome Annotation</h3>
+          <p>ORF prediction, homology search, MSA, Gibbs sampler, HMM profiling, motif PWM, sequence clustering — raw sequence becomes functional knowledge.</p>
+          <span style="margin-top:14px;"><span class="pill">Prodigal</span><span class="pill">BLAST</span><span class="pill">Diamond</span><span class="pill">CD-HIT</span></span>
+        </div>
+        <div class="card">
+          <div class="ic">◈</div>
+          <h3>Virtual Cell Modeling</h3>
+          <p>Reconstruct metabolism and regulation, then simulate: constraint-based flux analysis, SBML models, ODE kinetics and inferred gene-regulatory networks.</p>
+          <span style="margin-top:14px;"><span class="pill">FBA</span><span class="pill">SBML</span><span class="pill">GRN</span><span class="pill">ODEs</span></span>
+        </div>
+        <div class="card">
+          <div class="ic">◉</div>
+          <h3>Virtual Experiments</h3>
+          <p>Perturb the digital organism — knockouts, over-expression, environmental shifts — and predict the response with Bayesian networks and neural models.</p>
+          <span style="margin-top:14px;"><span class="pill">bnlearn</span><span class="pill">GEARS</span><span class="pill">GNN</span><span class="pill">LNN</span></span>
+        </div>
+        <div class="card">
+          <div class="ic">◐</div>
+          <h3>Pan-omics Analysis</h3>
+          <p>One statistical stack for simulated and real data alike: differential analysis, enrichment, and geometry of high-dimensional omics.</p>
+          <span style="margin-top:14px;"><span class="pill">limma</span><span class="pill">GSEA</span><span class="pill">GSVA</span><span class="pill">UMAP</span><span class="pill">KEGG · GO</span></span>
+        </div>
+      </div>
+      <div class="prose" style="margin-top:44px;">
+        <p>
+          The <span class="hl">R# language</span> is the interface that binds these stages together. Instead of
+          clicking through disconnected tools, the researcher <em>scripts</em> the entire workflow —
+          annotate a genome, reconstruct its metabolism, run a virtual perturbation, then feed the
+          simulated transcriptome straight into the same enrichment pipeline used for real RNA-seq —
+          in one language, in one environment. R# turns GCModeller from a suite of programs into what
+          its name promises: a <strong>computer-assisted design desk for genomics</strong>.
+        </p>
+        <p>
+          This is not a theoretical architecture. GCModeller was born from a concrete question — how
+          the plant pathogen <span class="hl">Xanthomonas campestris pv. campestris</span> causes disease in its
+          host. Its annotate → simulate → analyze → verify loop has been applied to compute disease
+          pathways, predict key virulence regulators and model bacterial stress resistance, demonstrating
+          that a scriptable virtual cell can drive real experimental discovery.
+        </p>
+      </div>
+      <div class="cite" style="margin-top:40px;">
+        <b>Citation.</b> Xie, G. &amp; Guan, Q. (2016, October 10). <em>SMRUCC/GCModeller alpha Release.</em> Zenodo.
+        <span class="doi">doi: 10.5281/zenodo.159947</span>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="sec" style="padding-bottom:0;">
+      <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:40px;">
+        <a class="btn" href="install.html">Run GCModeller in Docker <span class="arr">→</span></a>
+        <a class="btn ghost" href="docs.html">Browse the Documentation</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <img src="assets/img/logo.png" alt="" />
+      <div>
+        <strong>GCModeller</strong>
+        <p>genomics CAD (Computer Assistant Design) Modeller System — an open-source systems biology platform implemented from scratch in .NET.</p>
+      </div>
+    </div>
+    <nav class="foot-links">
+      <p class="foot-h">Site</p>
+      <a href="index.html">Overview</a>
+      <a href="science.html">The Science</a>
+      <a href="install.html">Install</a>
+      <a href="docs.html">Documentation</a>
+    </nav>
+    <div class="foot-contact">
+      <p class="foot-h">Contact</p>
+      <p><a href="mailto:xie.guigang@gcmodeller.org">xie.guigang@gcmodeller.org</a></p>
+      <p>SMRUCC genomics · Guilin, China</p>
+      <p><a href="https://github.com/SMRUCC/GCModeller" target="_blank" rel="noopener">github.com/SMRUCC/GCModeller</a></p>
+    </div>
+  </div>
+  <div class="wrap foot-legal">
+    <span>© 2026 SMRUCC · GPL-3.0 open source</span>
+    <span class="mono">doi: 10.5281/zenodo.159947</span>
+  </div>
+</footer>
+
+</body>
+</html>

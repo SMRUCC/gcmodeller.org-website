@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark" />
+<meta name="description" content="GCModeller documentation: browse the R# vignettes for the complete function reference of every module." />
+<title>Documentation — GCModeller</title>
+<link rel="icon" type="image/png" href="assets/img/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/theme.css" />
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="index.html">
+    <img src="assets/img/logo.png" alt="GCModeller logo" />
+    <span class="brand-txt">
+      <strong>GCModeller</strong>
+      <em>genomics CAD · Modeller System</em>
+    </span>
+  </a>
+  <nav class="links">
+    <a href="index.html">Overview</a>
+    <a href="science.html">The Science</a>
+    <a href="install.html">Install</a>
+    <a href="docs.html" class="active">Docs</a>
+    <a class="gh" href="https://github.com/SMRUCC/GCModeller" target="_blank" rel="noopener">GitHub ↗</a>
+  </nav>
+</header>
+
+<main class="page">
+  <div class="wrap">
+
+    <div class="page-hero">
+      <div class="kicker">Help Center</div>
+      <h1>Documentation &amp; Vignettes</h1>
+      <p class="lead">
+        Everything you need to script GCModeller lives in the <strong>R# vignettes</strong>: the
+        function reference for every software module, with parameters, defaults and runnable
+        examples. <strong>Start from the vignettes index</strong> — it is the front door to the whole API.
+      </p>
+    </div>
+
+    <!-- primary entry -->
+    <a class="hero-card" href="https://gcmodeller.org/vignettes/index.html" target="_blank" rel="noopener">
+      <div class="hc-left">
+        <div class="kicker" style="margin-bottom:10px;">Primary Entry</div>
+        <h2>R# Vignettes Index</h2>
+        <p>
+          The official reference documentation for GCModeller scripting. Each module of the
+          framework — genome annotation, virtual-cell modeling, virtual perturbation experiments,
+          pan-omics analysis — ships its own set of vignette pages documenting every exported
+          R# function.
+        </p>
+        <span class="go mono">gcmodeller.org/vignettes/index.html ↗</span>
+      </div>
+      <div class="hc-art mono" aria-hidden="true">
+        <span>imports "annotation"</span>
+        <span>imports "omics"</span>
+        <span>imports "modeling"</span>
+        <span>imports "network"</span>
+      </div>
+    </a>
+
+    <!-- how to use -->
+    <section class="sec" style="margin-top:80px;">
+      <div class="sec-head">
+        <span class="sec-num">01</span>
+        <h2>How to find a function</h2>
+      </div>
+      <div class="grid c3" style="margin-top:34px;">
+        <div class="card">
+          <div class="ic num">1</div>
+          <h3>Open the index</h3>
+          <p>Go to <span class="mono-inline">gcmodeller.org/vignettes/index.html</span>. The landing page lists every documented module of the framework.</p>
+        </div>
+        <div class="card">
+          <div class="ic num">2</div>
+          <h3>Pick your module</h3>
+          <p>Navigate to the module that matches your task — annotation, FBA, network inference, omics statistics, and so on.</p>
+        </div>
+        <div class="card">
+          <div class="ic num">3</div>
+          <h3>Read the function page</h3>
+          <p>Every exported R# function is documented with its parameters, types, default values and a runnable usage example you can adapt.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- search tip -->
+    <section class="sec">
+      <div class="sec-head">
+        <span class="sec-num">02</span>
+        <h2>Searching tips</h2>
+      </div>
+      <div class="code">
+        <div class="code-bar"><span class="tb r"></span><span class="tb y"></span><span class="tb g"></span><span class="code-title">search pattern</span></div>
+        <pre><code><span class="c"># find any vignette page mentioning a function name,</span>
+<span class="c"># directly from your favourite search engine:</span>
+
+site:gcmodeller.org/vignettes <span class="s">"limma"</span>
+site:gcmodeller.org/vignettes <span class="s">"gsea"</span>
+site:gcmodeller.org/vignettes <span class="s">"flux balance"</span></code></pre>
+      </div>
+      <div class="prose">
+        <p>
+          Vignette pages are plain, indexable HTML — a targeted search for the function name you
+          remember from a paper or a forum thread will usually land you on the exact reference page.
+        </p>
+      </div>
+    </section>
+
+    <!-- related resources -->
+    <section class="sec">
+      <div class="sec-head">
+        <span class="sec-num">03</span>
+        <h2>Related resources</h2>
+      </div>
+      <div class="grid c3" style="margin-top:34px;">
+        <a class="card link" href="https://github.com/SMRUCC/GCModeller" target="_blank" rel="noopener">
+          <div class="ic">⌥</div>
+          <h3>Source &amp; Issues</h3>
+          <p>Browse the implementation of any algorithm, file a bug report or request a feature on GitHub.</p>
+          <span class="go mono">github.com/SMRUCC/GCModeller ↗</span>
+        </a>
+        <a class="card link" href="https://hub.docker.com/r/xieguigang/gcmodeller-env/tags" target="_blank" rel="noopener">
+          <div class="ic">◇</div>
+          <h3>Container Image</h3>
+          <p>Tagged releases of the Ubuntu environment image in which GCModeller and its R# runtime run.</p>
+          <span class="go mono">hub.docker.com · gcmodeller-env ↗</span>
+        </a>
+        <a class="card link" href="https://bio.tools/gcmodeller" target="_blank" rel="noopener">
+          <div class="ic">◑</div>
+          <h3>bio.tools Entry</h3>
+          <p>The registry entry describing GCModeller's operations and tool types for the bioinformatics community.</p>
+          <span class="go mono">bio.tools/gcmodeller ↗</span>
+        </a>
+      </div>
+      <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:46px;">
+        <a class="btn" href="https://gcmodeller.org/vignettes/index.html" target="_blank" rel="noopener">Open the Vignettes <span class="arr">↗</span></a>
+        <a class="btn ghost" href="index.html">Back to Overview</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <img src="assets/img/logo.png" alt="" />
+      <div>
+        <strong>GCModeller</strong>
+        <p>genomics CAD (Computer Assistant Design) Modeller System — an open-source systems biology platform implemented from scratch in .NET.</p>
+      </div>
+    </div>
+    <nav class="foot-links">
+      <p class="foot-h">Site</p>
+      <a href="index.html">Overview</a>
+      <a href="science.html">The Science</a>
+      <a href="install.html">Install</a>
+      <a href="docs.html">Documentation</a>
+    </nav>
+    <div class="foot-contact">
+      <p class="foot-h">Contact</p>
+      <p><a href="mailto:xie.guigang@gcmodeller.org">xie.guigang@gcmodeller.org</a></p>
+      <p>SMRUCC genomics · Guilin, China</p>
+      <p><a href="https://github.com/SMRUCC/GCModeller" target="_blank" rel="noopener">github.com/SMRUCC/GCModeller</a></p>
+    </div>
+  </div>
+  <div class="wrap foot-legal">
+    <span>© 2026 SMRUCC · GPL-3.0 open source</span>
+    <span class="mono">doi: 10.5281/zenodo.159947</span>
+  </div>
+</footer>
+
+</body>
+</html>
