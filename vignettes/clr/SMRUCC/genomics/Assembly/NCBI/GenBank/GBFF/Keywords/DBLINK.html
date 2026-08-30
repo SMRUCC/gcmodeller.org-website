@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <p>数据库之间的相互链接的列表</p>
+        <p>数据库之间的相互链接的列表
 
         <h3>Declare</h3>        
 
@@ -30,6 +30,9 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.Assembly.NCBI.GenBank.GBFF.Keywords
 export class DBLINK extends <a href="/vignettes/clr/SMRUCC/genomics/Assembly/NCBI/GenBank/GBFF/Keywords/KeyWord.html">KeyWord</a> {
+   assembly_id: string;
+   bioproject: string;
+   biosample: string;
    Links: <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/DataSourceModel/NamedValue`1.html">NamedValue`1[]</a>;
 }
 </code>

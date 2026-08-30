@@ -22,9 +22,9 @@
 
         <h3>Description</h3>
 
-        <p>A simple organism taxonomy model.</p>
+        <p>A simple organism taxonomy model.
 
-<p>主要是用来保存csv以及Xml文件使用</p>
+<p>主要是用来保存csv以及Xml文件使用
 
         <h3>Declare</h3>        
 
@@ -38,15 +38,19 @@ export class Taxonomy {
    family: string;
    # 6D. 属
    genus: string;
-   # 1. 界
+   # <ol>
+   # <li>界</li>
+   # </ol>
    kingdom: string;
-   # 获取当前的这个分类结果值的最小分类单元的等级
-   lowestLevel: <a href="/vignettes/clr/SMRUCC/genomics/Metagenomics/TaxonomyRanks.html">TaxonomyRanks</a>;
    ncbi_taxid: integer;
    # 4B. 目
    order: string;
-   # 2. 门
+   # <ol start="2">
+   # <li>门</li>
+   # </ol>
    phylum: string;
+   # 获取当前的这个分类结果值的最小分类单元的等级
+   RankLevel: <a href="/vignettes/clr/SMRUCC/genomics/Metagenomics/TaxonomyRanks.html">TaxonomyRanks</a>;
    scientificName: string;
    # 7E. 种
    species: string;
@@ -57,7 +61,7 @@ export class Taxonomy {
         <h3>.NET clr type reference tree</h3>
 
         <ol>
-<li>use by <i>property</i> member <code>lowestLevel</code>: <a href="/vignettes/clr/SMRUCC/genomics/Metagenomics/TaxonomyRanks.html">TaxonomyRanks</a></li>
+<li>use by <i>property</i> member <code>RankLevel</code>: <a href="/vignettes/clr/SMRUCC/genomics/Metagenomics/TaxonomyRanks.html">TaxonomyRanks</a></li>
 </ol>
 
 

@@ -29,7 +29,10 @@
         <div style="width: 100%; padding-left: 3%; color: black;">
             <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>assign_terms</strong>(<i>alignment</i>,
     <i>term.maps</i> = <span style='color: blue !important;'>NULL</span>,
-    <i>top.best</i> = <span style='color: blue !important;'>TRUE</span>);</code></pre>
+    <i>top.best</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>direct.term.maps</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>filter.unknown</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>identities.cut</i> = <span style='color: green;'>0</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
@@ -37,7 +40,7 @@
         <table>
             
 <dt>alignment</dt>
-<dd><p>-</p></dd>
+<dd><p>the ncbi localblast alignment result, it can be the <a href="/vignettes/clr/SMRUCC/genomics/Interops/NCBI/Extensions/LocalBLAST/Application/BBH/BestHit.html">BestHit</a> array or the @<code>T:SMRUCC.genomics.Interops.NCBI.Extensions.DiamondAnnotation</p></dd>
 
 
 <dt>term.maps</dt>

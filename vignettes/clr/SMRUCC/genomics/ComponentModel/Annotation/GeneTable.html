@@ -22,9 +22,9 @@
 
         <h3>Description</h3>
 
-        <p>The gene dump information from the NCBI genbank.</p>
+        <p>The gene dump information from the NCBI genbank.
 
-<p>(从GBK文件之中所导出来的一个基因对象的简要信息，尝试使用这个对象以csv表格的格式存储一个基因的所有的注释信息)</p>
+<p>(从GBK文件之中所导出来的一个基因对象的简要信息，尝试使用这个对象以csv表格的格式存储一个基因的所有的注释信息)
 
         <h3>Declare</h3>        
 
@@ -54,13 +54,13 @@ export class GeneTable {
    # 假若在GBK文件之中没有Locus_tag属性，则导出函数@<code>M:SMRUCC.genomics.Assembly.NCBI.GenBank.gbExportService.DumpEXPORT(SMRUCC.genomics.Assembly.NCBI.GenBank.GBFF.Keywords.FEATURES.CDS)</code>会尝试使用<a href="/vignettes/clr/SMRUCC/genomics/ComponentModel/Annotation/GeneTable.html">GeneTable</a>.<a href="#">ProteinId</a>来替代
    locus_id: string;
    ProteinId: string;
+   # 该蛋白质所位于的基因组的在NCBI之中的编号信息
+   replicon_accessionID: string;
    right: integer;
    species: string;
-   # 该蛋白质所位于的基因组的在NCBI之中的编号信息
-   SpeciesAccessionID: string;
    strand: string;
-   Transl_table: string;
-   Translation: string;
+   transl_table: string;
+   translation: string;
    type: string;
    UniprotSwissProt: string;
    UniprotTrEMBL: string;

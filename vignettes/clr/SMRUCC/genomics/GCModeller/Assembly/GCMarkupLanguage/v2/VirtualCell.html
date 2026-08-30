@@ -22,9 +22,9 @@
 
         <h3>Description</h3>
 
-        <p>The virtual cell model xml file</p>
+        <p>The virtual cell model xml file
 
-<p>虚拟细胞数据模型Xml文件</p>
+<p>虚拟细胞数据模型Xml文件
 
         <h3>Declare</h3>        
 
@@ -32,8 +32,7 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2
 export class VirtualCell extends <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/CompilerServices/ModelBaseType.html">ModelBaseType</a> {
-   # the intra-cellular environment id, will be used for identify the compound source between different cell source.
-   #  usually be the organism taxonomy scientific name, or taxid, something.
+   # the intra-cellular environment id, will be used for identify the compound source between different cell source. usually be the organism taxonomy scientific name, or taxid, something.
    cellular_id: string;
    # 基因组结构模型，包含有基因的列表，以及转录调控网络
    genome: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Genome.html">Genome</a>;
@@ -43,6 +42,7 @@ export class VirtualCell extends <a href="/vignettes/clr/SMRUCC/genomics/GCModel
    Stylesheet: <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/XmlStyleProcessor.html">XmlStyleProcessor</a>;
    # 物种注释信息
    taxonomy: <a href="/vignettes/clr/SMRUCC/genomics/Metagenomics/Taxonomy.html">Taxonomy</a>;
+   traits: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Traits.html">Traits</a>;
    TypeComment: <a href="/vignettes/clr/System/Xml/XmlComment.html">XmlComment</a>;
 }
 </code>
@@ -57,6 +57,7 @@ export class VirtualCell extends <a href="/vignettes/clr/SMRUCC/genomics/GCModel
 <li>use by <i>property</i> member <code>properties</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/CompilerServices/Property.html">Property</a></li>
 <li>use by <i>property</i> member <code>Stylesheet</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/XmlStyleProcessor.html">XmlStyleProcessor</a></li>
 <li>use by <i>property</i> member <code>taxonomy</code>: <a href="/vignettes/clr/SMRUCC/genomics/Metagenomics/Taxonomy.html">Taxonomy</a></li>
+<li>use by <i>property</i> member <code>traits</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Traits.html">Traits</a></li>
 <li>use by <i>property</i> member <code>TypeComment</code>: <a href="/vignettes/clr/System/Xml/XmlComment.html">XmlComment</a></li>
 </ol>
 

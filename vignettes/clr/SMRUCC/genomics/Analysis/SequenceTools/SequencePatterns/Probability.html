@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <p>The PWM model</p>
+        <p>The PWM model
 
         <h3>Declare</h3>        
 
@@ -30,11 +30,14 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.Analysis.SequenceTools.SequencePatterns
 export class Probability {
+   background: list;
+   # the unique id/name reference of the motif PWM model
    name: string;
    pvalue: double;
    # the PWM matrix data
    region: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/SequenceTools/SequencePatterns/Residue.html">Residue[]</a>;
    score: double;
+   # motif residue number
    width: integer;
 }
 </code>
@@ -43,6 +46,7 @@ export class Probability {
         <h3>.NET clr type reference tree</h3>
 
         <ol>
+<li>use by <i>property</i> member <code>background</code>: list</li>
 <li>use by <i>property</i> member <code>region</code>: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/SequenceTools/SequencePatterns/Residue.html">Residue</a></li>
 </ol>
 

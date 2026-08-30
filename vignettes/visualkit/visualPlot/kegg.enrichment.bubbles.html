@@ -40,6 +40,9 @@
     <i>bubbleStyle</i> = <span style='color: blue !important;'>FALSE</span>,
     <i>top.samples</i> = <span style='color: green;'>16</span>,
     <i>sampleinfo</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>ignore.categories</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>sort</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>x.angle</i> = <span style='color: green;'>45</span>,
     <i>ppi</i> = <span style='color: green;'>300</span>);</code></pre>
         </div>
 
@@ -48,24 +51,26 @@
         <table>
             
 <dt>profiles</dt>
-<dd><p>A dataframe object(or a set of the dataframe object in tuple list) 
- that contains the kegg pathway enrichment data, data fields is 
- required for generates the bubble data:
- 
- + <code>Raw p</code>: pvalue of the enrichment term
- + <code>Impact</code>: x axis value
- + <code>Hits</code>: the molecule hits number in current enrichment term
- + <code>pathway</code>: the kegg pathway id
- 
- or a score matrix of the gsva analysis result.</p></dd>
+<dd><p>A dataframe object(or a set of the dataframe object in tuple list) that contains the kegg pathway enrichment data, data fields is required for generates the bubble data:
+
+
+<ul>
+<li><p><code>Raw p</code>: pvalue of the enrichment term</li>
+<li><p><code>Impact</code>: x axis value</li>
+<li><p><code>Hits</code>: the molecule hits number in current enrichment term</li>
+<li><p><code>pathway</code>: the kegg pathway id</li>
+</ul>
+
+
+</p></dd>
 
 
 <dt>size</dt>
-<dd><p>-</p></dd>
+<dd><p></p></dd>
 
 
 <dt>padding</dt>
-<dd><p>-</p></dd>
+<dd><p></p></dd>
 
 
 <dt>unenrichColor</dt>

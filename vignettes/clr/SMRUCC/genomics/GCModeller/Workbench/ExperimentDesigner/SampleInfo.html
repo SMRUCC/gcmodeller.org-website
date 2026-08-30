@@ -22,9 +22,7 @@
 
         <h3>Description</h3>
 
-        <p>一般而言，对于实验数据的分析而言，在进行数据存储的时候使用的是<a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Workbench/ExperimentDesigner/SampleInfo.html">SampleInfo</a>.<a href="#">ID</a>属性，
- 而在进行数据可视化或者数据报告输出的时候，则是使用的<a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Workbench/ExperimentDesigner/SampleGroup.html">SampleGroup</a>.<a href="#">sample_name</a>属性
- 作为显示的label</p>
+        <p>一般而言，对于实验数据的分析而言，在进行数据存储的时候使用的是<a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Workbench/ExperimentDesigner/SampleInfo.html">SampleInfo</a>.<a href="#">ID</a>属性， 而在进行数据可视化或者数据报告输出的时候，则是使用的<a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Workbench/ExperimentDesigner/SampleGroup.html">SampleGroup</a>.<a href="#">sample_name</a>属性 作为显示的label
 
         <h3>Declare</h3>        
 
@@ -32,13 +30,15 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.GCModeller.Workbench.ExperimentDesigner
 export class SampleInfo extends <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Workbench/ExperimentDesigner/SampleGroup.html">SampleGroup</a> {
-   # the experiment batch id
+   # the experiment batch id, example as 1,2,3,4,5
    batch: integer;
    color: string;
    # 样品的标记符号，符合VisualBasic标识符语法的目标样品标识符
    ID: string;
-   # index编号
+   # sample injection order in current batch, example as 1,2,3,4,5
    injectionOrder: integer;
+   # additional sample metadata, for example as "treatment", "control", "time point 1h", "time point 2h" etc.
+   metadata: list;
    sample_info: string;
    sample_name: string;
    shape: string;
@@ -50,6 +50,7 @@ export class SampleInfo extends <a href="/vignettes/clr/SMRUCC/genomics/GCModell
 
         <ol>
 <li>this class extends from <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Workbench/ExperimentDesigner/SampleGroup.html">SampleGroup</a> class: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Workbench/ExperimentDesigner/SampleGroup.html">SampleGroup</a></li>
+<li>use by <i>property</i> member <code>metadata</code>: list</li>
 </ol>
 
 

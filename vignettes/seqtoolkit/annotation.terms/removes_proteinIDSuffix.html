@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>removes_proteinIDSuffix</title>
+    <title>Removes the numeric suffix (usually representing an exon index) from protein identifiers.</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <link rel="stylesheet" type="text/css" href="https://gcmodeller.org/lib/page.css">
@@ -18,22 +18,26 @@
             </tr>
         </table>
 
-        <h2>removes_proteinIDSuffix</h2>
+        <h2>Removes the numeric suffix (usually representing an exon index) from protein identifiers.</h2>
 
         <h3>Description</h3>
 
-        removes_proteinIDSuffix
+        
 
         <h3>Usage</h3>
 
         <div style="width: 100%; padding-left: 3%; color: black;">
-            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>removes_proteinIDSuffix</strong>(<i>id</i>);</code></pre>
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>removes_proteinIDSuffix</strong>(<i>id</i>,
+    <i>make.unique</i> = <span style='color: blue !important;'>TRUE</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
 
         <table>
             
+<dt>id</dt>
+<dd><p></p></dd>
+
         </table>
 
 
@@ -47,7 +51,7 @@
 
         <h3>Value</h3>
 
-        this function returns data object of type string.<h4>clr value class</h4><ul><li>string</li></ul>
+        <p>An array of unique protein identifiers with the numeric suffix removed.<h4>clr value class</h4><ul><li>string</li></ul>
 
         <h3 style="display: none;">Examples</h3>
 

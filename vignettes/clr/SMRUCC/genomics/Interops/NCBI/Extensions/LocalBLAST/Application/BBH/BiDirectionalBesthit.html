@@ -22,7 +22,9 @@
 
         <h3>Description</h3>
 
-        <p>Best hit result from the binary direction blastp result.(最佳双向比对结果，BBH，直系同源)</p>
+        <p>Best hit result from the binary direction blastp result. Ortholog mapping result.
+
+<p>(最佳双向比对结果，BBH，直系同源)
 
         <h3>Declare</h3>        
 
@@ -39,7 +41,7 @@ export class BiDirectionalBesthit extends <a href="/vignettes/clr/SMRUCC/genomic
    isMatched: boolean;
    isSelfHit: boolean;
    # Protein length annotiation for protein <a href="/vignettes/clr/SMRUCC/genomics/Interops/NCBI/Extensions/LocalBLAST/Application/BBH/Abstract/I_BlastQueryHit.html">I_BlastQueryHit</a>.<a href="#">QueryName</a>.(本蛋白质实体对象的序列长度)
-   length: string;
+   length: integer;
    level: <a href="/vignettes/clr/SMRUCC/genomics/Interops/NCBI/Extensions/LocalBLAST/Application/BBH/Levels.html">Levels</a>;
    positive: double;
    QueryName: string;

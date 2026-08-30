@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <p>a sub-class of <a href="/vignettes/clr/SMRUCC/genomics/Analysis/SequenceAlignment/MSA/MSAOutput.html">MSAOutput</a>.</p>
+        <p>a sub-class of <a href="/vignettes/clr/SMRUCC/genomics/Analysis/SequenceAlignment/MSA/MSAOutput.html">MSAOutput</a>.
 
         <h3>Declare</h3>        
 
@@ -30,9 +30,11 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.Analysis.SequenceTools.SequencePatterns.Motif
 export class MSAMotif extends <a href="/vignettes/clr/SMRUCC/genomics/Analysis/SequenceAlignment/MSA/MSAOutput.html">MSAOutput</a> {
+   # usually be the ACGT
    alphabets: string;
    cost: double;
    countMatrix: <a href="/vignettes/clr/Microsoft/VisualBasic/Text/Xml/Models/ints.html">ints[]</a>;
+   edits: integer;
    MSA: string;
    names: string;
    p: double;

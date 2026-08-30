@@ -30,7 +30,7 @@
             <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>cor_network</strong>(<i>x</i>,
     <i>adjacency</i> = <span style='color: green;'>0.6</span>,
     <i>pca.layout</i> = <span style='color: blue !important;'>TRUE</span>,
-    <i>env</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
+    <i>...</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
@@ -38,15 +38,19 @@
         <table>
             
 <dt>x</dt>
-<dd><p>should be an expression matrix object of gene features in rows and sample id in columns. [as <a href="/vignettes/clr/SMRUCC/genomics/Analysis/HTS/DataFrame/Matrix.html">Matrix</a>]</p></dd>
+<dd><p>should be an HTS expression matrix object of gene features in rows and sample id in columns or the adjacency matrix which is read via <code>read.adjacency</p></dd>
 
 
 <dt>adjacency</dt>
 <dd><p>[as double]</p></dd>
 
 
+<dt>args</dt>
+<dd><p>additional parameters for create correlation network based on the adjacency matrix directly: <code>membership. [as list]</p></dd>
+
+
 <dt>env</dt>
-<dd><p>[as <a href="/vignettes/clr/System/Environment.html">Environment</a>]</p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
