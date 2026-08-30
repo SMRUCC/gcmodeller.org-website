@@ -665,8 +665,8 @@ img {
   gap: 16px;
 }
 .foot-brand img {
-  width: 52px;
-  height: 52px;
+  /* width: 52px; */
+  height: 200px;
   object-fit: contain;
 }
 .foot-brand strong {
