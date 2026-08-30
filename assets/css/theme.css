@@ -772,8 +772,8 @@ body.ready .strip {
   transition: opacity 0.8s ease 0.15s;
 }
 .boot img {
-  width: 74px;
-  height: 74px;
+  /* width: 74px; */
+  height: 400px;
   object-fit: contain;
   animation: bootpulse 1.6s ease-in-out infinite;
 }
