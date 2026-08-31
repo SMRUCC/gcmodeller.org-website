@@ -118,7 +118,7 @@ td.prio, th.prio { width: 150px; }
             <p class="meta">
               <span class="stat"><b><xsl:value-of select="count(sitemap:urlset/sitemap:url)" /></b> urls</span>
               <span class="dot">·</span>
-              <span class="stat">generated at 2026-08-31 05:35</span>
+              <span class="stat">generated at 2026-09-01 04:34</span>
             </p>
           </header>
 
