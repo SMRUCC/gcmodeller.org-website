@@ -404,12 +404,6 @@
     <priority>0.66</priority>
   </url>
   <url>
-    <loc>https://gcmodeller.org/vignettes/seqtoolkit/bifrost/metaeuk.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.66</priority>
-  </url>
-  <url>
     <loc>https://gcmodeller.org/vignettes/seqtoolkit/bifrost/prodigal.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>always</changefreq>
@@ -872,6 +866,12 @@
     <priority>0.65</priority>
   </url>
   <url>
+    <loc>https://gcmodeller.org/vignettes/seqtoolkit/bifrost/metaeuk.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
     <loc>https://gcmodeller.org/vignettes/seqtoolkit/bifrost/prodigal_training.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>always</changefreq>
@@ -1046,12 +1046,6 @@
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://gcmodeller.org/vignettes/TRNtoolkit/TRN.builder/open_motifdb.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
     <loc>https://gcmodeller.org/vignettes/TRNtoolkit/TRN.builder/regulation.footprint.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>daily</changefreq>
@@ -1157,6 +1151,12 @@
     <loc>https://gcmodeller.org/vignettes/TRNtoolkit/motif_tool.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://gcmodeller.org/vignettes/TRNtoolkit/TRN.builder/open_motifdb.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.64</priority>
   </url>
   <url>
@@ -1766,12 +1766,6 @@
     <priority>0.59</priority>
   </url>
   <url>
-    <loc>https://gcmodeller.org/vignettes/clr/gseakit/EnrichmentTableFormat.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.58</priority>
-  </url>
-  <url>
     <loc>https://gcmodeller.org/vignettes/clr/kegg_kit/OrganismTypes.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -1878,6 +1872,18 @@
     <lastmod>2026-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.58</priority>
+  </url>
+  <url>
+    <loc>https://gcmodeller.org/vignettes/biosystem/bnlearn/bnlearn.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.57</priority>
+  </url>
+  <url>
+    <loc>https://gcmodeller.org/vignettes/clr/gseakit/EnrichmentTableFormat.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.57</priority>
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/clr/Microsoft/VisualBasic/Imaging/Image.html</loc>
@@ -2336,12 +2342,6 @@
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://gcmodeller.org/vignettes/biosystem/bnlearn/bnlearn.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.56</priority>
-  </url>
-  <url>
     <loc>https://gcmodeller.org/vignettes/biosystem/bnlearn/knockdown.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -2636,12 +2636,6 @@
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://gcmodeller.org/vignettes/clr/rnaseq/AssembleResult.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.56</priority>
-  </url>
-  <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/Core/PriorNetwork.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -2763,12 +2757,6 @@
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/clr/System/InvalidOperationException.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.56</priority>
-  </url>
-  <url>
-    <loc>https://gcmodeller.org/vignettes/clr/System/MarshalByRefObject.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.56</priority>
@@ -6656,6 +6644,12 @@
     <priority>0.55</priority>
   </url>
   <url>
+    <loc>https://gcmodeller.org/vignettes/clr/rnaseq/AssembleResult.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/Intervention/InterventionResult.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -6879,6 +6873,12 @@
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/clr/System/Collections/ICollection.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
+    <loc>https://gcmodeller.org/vignettes/clr/System/MarshalByRefObject.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.55</priority>
@@ -7304,12 +7304,6 @@
     <priority>0.54</priority>
   </url>
   <url>
-    <loc>https://gcmodeller.org/vignettes/clr/System/Collections/CollectionBase.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.54</priority>
-  </url>
-  <url>
     <loc>https://gcmodeller.org/vignettes/clr/System/Drawing/Rectangle.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -7341,12 +7335,6 @@
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/clr/System/Reflection/FieldInfo.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.54</priority>
-  </url>
-  <url>
-    <loc>https://gcmodeller.org/vignettes/clr/System/Reflection/ICustomAttributeProvider.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.54</priority>
@@ -7515,12 +7503,6 @@
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/Metaboliq/MetabolicTrainerConfig.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.53</priority>
-  </url>
-  <url>
-    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/Metagenome/gast/TaxonomyTree.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.53</priority>
@@ -7718,12 +7700,6 @@
     <priority>0.53</priority>
   </url>
   <url>
-    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Data/SABIORK/SBML/SBMLReaction.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.53</priority>
-  </url>
-  <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Data/STRING/Tabular/Tsv/linksDetail.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -7886,6 +7862,12 @@
     <priority>0.53</priority>
   </url>
   <url>
+    <loc>https://gcmodeller.org/vignettes/clr/System/Collections/CollectionBase.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.53</priority>
+  </url>
+  <url>
     <loc>https://gcmodeller.org/vignettes/clr/System/Collections/IEnumerable.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -7893,6 +7875,12 @@
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/clr/System/Int64.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.53</priority>
+  </url>
+  <url>
+    <loc>https://gcmodeller.org/vignettes/clr/System/Reflection/ICustomAttributeProvider.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.53</priority>
@@ -8204,6 +8192,12 @@
     <priority>0.52</priority>
   </url>
   <url>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/Metagenome/gast/TaxonomyTree.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.52</priority>
+  </url>
+  <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/Metagenome/greengenes/otu_taxonomy.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -8336,12 +8330,6 @@
     <priority>0.52</priority>
   </url>
   <url>
-    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/SSystem/Kernel/ObjectModels/var.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.52</priority>
-  </url>
-  <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Assembly/KEGG/DBGET/bGetObject/Organism/Prokaryote.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -8469,6 +8457,12 @@
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Data/SABIORK/SBML/SBMLInternalIndexer.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.52</priority>
+  </url>
+  <url>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Data/SABIORK/SBML/SBMLReaction.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.52</priority>
@@ -8738,12 +8732,6 @@
     <priority>0.51</priority>
   </url>
   <url>
-    <loc>https://gcmodeller.org/vignettes/clr/Microsoft/VisualBasic/Data/Framework/StorageProvider/DataFrameResolver.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.51</priority>
-  </url>
-  <url>
     <loc>https://gcmodeller.org/vignettes/clr/Microsoft/VisualBasic/Data/visualize/Network/Graph/EdgeBundling/Handle.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -8883,6 +8871,18 @@
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/clr/Microsoft/VisualBasic/Scripting/MetaData/PackageAttribute.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.51</priority>
+  </url>
+  <url>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/DBN/DBNConfig.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.51</priority>
+  </url>
+  <url>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/DBN/DynamicBayesianNetwork.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.51</priority>
@@ -9122,6 +9122,12 @@
     <priority>0.51</priority>
   </url>
   <url>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/SSystem/Kernel/ObjectModels/var.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.51</priority>
+  </url>
+  <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Annotation/MetaEuk/GenePrediction.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -9189,12 +9195,6 @@
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Assembly/Uniprot/XML/feature.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.51</priority>
-  </url>
-  <url>
-    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Assembly/Uniprot/XML/location.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.51</priority>
@@ -9344,12 +9344,6 @@
     <priority>0.51</priority>
   </url>
   <url>
-    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Interops/NCBI/Extensions/DiamondAnnotation.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.51</priority>
-  </url>
-  <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Interops/NCBI/Extensions/LocalBLAST/Application/NtMapping/BlastnMapping.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -9369,12 +9363,6 @@
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Model/OperonMapper/ODBOperon.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.51</priority>
-  </url>
-  <url>
-    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Model/PathVisio/GPML/DataNode.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.51</priority>
@@ -9555,6 +9543,12 @@
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/clr/Microsoft/VisualBasic/Data/Framework/IO/Table.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://gcmodeller.org/vignettes/clr/Microsoft/VisualBasic/Data/Framework/StorageProvider/DataFrameResolver.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.50</priority>
@@ -9741,6 +9735,18 @@
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/Core/GeneExpressionData.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/Core/WGCNADBN/BlockBayesianNetwork.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/Core/WGCNADBN/ModuleDBN.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.50</priority>
@@ -10167,6 +10173,12 @@
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Assembly/Uniprot/XML/lineage.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Assembly/Uniprot/XML/location.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.50</priority>
@@ -10808,6 +10820,12 @@
     <priority>0.50</priority>
   </url>
   <url>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Interops/NCBI/Extensions/DiamondAnnotation.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Model/MotifGraph/ProteinStructure/FamilyExports.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -10887,6 +10905,12 @@
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Model/PathVisio/GPML/Anchor.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Model/PathVisio/GPML/DataNode.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.50</priority>

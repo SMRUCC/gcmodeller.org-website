@@ -1134,9 +1134,10 @@
     ]
   },
   "https://gcmodeller.org/vignettes/biosystem/bnlearn/bnlearn.html": {
-    "md5": "4271465e3a9eafbb67c6cdce21c77401",
+    "md5": "fe666c8bca6158d8649129ed16260a38",
     "timestamp": [
-      1788097523
+      1788097523,
+      1788239922
     ]
   },
   "https://gcmodeller.org/vignettes/biosystem/bnlearn/knockdown.html": {
@@ -2327,6 +2328,18 @@
       1788097339
     ]
   },
+  "https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/Core/WGCNADBN/BlockBayesianNetwork.html": {
+    "md5": "31fca867b57bfb26df6971c47c91fa57",
+    "timestamp": [
+      1788239922
+    ]
+  },
+  "https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/Core/WGCNADBN/ModuleDBN.html": {
+    "md5": "97c74f6735085343c7942aacfc475922",
+    "timestamp": [
+      1788239922
+    ]
+  },
   "https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/Core/WGCNADBN/PropagationMethod.html": {
     "md5": "f213be805f5edf1928c1a1652bae4add",
     "timestamp": [
@@ -2337,6 +2350,18 @@
     "md5": "9e4af8409ddbd348465b070352cb747d",
     "timestamp": [
       1788097339
+    ]
+  },
+  "https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/DBN/DBNConfig.html": {
+    "md5": "0ff31f828283a6587563b05dd37fe821",
+    "timestamp": [
+      1788239922
+    ]
+  },
+  "https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/DBN/DynamicBayesianNetwork.html": {
+    "md5": "1cdf6231e867d62b53be24c40d3e9c32",
+    "timestamp": [
+      1788239922
     ]
   },
   "https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/Effector.html": {
