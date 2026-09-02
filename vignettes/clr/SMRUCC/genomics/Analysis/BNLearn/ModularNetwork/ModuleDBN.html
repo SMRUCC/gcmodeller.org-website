@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>SMRUCC.genomics.Analysis.BNLearn.Core.WGCNADBN.ModuleDBN</title>
+    <title>SMRUCC.genomics.Analysis.BNLearn.ModularNetwork.ModuleDBN</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <link rel="stylesheet" type="text/css" href="https://gcmodeller.org/lib/page.css">
@@ -13,7 +13,7 @@
 
         <table style="width: 100%;">
             <tr>
-                <td>ModuleDBN {SMRUCC.genomics.Analysis.BNLearn.Core.WGCNADBN}</td>
+                <td>ModuleDBN {SMRUCC.genomics.Analysis.BNLearn.ModularNetwork}</td>
                 <td style="text-align: right;">.NET clr documentation</td>
             </tr>
         </table>
@@ -28,7 +28,7 @@
 
         <pre>
             <code id="clr_ts">
-# namespace SMRUCC.genomics.Analysis.BNLearn.Core.WGCNADBN
+# namespace SMRUCC.genomics.Analysis.BNLearn.ModularNetwork
 export class ModuleDBN {
    # 模块 eigengene 轨迹：各时间点的模块基因均值向量（用于模块间相关度）
    Eigengene: double;
@@ -40,6 +40,10 @@ export class ModuleDBN {
    ModuleColor: string;
    # 已构建拓扑并完成参数学习的动态贝叶斯网络子网络
    Net: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/DBN/DynamicBayesianNetwork.html">DynamicBayesianNetwork</a>;
+   # 该模块各基因的<strong>野生型（未受扰动）表达丰度</strong>：基因 ID → 丰度值。
+   # 
+   # 由训练流程自动计算（各基因在时间序列上的中位数，对 dropout 零值与 异常值稳健），作为虚拟扰动推演的初始状态与响应参照基准。早期实现把初始 状态硬编码为"全部 Medium"，导致未受扰动影响的基因一律输出 Medium。 可由 BlockBayesianNetwork.SetWildtypeBaseline 覆盖。
+   WildtypeAbundance: list;
 }
 </code>
         </pre>
@@ -49,6 +53,7 @@ export class ModuleDBN {
         <ol>
 <li>use by <i>property</i> member <code>GeneIndex</code>: list</li>
 <li>use by <i>property</i> member <code>Net</code>: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/DBN/DynamicBayesianNetwork.html">DynamicBayesianNetwork</a></li>
+<li>use by <i>property</i> member <code>WildtypeAbundance</code>: list</li>
 </ol>
 
 

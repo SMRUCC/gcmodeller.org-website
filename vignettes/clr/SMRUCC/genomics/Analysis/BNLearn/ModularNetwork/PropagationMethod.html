@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>SMRUCC.genomics.Analysis.BNLearn.Core.WGCNADBN.PropagationMethod</title>
+    <title>SMRUCC.genomics.Analysis.BNLearn.ModularNetwork.PropagationMethod</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <link rel="stylesheet" type="text/css" href="https://gcmodeller.org/lib/page.css">
@@ -13,7 +13,7 @@
 
         <table style="width: 100%;">
             <tr>
-                <td>PropagationMethod {SMRUCC.genomics.Analysis.BNLearn.Core.WGCNADBN}</td>
+                <td>PropagationMethod {SMRUCC.genomics.Analysis.BNLearn.ModularNetwork}</td>
                 <td style="text-align: right;">.NET clr documentation</td>
             </tr>
         </table>
@@ -28,13 +28,13 @@
 
         <pre>
             <code id="clr_ts">
-# namespace SMRUCC.genomics.Analysis.BNLearn.Core.WGCNADBN
+# namespace SMRUCC.genomics.Analysis.BNLearn.ModularNetwork
 export class PropagationMethod extends <a href="/vignettes/clr/System/Enum.html">Enum</a> {
    # 雅可比矩阵传播（默认）：把全局系数矩阵 A 视作线性化雅可比， 扰动向量沿 A^k 多步线性传播至收敛，得到稳态全局响应。 适用于小幅扰动的线性近似。
-   Jacobian: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/Core/WGCNADBN/PropagationMethod.html">PropagationMethod</a> = 0;
+   Jacobian: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/ModularNetwork/PropagationMethod.html">PropagationMethod</a> = 0;
 
    # 级联采样传播：在整合后的全局网络上做 do-演算，并把上一步 各基因均值作为相邻模块证据迭代采样多步，跨模块传播不确定性。 更忠实于概率模型，计算更重。
-   CascadeSampling: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/Core/WGCNADBN/PropagationMethod.html">PropagationMethod</a> = 1;
+   CascadeSampling: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/ModularNetwork/PropagationMethod.html">PropagationMethod</a> = 1;
 
 }
 </code>
@@ -44,8 +44,8 @@ export class PropagationMethod extends <a href="/vignettes/clr/System/Enum.html"
 
         <ol>
 <li>this class extends from <a href="/vignettes/clr/System/Enum.html">Enum</a> class: <a href="/vignettes/clr/System/Enum.html">Enum</a></li>
-<li>use by <i>field</i> member <code>Jacobian</code>: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/Core/WGCNADBN/PropagationMethod.html">PropagationMethod</a></li>
-<li>use by <i>field</i> member <code>CascadeSampling</code>: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/Core/WGCNADBN/PropagationMethod.html">PropagationMethod</a></li>
+<li>use by <i>field</i> member <code>Jacobian</code>: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/ModularNetwork/PropagationMethod.html">PropagationMethod</a></li>
+<li>use by <i>field</i> member <code>CascadeSampling</code>: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/ModularNetwork/PropagationMethod.html">PropagationMethod</a></li>
 </ol>
 
 

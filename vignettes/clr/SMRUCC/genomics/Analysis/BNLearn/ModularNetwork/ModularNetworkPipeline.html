@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>SMRUCC.genomics.Analysis.BNLearn.Core.WGCNADBN.WGCNASubnetworkPipeline</title>
+    <title>SMRUCC.genomics.Analysis.BNLearn.ModularNetwork.ModularNetworkPipeline</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <link rel="stylesheet" type="text/css" href="https://gcmodeller.org/lib/page.css">
@@ -13,12 +13,12 @@
 
         <table style="width: 100%;">
             <tr>
-                <td>WGCNASubnetworkPipeline {SMRUCC.genomics.Analysis.BNLearn.Core.WGCNADBN}</td>
+                <td>ModularNetworkPipeline {SMRUCC.genomics.Analysis.BNLearn.ModularNetwork}</td>
                 <td style="text-align: right;">.NET clr documentation</td>
             </tr>
         </table>
 
-        <h2>WGCNASubnetworkPipeline</h2>
+        <h2>ModularNetworkPipeline</h2>
 
         <h3>Description</h3>
 
@@ -28,8 +28,8 @@
 
         <pre>
             <code id="clr_ts">
-# namespace SMRUCC.genomics.Analysis.BNLearn.Core.WGCNADBN
-export class WGCNASubnetworkPipeline {
+# namespace SMRUCC.genomics.Analysis.BNLearn.ModularNetwork
+export class ModularNetworkPipeline {
    # hub 基因间相关阈值：|r| 超过才在对应基因间补跨模块边
    CrossGeneCorThreshold: double;
    # 模块 eigengene 相关阈值：|cor| 超过才尝试补模块间边
@@ -45,7 +45,7 @@ export class WGCNASubnetworkPipeline {
    # 参数学习与采样所用样本数
    NSamples: integer;
    # 传播方法，默认 Jacobian（线性化雅可比多步传播）
-   Propagation: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/Core/WGCNADBN/PropagationMethod.html">PropagationMethod</a>;
+   Propagation: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/ModularNetwork/PropagationMethod.html">PropagationMethod</a>;
    # 随机种子
    RandomSeed: integer;
    # 结构学习参数（算法/显著性阈值/最大父节点数/随机种子）
@@ -59,7 +59,7 @@ export class WGCNASubnetworkPipeline {
         <h3>.NET clr type reference tree</h3>
 
         <ol>
-<li>use by <i>property</i> member <code>Propagation</code>: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/Core/WGCNADBN/PropagationMethod.html">PropagationMethod</a></li>
+<li>use by <i>property</i> member <code>Propagation</code>: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/ModularNetwork/PropagationMethod.html">PropagationMethod</a></li>
 <li>use by <i>property</i> member <code>StructureParams</code>: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/StructureLearning/StructureLearningParams.html">StructureLearningParams</a></li>
 </ol>
 
