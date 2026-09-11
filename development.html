@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="description"
+    content="Develop bioinformatics applications in .NET: add the sciBASIC NuGet feed to Visual Studio, install the SMRUCC.genomics.* GCModeller packages and write VB.NET, C# or F# code against the framework." />
+  <title>Development — GCModeller</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/theme.css" />
+</head>
+
+<body>
+
+  <header class="nav">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo.png" alt="GCModeller logo" onerror="this.style.display='none'" />
+      <span class="brand-txt">
+        <strong>GCModeller</strong>
+        <em>genomics CAD · Modeller System</em>
+      </span>
+    </a>
+    <nav class="links">
+      <a href="index.html">Overview</a>
+      <a href="science.html">The Science</a>
+      <a href="install.html">Install</a>
+      <a href="docs.html">Docs</a>
+      <a href="development.html" class="active">Development</a>
+      <a class="gh" href="https://github.com/SMRUCC/GCModeller" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <div class="wrap">
+
+      <div class="page-hero">
+        <div class="kicker">.NET Development</div>
+        <h1>Develop with GCModeller</h1>
+        <p class="lead">
+          GCModeller is not only an R# scripting environment — every module is also published as a
+          <strong>.NET package</strong>. Add the <strong>sciBASIC NuGet feed</strong> to Visual Studio, reference
+          <span class="mono-inline">SMRUCC.genomics.*</span> from your project, and build bioinformatics
+          applications directly on top of the framework in <strong>VB.NET, C# or F#</strong>.
+        </p>
+        <div class="note" style="margin-top:34px;">
+          <span class="n-ic">i</span>
+          <span>
+            The GCModeller packages are distributed on the NuGet feed of the
+            <strong>sciBASIC.NET foundation</strong>, the package platform behind GCModeller's own dependencies.
+            Downloads are anonymous — no account or API key is required.
+            Looking for the R# scripting workflow instead? That route is documented on the
+            <a href="install.html">Install</a> page.
+          </span>
+        </div>
+      </div>
+
+      <!-- resource cards -->
+      <div class="grid c4">
+        <a class="card link" href="https://nuget.scibasic.net/tags.html?tag=gcmodeller" target="_blank"
+          rel="noopener">
+          <div class="ic">◈</div>
+          <h3>sciBASIC NuGet Feed</h3>
+          <p>Browse the 93 packages tagged <span class="mono-inline">gcmodeller</span>, with versions, descriptions
+            and download links.</p>
+          <span class="go mono">nuget.scibasic.net · tag=gcmodeller ↗</span>
+        </a>
+        <a class="card link" href="https://github.com/SMRUCC/GCModeller" target="_blank" rel="noopener">
+          <div class="ic">⌥</div>
+          <h3>GitHub Repository</h3>
+          <p>Full source of every module, including the reference command line projects you can copy from.</p>
+          <span class="go mono">github.com/SMRUCC/GCModeller ↗</span>
+        </a>
+        <a class="card link" href="https://gcmodeller.org/vignettes/index.html" target="_blank" rel="noopener">
+          <div class="ic">▣</div>
+          <h3>.NET API Reference</h3>
+          <p>The CLR type documentation for every namespace, generated from the assemblies you install.</p>
+          <span class="go mono">gcmodeller.org/vignettes ↗</span>
+        </a>
+        <a class="card link" href="install.html">
+          <div class="ic">◇</div>
+          <h3>Docker &amp; R# Route</h3>
+          <p>Prefer scripting inside the container environment? Start from the Install page instead.</p>
+          <span class="go mono">install.html →</span>
+        </a>
+      </div>
+
+      <!-- 01 -->
+      <section class="sec" style="margin-top:76px;">
+        <div class="sec-head">
+          <span class="sec-num">01</span>
+          <h2>Register the sciBASIC package source</h2>
+        </div>
+        <div class="code">
+          <div class="code-bar"><span class="tb r"></span><span class="tb y"></span><span class="tb g"></span><span
+              class="code-title">Visual Studio — Options</span></div>
+          <pre><code><span class="k">Tools</span> <span class="o">▸</span> <span class="k">Options</span> <span class="o">▸</span> <span class="k">NuGet Package Manager</span> <span class="o">▸</span> <span class="k">Package Sources</span>
+
+<span class="c"># click (+), fill in the two fields below, then Update → OK</span>
+Name:    <span class="t">sciBASIC</span>
+Source:  <span class="s">https://nuget.scibasic.net/v3/index.json</span></code></pre>
+        </div>
+        <div class="prose">
+          <p>
+            The feed is a standard <strong>NuGet v3</strong> service, so the official Visual Studio client talks to it
+            without any extra tooling. Package downloads are anonymous; publishing to the feed is a separate,
+            authenticated operation and is not needed to consume GCModeller.
+          </p>
+        </div>
+      </section>
+
+      <!-- 02 -->
+      <section class="sec">
+        <div class="sec-head">
+          <span class="sec-num">02</span>
+          <h2>Browse and install the packages</h2>
+        </div>
+        <div class="code">
+          <div class="code-bar"><span class="tb r"></span><span class="tb y"></span><span class="tb g"></span><span
+              class="code-title">Manage NuGet Packages — Browse</span></div>
+          <pre><code><span class="c"># right-click the project → "Manage NuGet Packages…"</span>
+<span class="c"># switch the package source dropdown to sciBASIC, then search:</span>
+
+Package source: <span class="t">sciBASIC</span>
+Search:         <span class="k">SMRUCC.genomics</span>
+
+<span class="c"># 93 packages currently carry the gcmodeller tag, for example:</span>
+<span class="t">SMRUCC.genomics.core</span>                <span class="c"># 10.5.3.8911 · foundation library</span>
+<span class="t">SMRUCC.genomics.annotation</span>          <span class="c"># GFF / PTF annotation models</span>
+<span class="t">SMRUCC.genomics.annotation.prodigal</span> <span class="c"># gene prediction</span>
+<span class="t">SMRUCC.genomics.analysis.hts.gsea</span>   <span class="c"># gene set enrichment</span>
+<span class="t">SMRUCC.genomics.analysis.metagenome</span> <span class="c"># 16S / OTU community analysis</span></code></pre>
+        </div>
+        <div class="prose">
+          <p>
+            The complete, always up-to-date listing lives on the
+            <a href="https://nuget.scibasic.net/tags.html?tag=gcmodeller" target="_blank" rel="noopener">gcmodeller
+              tag page</a> of the sciBASIC feed — check it first when you are unsure which module provides the
+            algorithm you need. Dependencies are resolved automatically, so installing a high-level module such as
+            <span class="mono-inline">SMRUCC.genomics.analysis.hts.gsea</span> also pulls in
+            <span class="mono-inline">SMRUCC.genomics.core</span> and the shared data models.
+          </p>
+        </div>
+      </section>
+
+      <!-- 03 -->
+      <section class="sec">
+        <div class="sec-head">
+          <span class="sec-num">03</span>
+          <h2>Command line &amp; NuGet.config</h2>
+        </div>
+        <div class="code">
+          <div class="code-bar"><span class="tb r"></span><span class="tb y"></span><span class="tb g"></span><span
+              class="code-title">terminal — dotnet CLI / Package Manager Console</span></div>
+          <pre><code><span class="c"># register the feed once, then add packages as usual</span>
+<span class="p">$</span> dotnet nuget add source https://nuget.scibasic.net/v3/index.json -n sciBASIC
+<span class="p">$</span> dotnet add package SMRUCC.genomics.core --source sciBASIC
+
+<span class="c"># or, from the Package Manager Console inside Visual Studio:</span>
+<span class="p">PM&gt;</span> Install-Package SMRUCC.genomics.core -Source sciBASIC</code></pre>
+        </div>
+        <div class="code">
+          <div class="code-bar"><span class="tb r"></span><span class="tb y"></span><span class="tb g"></span><span
+              class="code-title">NuGet.config — commit the source with your solution</span></div>
+          <pre><code><span class="o">&lt;?</span>xml version<span class="o">=</span><span class="s">"1.0"</span> encoding<span class="o">=</span><span class="s">"utf-8"</span><span class="o">?&gt;</span>
+<span class="o">&lt;</span>configuration<span class="o">&gt;</span>
+  <span class="o">&lt;</span>packageSources<span class="o">&gt;</span>
+    <span class="o">&lt;</span>add key<span class="o">=</span><span class="s">"sciBASIC"</span> value<span class="o">=</span><span class="s">"https://nuget.scibasic.net/v3/index.json"</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;/</span>packageSources<span class="o">&gt;</span>
+<span class="o">&lt;/</span>configuration<span class="o">&gt;</span></code></pre>
+        </div>
+        <div class="prose">
+          <p>
+            A checked-in <span class="mono-inline">NuGet.config</span> is the most reliable option for teams and CI
+            pipelines: every restore resolves GCModeller from the sciBASIC feed without any per-machine setup.
+          </p>
+        </div>
+      </section>
+
+      <!-- 04 -->
+      <section class="sec">
+        <div class="sec-head">
+          <span class="sec-num">04</span>
+          <h2>Your first GCModeller program</h2>
+        </div>
+        <div class="prose">
+          <p>
+            The snippet below is real production code taken from the <strong>Bifrost</strong> gene-prediction
+            command line tool of GCModeller (<span class="mono-inline">annotations/Bifrost/Bifrost/Program.vb</span>).
+            It exposes two CLI verbs — <span class="mono-inline">prodigal</span> for ab-initio prokaryotic gene
+            calling and <span class="mono-inline">metaeuk</span> for homology-based eukaryotic prediction — and shows
+            the typical shape of a GCModeller program: import a namespace, read a FASTA file, run a worker, export the
+            result. The same program is shown in all three .NET languages.
+          </p>
+        </div>
+
+        <div class="lang-tabs">
+          <input type="radio" name="lang" id="lang-vb" checked>
+          <input type="radio" name="lang" id="lang-cs">
+          <input type="radio" name="lang" id="lang-fs">
+
+          <div class="lang-bar">
+            <label for="lang-vb">VB.NET</label>
+            <label for="lang-cs">C#</label>
+            <label for="lang-fs">F#</label>
+          </div>
+
+          <div class="lang-panes">
+
+            <div class="pane pane-vb">
+              <div class="code">
+                <div class="code-bar"><span class="tb r"></span><span class="tb y"></span><span
+                    class="tb g"></span><span class="code-title">Bifrost.vb — VB.NET</span><span
+                    class="pane-tag">VB.NET</span></div>
+                <pre><code><span class="k">Imports</span> <span class="t">Microsoft.VisualBasic.CommandLine</span>
+<span class="k">Imports</span> <span class="t">Microsoft.VisualBasic.CommandLine.Reflection</span>
+<span class="k">Imports</span> <span class="t">SMRUCC.genomics.Annotation.MetaEuk</span>
+<span class="k">Imports</span> <span class="t">SMRUCC.genomics.Annotation.Prodigal</span>
+<span class="k">Imports</span> <span class="t">SMRUCC.genomics.SequenceModel.FASTA</span>
+
+<span class="k">Module</span> <span class="t">Program</span>
+
+    <span class="k">Public Function</span> <span class="f">Main</span>(args <span class="k">As</span> <span class="t">String</span>()) <span class="k">As</span> <span class="t">Integer</span>
+        <span class="k">Return</span> <span class="k">GetType</span>(<span class="t">Program</span>).<span class="f">RunCLI</span>(<span class="t">App</span>.CommandLine)
+    <span class="k">End Function</span>
+
+    <span class="o">&lt;</span><span class="a">ExportAPI</span>(<span class="s">"prodigal"</span>)<span class="o">&gt;</span>
+    <span class="k">Public Function</span> <span class="f">Prodigal</span>(args <span class="k">As</span> <span class="t">CommandLine</span>) <span class="k">As</span> <span class="t">Integer</span>
+        <span class="k">Dim</span> MAGs <span class="k">As</span> <span class="t">String</span> = args(<span class="s">"--contigs"</span>)
+        <span class="k">Dim</span> outprefix <span class="k">As</span> <span class="t">String</span> = args(<span class="s">"--output"</span>)
+        <span class="k">Dim</span> predicts = <span class="t">ProdigalWorker</span>.<span class="f">GenePrediction</span>(<span class="t">FastaFile</span>.<span class="f">Read</span>(MAGs)).<span class="f">ToArray</span>
+
+        <span class="k">Call</span> <span class="t">ProdigalWorker</span>.<span class="f">ExportResult</span>(predicts, outprefix)
+
+        <span class="k">Return</span> <span class="n">0</span>
+    <span class="k">End Function</span>
+
+    <span class="o">&lt;</span><span class="a">ExportAPI</span>(<span class="s">"metaeuk"</span>)<span class="o">&gt;</span>
+    <span class="k">Public Function</span> <span class="f">MetaEuk</span>(args <span class="k">As</span> <span class="t">CommandLine</span>) <span class="k">As</span> <span class="t">Integer</span>
+        <span class="k">Dim</span> config <span class="k">As New</span> <span class="t">MetaEukConfig</span> <span class="k">With</span> {
+            .ReferenceFile = args(<span class="s">"--reference"</span>),
+            .ContigsFile = args(<span class="s">"--contigs"</span>),
+            .OutputPrefix = args(<span class="s">"--output"</span>)
+        }
+        <span class="k">Dim</span> predicts <span class="k">As</span> <span class="t">GenePrediction</span>() = <span class="t">MetaEukWorker</span>.<span class="f">Predict</span>(config).<span class="f">ToArray</span>
+
+        <span class="k">Call</span> <span class="t">MetaEukWorker</span>.<span class="f">ExportResult</span>(predicts, config)
+
+        <span class="k">Return</span> <span class="n">0</span>
+    <span class="k">End Function</span>
+
+<span class="k">End Module</span></code></pre>
+              </div>
+            </div>
+
+            <div class="pane pane-cs">
+              <div class="code">
+                <div class="code-bar"><span class="tb r"></span><span class="tb y"></span><span
+                    class="tb g"></span><span class="code-title">Bifrost.cs — C#</span><span
+                    class="pane-tag">C#</span></div>
+                <pre><code><span class="k">using</span> <span class="t">Microsoft.VisualBasic.CommandLine</span>;
+<span class="k">using</span> <span class="t">Microsoft.VisualBasic.CommandLine.Reflection</span>;
+<span class="k">using</span> <span class="t">SMRUCC.genomics.Annotation.MetaEuk</span>;
+<span class="k">using</span> <span class="t">SMRUCC.genomics.Annotation.Prodigal</span>;
+<span class="k">using</span> <span class="t">SMRUCC.genomics.SequenceModel.FASTA</span>;
+
+<span class="k">public static class</span> <span class="t">Program</span>
+{
+    <span class="k">public static int</span> <span class="f">Main</span>(<span class="k">string</span>[] args)
+    {
+        <span class="k">return typeof</span>(<span class="t">Program</span>).<span class="f">RunCLI</span>(<span class="t">App</span>.CommandLine);
+    }
+
+    [<span class="a">ExportAPI</span>(<span class="s">"prodigal"</span>)]
+    <span class="k">public static int</span> <span class="f">Prodigal</span>(<span class="t">CommandLine</span> args)
+    {
+        <span class="k">string</span> MAGs = args[<span class="s">"--contigs"</span>];
+        <span class="k">string</span> outprefix = args[<span class="s">"--output"</span>];
+        <span class="k">var</span> predicts = <span class="t">ProdigalWorker</span>.<span class="f">GenePrediction</span>(<span class="t">FastaFile</span>.<span class="f">Read</span>(MAGs)).<span class="f">ToArray</span>();
+
+        <span class="t">ProdigalWorker</span>.<span class="f">ExportResult</span>(predicts, outprefix);
+
+        <span class="k">return</span> <span class="n">0</span>;
+    }
+
+    [<span class="a">ExportAPI</span>(<span class="s">"metaeuk"</span>)]
+    <span class="k">public static int</span> <span class="f">MetaEuk</span>(<span class="t">CommandLine</span> args)
+    {
+        <span class="k">var</span> config = <span class="k">new</span> <span class="t">MetaEukConfig</span> {
+            ReferenceFile = args[<span class="s">"--reference"</span>],
+            ContigsFile = args[<span class="s">"--contigs"</span>],
+            OutputPrefix = args[<span class="s">"--output"</span>]
+        };
+        <span class="t">GenePrediction</span>[] predicts = <span class="t">MetaEukWorker</span>.<span class="f">Predict</span>(config).<span class="f">ToArray</span>();
+
+        <span class="t">MetaEukWorker</span>.<span class="f">ExportResult</span>(predicts, config);
+
+        <span class="k">return</span> <span class="n">0</span>;
+    }
+}</code></pre>
+              </div>
+            </div>
+
+            <div class="pane pane-fs">
+              <div class="code">
+                <div class="code-bar"><span class="tb r"></span><span class="tb y"></span><span
+                    class="tb g"></span><span class="code-title">Bifrost.fs — F#</span><span
+                    class="pane-tag">F#</span></div>
+                <pre><code><span class="k">open</span> <span class="t">Microsoft.VisualBasic.CommandLine</span>
+<span class="k">open</span> <span class="t">Microsoft.VisualBasic.CommandLine.Reflection</span>
+<span class="k">open</span> <span class="t">SMRUCC.genomics.Annotation.MetaEuk</span>
+<span class="k">open</span> <span class="t">SMRUCC.genomics.Annotation.Prodigal</span>
+<span class="k">open</span> <span class="t">SMRUCC.genomics.SequenceModel.FASTA</span>
+
+<span class="k">module</span> <span class="t">Program</span> =
+
+    <span class="k">let</span> <span class="f">Main</span> (args: <span class="k">string</span>[]) : <span class="k">int</span> =
+        <span class="k">typeof</span>&lt;<span class="t">Program</span>&gt;.<span class="f">RunCLI</span>(<span class="t">App</span>.CommandLine)
+
+    [&lt;<span class="a">ExportAPI</span>(<span class="s">"prodigal"</span>)&gt;]
+    <span class="k">let</span> <span class="f">Prodigal</span> (args: <span class="t">CommandLine</span>) : <span class="k">int</span> =
+        <span class="k">let</span> MAGs = args.[<span class="s">"--contigs"</span>]
+        <span class="k">let</span> outprefix = args.[<span class="s">"--output"</span>]
+        <span class="k">let</span> predicts = <span class="t">ProdigalWorker</span>.<span class="f">GenePrediction</span>(<span class="t">FastaFile</span>.<span class="f">Read</span>(MAGs)) |&gt; <span class="t">Seq</span>.<span class="f">toArray</span>
+
+        <span class="t">ProdigalWorker</span>.<span class="f">ExportResult</span>(predicts, outprefix)
+
+        <span class="n">0</span>
+
+    [&lt;<span class="a">ExportAPI</span>(<span class="s">"metaeuk"</span>)&gt;]
+    <span class="k">let</span> <span class="f">MetaEuk</span> (args: <span class="t">CommandLine</span>) : <span class="k">int</span> =
+        <span class="k">let</span> config = <span class="t">MetaEukConfig</span>(
+                        ReferenceFile = args.[<span class="s">"--reference"</span>],
+                        ContigsFile = args.[<span class="s">"--contigs"</span>],
+                        OutputPrefix = args.[<span class="s">"--output"</span>])
+
+        <span class="k">let</span> predicts : <span class="t">GenePrediction</span>[] = <span class="t">MetaEukWorker</span>.<span class="f">Predict</span>(config) |&gt; <span class="t">Seq</span>.<span class="f">toArray</span>
+
+        <span class="t">MetaEukWorker</span>.<span class="f">ExportResult</span>(predicts, config)
+
+        <span class="n">0</span></code></pre>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="prose">
+          <p>
+            Every type and function used above — <span class="mono-inline">FastaFile</span>,
+            <span class="mono-inline">ProdigalWorker</span>, <span class="mono-inline">MetaEukWorker</span>,
+            <span class="mono-inline">GenePrediction</span> — is documented with its full signature in the
+            <a href="https://gcmodeller.org/vignettes/index.html" target="_blank" rel="noopener">CLR API
+              reference</a>. GCModeller itself is written in VB.NET, so the VB.NET flavour is always the reference
+            implementation; C# and F# consume the very same assemblies.
+          </p>
+        </div>
+      </section>
+
+      <!-- 05 -->
+      <section class="sec">
+        <div class="sec-head">
+          <span class="sec-num">05</span>
+          <h2>Which package do I need?</h2>
+        </div>
+        <div class="grid c4" style="margin-top:34px;">
+          <div class="card">
+            <div class="ic">◆</div>
+            <h3>Core</h3>
+            <p><span class="mono-inline">SMRUCC.genomics.core</span> — the foundation library: biological file I/O
+              streams and the shared data models every other module builds on. Install it first.</p>
+          </div>
+          <div class="card">
+            <div class="ic">◇</div>
+            <h3>Annotation</h3>
+            <p><span class="mono-inline">SMRUCC.genomics.annotation</span>,
+              <span class="mono-inline">.annotation.prodigal</span>, <span class="mono-inline">.annotation.metaeuk</span>
+              — gene prediction and genome annotation file models (GFF, PTF, GO / KO / Pfam mapping).</p>
+          </div>
+          <div class="card">
+            <div class="ic">◈</div>
+            <h3>Analysis</h3>
+            <p><span class="mono-inline">SMRUCC.genomics.analysis.*</span> — enrichment (<span
+                class="mono-inline">.go</span>, <span class="mono-inline">.kegg</span>,
+              <span class="mono-inline">.analysis.hts.gsea</span>), expression (<span
+                class="mono-inline">.hts.rnaexpression</span>), network inference (<span
+                class="mono-inline">.hts.wgcna</span>), FBA and metagenomics.</p>
+          </div>
+          <div class="card">
+            <div class="ic">◑</div>
+            <h3>Data &amp; repositories</h3>
+            <p><span class="mono-inline">SMRUCC.genomics.data.*</span> — readers for BioCyc / MetaCyc, KEGG,
+              Reactome, UniProt, RCSB PDB and the regulon databases.</p>
+          </div>
+        </div>
+        <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:46px;">
+          <a class="btn" href="https://nuget.scibasic.net/tags.html?tag=gcmodeller" target="_blank"
+            rel="noopener">Browse the NuGet Packages <span class="arr">↗</span></a>
+          <a class="btn ghost" href="https://gcmodeller.org/vignettes/index.html" target="_blank"
+            rel="noopener">.NET API Reference <span class="arr">↗</span></a>
+          <a class="btn ghost" href="install.html">Back to Install</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div class="foot-brand">
+        <img src="assets/img/logo.png" alt="" onerror="this.style.display='none'" />
+        <div>
+          <strong>GCModeller</strong>
+          <p>中國 · 桂林 | GuiLin, China</p>
+          <p>genomics CAD (Computer Assistant Design) Modeller System — an open-source systems biology platform
+            implemented from scratch in .NET.</p>
+        </div>
+      </div>
+      <nav class="foot-links">
+        <p class="foot-h">Site</p>
+        <a href="index.html">Overview</a>
+        <a href="science.html">The Science</a>
+        <a href="install.html">Install</a>
+        <a href="docs.html">Documentation</a>
+        <a href="development.html">Development</a>
+      </nav>
+      <div class="foot-contact">
+        <p class="foot-h">Contact</p>
+        <p><a href="mailto:xie.guigang@gcmodeller.org">xie.guigang@gcmodeller.org</a></p>
+        <p>SMRUCC genomics · Guilin, China</p>
+        <p><a href="https://github.com/SMRUCC/GCModeller" target="_blank"
+            rel="noopener">github.com/SMRUCC/GCModeller</a></p>
+      </div>
+    </div>
+    <div class="wrap foot-legal">
+      <span>© 2026 SMRUCC · GPL-3.0 open source</span>
+      <span class="mono">doi: 10.5281/zenodo.159947</span>
+    </div>
+  </footer>
+
+</body>
+
+</html>
