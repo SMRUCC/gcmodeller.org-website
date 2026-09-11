@@ -549,6 +549,177 @@ img {
 } /* function*/
 
 /* ------------------------------------------------------------
+ *  Code block title bar · inline mono · syntax tokens
+ * ------------------------------------------------------------ */
+.code .code-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-bottom: 1px solid var(--line-soft);
+  background: rgba(146, 166, 196, 0.04);
+}
+.code .code-bar .tb {
+  flex: 0 0 auto;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(146, 166, 196, 0.22);
+}
+.code .code-bar .tb.r {
+  background: #ff5f56;
+}
+.code .code-bar .tb.y {
+  background: #ffbd2e;
+}
+.code .code-bar .tb.g {
+  background: #27c93f;
+}
+.code .code-bar .code-title {
+  margin-left: 6px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--ink-mute);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mono-inline {
+  font-family: var(--mono);
+  font-size: 0.92em;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: rgba(146, 166, 196, 0.09);
+  border: 1px solid var(--line-soft);
+  color: #7fb3e0;
+  white-space: nowrap;
+}
+
+/* syntax highlight tokens */
+.code .p {
+  color: var(--steel);
+  font-weight: 500;
+} /* prompt  */
+.code .c {
+  color: #56637a;
+} /* comment */
+.code .k {
+  color: #ff7a6e;
+} /* keyword */
+.code .s {
+  color: #9ecb8f;
+} /* string  */
+.code .t,
+.code .f {
+  color: #7fb3e0;
+} /* type / member */
+.code .o {
+  color: #8ba0b9;
+} /* operator */
+.code .a {
+  color: #d7b3ff;
+} /* attribute */
+.code .n {
+  color: #e5a96a;
+} /* number  */
+
+/* ------------------------------------------------------------
+ *  Language tabs — pure CSS (radio + label), no JavaScript
+ * ------------------------------------------------------------ */
+.lang-tabs {
+  position: relative;
+  margin: 26px 0;
+}
+.lang-tabs > input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+.lang-tabs > .lang-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  width: fit-content;
+  margin-bottom: 18px;
+  padding: 6px;
+  border: 1px solid var(--line-soft);
+  border-radius: 12px;
+  background: rgba(146, 166, 196, 0.04);
+}
+.lang-tabs > .lang-bar > label {
+  cursor: pointer;
+  user-select: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  transition:
+    color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s;
+}
+.lang-tabs > .lang-bar > label:hover {
+  color: var(--ink);
+  background: rgba(146, 166, 196, 0.08);
+}
+.lang-tabs .pane {
+  display: none;
+}
+.lang-tabs .pane .code {
+  margin: 0;
+}
+.lang-tabs > input:focus-visible + .lang-bar,
+.lang-tabs > input:focus-visible ~ .lang-bar {
+  outline: 1px solid rgba(255, 59, 47, 0.5);
+  outline-offset: 2px;
+}
+#lang-vb:checked ~ .lang-bar > label[for="lang-vb"],
+#lang-cs:checked ~ .lang-bar > label[for="lang-cs"],
+#lang-fs:checked ~ .lang-bar > label[for="lang-fs"] {
+  color: #fff;
+  background: var(--red);
+  box-shadow: 0 8px 24px rgba(255, 59, 47, 0.28);
+}
+#lang-vb:checked ~ .lang-panes > .pane-vb,
+#lang-cs:checked ~ .lang-panes > .pane-cs,
+#lang-fs:checked ~ .lang-panes > .pane-fs {
+  display: block;
+  animation: paneIn 0.28s ease;
+}
+@keyframes paneIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.code .pane-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  padding: 2px 10px;
+  border-radius: 99px;
+  border: 1px solid rgba(255, 59, 47, 0.28);
+  background: var(--red-soft);
+  color: #ff7a6e;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* ------------------------------------------------------------
  *  Steps (install page)
  * ------------------------------------------------------------ */
 .step {
