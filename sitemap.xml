@@ -11,7 +11,7 @@
     <loc>https://gcmodeller.org/vignettes/index.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.98</priority>
+    <priority>0.99</priority>
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/phenotype_kit/geneExpression.html</loc>
@@ -77,12 +77,6 @@
     <loc>https://gcmodeller.org/vignettes/clr/System/Enum.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://gcmodeller.org/vignettes/comparative_toolkit/pangenome.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
@@ -1046,7 +1040,19 @@
     <priority>0.71</priority>
   </url>
   <url>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Circos/Configurations/Circos.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.71</priority>
+  </url>
+  <url>
     <loc>https://gcmodeller.org/vignettes/clr/System/Xml/XmlComment.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.71</priority>
+  </url>
+  <url>
+    <loc>https://gcmodeller.org/vignettes/comparative_toolkit/pangenome.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.71</priority>
@@ -1520,6 +1526,12 @@
     <priority>0.67</priority>
   </url>
   <url>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Circos/Karyotype/KaryotypeSkeleton.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.67</priority>
+  </url>
+  <url>
     <loc>https://gcmodeller.org/vignettes/clr/System/Array.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -1658,6 +1670,12 @@
     <priority>0.66</priority>
   </url>
   <url>
+    <loc>https://gcmodeller.org/vignettes/rnaseq/rockhopper.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.66</priority>
+  </url>
+  <url>
     <loc>https://gcmodeller.org/vignettes/clr/Microsoft/VisualBasic/Text/Xml/Models/NamedValue.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -1677,6 +1695,12 @@
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Metagenomics/TaxonomyRanks.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://gcmodeller.org/vignettes/clr/System/Attribute.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.65</priority>
@@ -1781,6 +1805,12 @@
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/VirtualCell.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Circos/Karyotype/GenomeKaryotype.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.64</priority>
   </url>
   <url>
@@ -1892,15 +1922,15 @@
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Circos/Configurations/Circos.html</loc>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Circos/Configurations/Nodes/Plots/ITrackPlot.html</loc>
     <lastmod>2026-09-12</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://gcmodeller.org/vignettes/clr/System/Attribute.html</loc>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Circos/Karyotype/GeneObjects/PTTMarks.html</loc>
     <lastmod>2026-09-12</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.63</priority>
   </url>
   <url>
@@ -2240,6 +2270,12 @@
     <priority>0.62</priority>
   </url>
   <url>
+    <loc>https://gcmodeller.org/vignettes/comparative_toolkit/pangenome/multiple_genome_alignment.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.62</priority>
+  </url>
+  <url>
     <loc>https://gcmodeller.org/vignettes/cytoscape/xgmml/xgmml.render.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -2253,12 +2289,6 @@
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/gseakit/background/as.geneSet.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.62</priority>
-  </url>
-  <url>
-    <loc>https://gcmodeller.org/vignettes/gseakit/background/geneSet.filter.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.62</priority>
@@ -3290,6 +3320,12 @@
     <priority>0.61</priority>
   </url>
   <url>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Circos/Configurations/ComponentModel/CircosDocument.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.61</priority>
+  </url>
+  <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Cytoscape/CytoscapeGraphView/XGMML/File/Attribute.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -3837,6 +3873,12 @@
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/gseakit/background/geneSet.annotations.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.61</priority>
+  </url>
+  <url>
+    <loc>https://gcmodeller.org/vignettes/gseakit/background/geneSet.filter.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.61</priority>
@@ -7130,13 +7172,13 @@
     <priority>0.60</priority>
   </url>
   <url>
-    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Circos/Karyotype/KaryotypeEntry.html</loc>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Circos/Karyotype/Band.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.60</priority>
   </url>
   <url>
-    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Circos/Karyotype/KaryotypeSkeleton.html</loc>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Circos/Karyotype/KaryotypeEntry.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.60</priority>
@@ -8240,6 +8282,12 @@
     <priority>0.57</priority>
   </url>
   <url>
+    <loc>https://gcmodeller.org/vignettes/clr/Microsoft/VisualBasic/ComponentModel/Settings/SimpleConfig.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.57</priority>
+  </url>
+  <url>
     <loc>https://gcmodeller.org/vignettes/clr/Microsoft/VisualBasic/Data/Framework/IO/RowObject.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -8847,12 +8895,6 @@
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/SequenceModel/FQ/NanoPlot/NanoPlotResult.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.57</priority>
-  </url>
-  <url>
-    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Circos/Configurations/ComponentModel/CircosDocument.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.57</priority>
@@ -9644,6 +9686,12 @@
     <priority>0.56</priority>
   </url>
   <url>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Circos/Configurations/CircosAttribute.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.56</priority>
+  </url>
+  <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Circos/Configurations/ComponentModel/CircosDistributed.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -9657,18 +9705,6 @@
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Circos/Configurations/Nodes/IdeogramBlock.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.56</priority>
-  </url>
-  <url>
-    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Circos/Karyotype/GeneObjects/PTTMarks.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.56</priority>
-  </url>
-  <url>
-    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Circos/Karyotype/GenomeKaryotype.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.56</priority>
@@ -10550,12 +10586,6 @@
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/transcription.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.55</priority>
-  </url>
-  <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/GCModeller/ModellingEngine/BootstrapLoader/Definitions/AminoAcid.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -10796,7 +10826,7 @@
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Circos/Configurations/Nodes/Plots/ITrackPlot.html</loc>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Circos/Configurations/Nodes/Plots/ConditionalRule.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.55</priority>
@@ -11444,6 +11474,12 @@
     <priority>0.54</priority>
   </url>
   <url>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/transcription.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.54</priority>
+  </url>
+  <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/TranscriptUnit.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -11876,12 +11912,6 @@
     <priority>0.54</priority>
   </url>
   <url>
-    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Interops/NCBI/Extensions/LocalBLAST/Application/BBH/BHRHit.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.54</priority>
-  </url>
-  <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Interops/NCBI/Extensions/LocalBLAST/Application/BBH/KOAssignmentCandidate.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -11937,6 +11967,18 @@
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Model/SBML/Level2/Elements/speciesReference.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.54</priority>
+  </url>
+  <url>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Circos/Configurations/Nodes/Plots/Lines/Axis.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.54</priority>
+  </url>
+  <url>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Visualize/Circos/Configurations/Nodes/Plots/Lines/Background.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.54</priority>
@@ -12099,6 +12141,12 @@
   </url>
   <url>
     <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Interops/NBCR/MEME_Suite/DocumentFormat/XmlOutput/MEME/Scores.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.53</priority>
+  </url>
+  <url>
+    <loc>https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Interops/NCBI/Extensions/LocalBLAST/Application/BBH/BHRHit.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.53</priority>
