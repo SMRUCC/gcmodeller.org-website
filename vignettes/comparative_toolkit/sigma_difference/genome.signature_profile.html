@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Create the partition data from a raw data frame: the start / stop columns</title>
+    <title>The ``rho*`` genome signature profile: the double-strand symmetrized</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <link rel="stylesheet" type="text/css" href="https://gcmodeller.org/lib/page.css">
@@ -13,45 +13,29 @@
 
         <table style="width: 100%;">
             <tr>
-                <td>Partitions.Creates {sigma_difference}</td>
+                <td>genome.signature_profile {sigma_difference}</td>
                 <td style="text-align: right;">R Documentation</td>
             </tr>
         </table>
 
-        <h2>Create the partition data from a raw data frame: the start / stop columns</h2>
+        <h2>The ``rho*`` genome signature profile: the double-strand symmetrized</h2>
 
         <h3>Description</h3>
 
-        <p>define the segment loci on the given genome sequence.</p>
+        <p>dinucleotide relative abundance <code>rho*XY = fXY / (fX fY)</code> of all 16&lt;br /&gt; dinucleotides, each reported with its six-level significance symbol&lt;br /&gt; (<code>---</code> / <code>--</code> / <code>-</code> / <code>+</code> / <code>++</code> / <code>+++</code>, thresholds 0.50 / 0.70 /&lt;br /&gt; 0.78 / 1.23 / 1.30 / 1.50).</p>
 
         <h3>Usage</h3>
 
         <div style="width: 100%; padding-left: 3%; color: black;">
-            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>Partitions.Creates</strong>(<i>PartitionRaw</i>, <i>TagCol</i>, <i>StartTag</i>, <i>StopTag</i>, <i>Nt</i>);</code></pre>
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>genome.signature_profile</strong>(<i>nt</i>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
 
         <table>
             
-<dt>PartitionRaw</dt>
-<dd><p>the raw partition data frame. [as <a href="/vignettes/clr/Microsoft/VisualBasic/Data/Framework/StorageProvider/DataFrameResolver.html">DataFrameResolver</a>]</p></dd>
-
-
-<dt>TagCol</dt>
-<dd><p>the column name of the partition tag. [as string]</p></dd>
-
-
-<dt>StartTag</dt>
-<dd><p>the column name of the segment start loci. [as string]</p></dd>
-
-
-<dt>StopTag</dt>
-<dd><p>the column name of the segment stop loci. [as string]</p></dd>
-
-
-<dt>Nt</dt>
-<dd><p>the genome sequence. [as <a href="/vignettes/clr/SMRUCC/genomics/SequenceModel/FASTA/FastaSeq.html">FastaSeq</a>]</p></dd>
+<dt>nt</dt>
+<dd><p>the genome nucleotide sequence. [as <a href="/vignettes/clr/SMRUCC/genomics/SequenceModel/FASTA/FastaSeq.html">FastaSeq</a>]</p></dd>
 
         </table>
 
@@ -66,7 +50,7 @@
 
         <h3>Value</h3>
 
-        <p>the created partition data collection</p><h4>clr value class</h4><ul><li><a href="/vignettes/clr/SMRUCC/genomics/Analysis/SequenceTools/DNA_Comparative/PartitioningData.html">PartitioningData[]</a></li></ul>
+        <p>the <code>{XY, rho* [symbol]}</code> profile table</p><h4>clr value class</h4><ul><li><a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/DataSourceModel/NamedValue`1.html">NamedValue`1[]</a></li></ul>
 
         <h3 style="display: none;">Examples</h3>
 

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Create the partition data from a raw data frame: the start / stop columns</title>
+    <title>List the rare and the frequent tetranucleotides of the ``tau*`` profile</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <link rel="stylesheet" type="text/css" href="https://gcmodeller.org/lib/page.css">
@@ -13,45 +13,39 @@
 
         <table style="width: 100%;">
             <tr>
-                <td>Partitions.Creates {sigma_difference}</td>
+                <td>tau_star.rare_frequent {sigma_difference}</td>
                 <td style="text-align: right;">R Documentation</td>
             </tr>
         </table>
 
-        <h2>Create the partition data from a raw data frame: the start / stop columns</h2>
+        <h2>List the rare and the frequent tetranucleotides of the ``tau*`` profile</h2>
 
         <h3>Description</h3>
 
-        <p>define the segment loci on the given genome sequence.</p>
+        <p>against the given thresholds (the restriction avoidance candidates).</p>
 
         <h3>Usage</h3>
 
         <div style="width: 100%; padding-left: 3%; color: black;">
-            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>Partitions.Creates</strong>(<i>PartitionRaw</i>, <i>TagCol</i>, <i>StartTag</i>, <i>StopTag</i>, <i>Nt</i>);</code></pre>
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>tau_star.rare_frequent</strong>(<i>nt</i>,
+    <i>rareBelow</i> = <span style='color: green;'>0.78</span>,
+    <i>frequentAbove</i> = <span style='color: green;'>1.23</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
 
         <table>
             
-<dt>PartitionRaw</dt>
-<dd><p>the raw partition data frame. [as <a href="/vignettes/clr/Microsoft/VisualBasic/Data/Framework/StorageProvider/DataFrameResolver.html">DataFrameResolver</a>]</p></dd>
+<dt>nt</dt>
+<dd><p>the genome nucleotide sequence. [as <a href="/vignettes/clr/SMRUCC/genomics/SequenceModel/FASTA/FastaSeq.html">FastaSeq</a>]</p></dd>
 
 
-<dt>TagCol</dt>
-<dd><p>the column name of the partition tag. [as string]</p></dd>
+<dt>rareBelow</dt>
+<dd><p>words with <code>tau*</code> below this value are rare. [as double]</p></dd>
 
 
-<dt>StartTag</dt>
-<dd><p>the column name of the segment start loci. [as string]</p></dd>
-
-
-<dt>StopTag</dt>
-<dd><p>the column name of the segment stop loci. [as string]</p></dd>
-
-
-<dt>Nt</dt>
-<dd><p>the genome sequence. [as <a href="/vignettes/clr/SMRUCC/genomics/SequenceModel/FASTA/FastaSeq.html">FastaSeq</a>]</p></dd>
+<dt>frequentAbove</dt>
+<dd><p>words with <code>tau*</code> above this value are frequent. [as double]</p></dd>
 
         </table>
 
@@ -66,7 +60,7 @@
 
         <h3>Value</h3>
 
-        <p>the created partition data collection</p><h4>clr value class</h4><ul><li><a href="/vignettes/clr/SMRUCC/genomics/Analysis/SequenceTools/DNA_Comparative/PartitioningData.html">PartitioningData[]</a></li></ul>
+        <p>a dictionary with the <code>rare</code> and <code>frequent</code> word lists</p><h4>clr value class</h4><ul><li>list</li></ul>
 
         <h3 style="display: none;">Examples</h3>
 

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>并行版本的计算函数</title>
+    <title>Sliding window ``delta*`` profile: the delta-difference between each local</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <link rel="stylesheet" type="text/css" href="https://gcmodeller.org/lib/page.css">
@@ -13,21 +13,21 @@
 
         <table style="width: 100%;">
             <tr>
-                <td>genome.sigma_diff {sigma_difference}</td>
+                <td>genome.delta_star_profile {sigma_difference}</td>
                 <td style="text-align: right;">R Documentation</td>
             </tr>
         </table>
 
-        <h2>并行版本的计算函数</h2>
+        <h2>Sliding window ``delta*`` profile: the delta-difference between each local</h2>
 
         <h3>Description</h3>
 
-        
+        <p>window of the genome and the comparison sequence.&lt;br /&gt;&lt;br /&gt; PERFORMANCE: implemented with the incremental window count matrix&lt;br /&gt; (O(1) update per slide + O(16) distance per sample), and the comparison&lt;br /&gt; sequence signature is built only once.</p>
 
         <h3>Usage</h3>
 
         <div style="width: 100%; padding-left: 3%; color: black;">
-            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>genome.sigma_diff</strong>(<i>genome</i>, <i>compare</i>,
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>genome.delta_star_profile</strong>(<i>genome</i>, <i>compare</i>,
     <i>windowsSize</i> = <span style='color: green;'>1000</span>);</code></pre>
         </div>
 
@@ -36,11 +36,15 @@
         <table>
             
 <dt>genome</dt>
-<dd><p>[as <a href="/vignettes/clr/SMRUCC/genomics/SequenceModel/FASTA/FastaSeq.html">FastaSeq</a>]</p></dd>
+<dd><p>the query genome sequence. [as <a href="/vignettes/clr/SMRUCC/genomics/SequenceModel/FASTA/FastaSeq.html">FastaSeq</a>]</p></dd>
+
+
+<dt>compare</dt>
+<dd><p>the comparison genome sequence. [as <a href="/vignettes/clr/SMRUCC/genomics/SequenceModel/FASTA/FastaSeq.html">FastaSeq</a>]</p></dd>
 
 
 <dt>windowsSize</dt>
-<dd><p>默认为1kb的长度. [as integer]</p></dd>
+<dd><p>the sliding window size in bp, default 1kb. [as integer]</p></dd>
 
         </table>
 
@@ -55,7 +59,7 @@
 
         <h3>Value</h3>
 
-        this function returns data object of type <a href="/vignettes/clr/SMRUCC/genomics/Analysis/SequenceTools/DNA_Comparative/SiteSigma.html">SiteSigma[]</a>.<h4>clr value class</h4><ul><li><a href="/vignettes/clr/SMRUCC/genomics/Analysis/SequenceTools/DNA_Comparative/SiteSigma.html">SiteSigma[]</a></li></ul>
+        <p>profile rows ordered by the site position, an array of <a href="cref:T:SMRUCC.genomics.Analysis.SequenceTools.DNA_Comparative.WindowDelta">WindowDelta</a></p><h4>clr value class</h4><ul><li><a href="/vignettes/clr/SMRUCC/genomics/Analysis/SequenceTools/DNA_Comparative/WindowDelta.html">WindowDelta</a></li></ul>
 
         <h3 style="display: none;">Examples</h3>
 
