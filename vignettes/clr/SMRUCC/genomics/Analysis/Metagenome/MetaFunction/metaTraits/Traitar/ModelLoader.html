@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <p>模型文件加载器</p>
+        <p>表型 SVM 模型仓库：负责把训练得到的模型集落盘以及从磁盘还原</p>
 
         <h3>Declare</h3>        
 
@@ -30,12 +30,16 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.Analysis.Metagenome.MetaFunction.metaTraits.Traitar
 export class ModelLoader {
-   # Pfam描述字典（PfamID -&gt; 描述）
-   PfamDescriptions: list;
-   # 表型数量
+   # 模型仓库所在的目录
+   Directory: string;
+   # Pfam 词表与编码配置
+   Embedding: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/Metagenome/MetaFunction/metaTraits/Traitar/PfamEmbedding.html">PfamEmbedding</a>;
+   # 表型名 -&gt; 该表型所对应的 SVM 模型实例
+   Models: list;
+   # 表型模型总数
    PhenotypeCount: integer;
-   # 表型模型字典（表型ID -&gt; PhenotypeModel）
-   Phenotypes: list;
+   # 已经训练成功的模型数量
+   TrainedCount: integer;
 }
 </code>
         </pre>
@@ -43,8 +47,8 @@ export class ModelLoader {
         <h3>.NET clr type reference tree</h3>
 
         <ol>
-<li>use by <i>property</i> member <code>PfamDescriptions</code>: list</li>
-<li>use by <i>property</i> member <code>Phenotypes</code>: list</li>
+<li>use by <i>property</i> member <code>Embedding</code>: <a href="/vignettes/clr/SMRUCC/genomics/Analysis/Metagenome/MetaFunction/metaTraits/Traitar/PfamEmbedding.html">PfamEmbedding</a></li>
+<li>use by <i>property</i> member <code>Models</code>: list</li>
 </ol>
 
 
