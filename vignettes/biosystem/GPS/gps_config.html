@@ -58,12 +58,21 @@
     <i>gradientClip</i> = <span style='color: green;'>1</span>,
     <i>earlyStopPatience</i> = <span style='color: green;'>15</span>,
     <i>maskRatio</i> = <span style='color: green;'>0.15</span>,
-    <i>printEvery</i> = <span style='color: green;'>5</span>,
     <i>trainRatio</i> = <span style='color: green;'>0.7</span>,
     <i>validationRatio</i> = <span style='color: green;'>0.15</span>,
     <i>seed</i> = <span style='color: green;'>2024</span>,
     <i>significanceZScore</i> = <span style='color: green;'>0.5</span>,
-    <i>cascadeSteps</i> = <span style='color: green;'>5</span>);</code></pre>
+    <i>cascadeSteps</i> = <span style='color: green;'>5</span>,
+    <i>CheckpointIntervalEpochs</i> = <span style='color: green;'>1</span>,
+    <i>denseAttentionMaxNodes</i> = <span style='color: green;'>1024</span>,
+    <i>attentionNeighbors</i> = <span style='color: green;'>32</span>,
+    <i>attentionRandomLinks</i> = <span style='color: green;'>8</span>,
+    <i>attentionHubGenes</i> = <span style='color: green;'>8</span>,
+    <i>knockdownResidual</i> = <span style='color: green;'>0.2</span>,
+    <i>edgeNormalization</i> = <span style='color: brown;'><strong>"sqrt"</strong></span>,
+    <i>perturbationChannel</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>perturbationChannelGain</i> = <span style='color: green;'>1</span>,
+    <i>perturbationChannelCoRegulation</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
@@ -190,10 +199,6 @@
 <dd><p>fraction of genes whose last time frame is masked during the pre-training stage; must be in <code>[0, 1)</code>. Default 0.15. [as double]</p></dd>
 
 
-<dt>printEvery</dt>
-<dd><p>print the loss every <code>printEvery</code> epochs; <code>0</code> keeps the training silent. Default 5. [as integer]</p></dd>
-
-
 <dt>trainRatio</dt>
 <dd><p>fraction of the sliding windows used for training; the split is always performed in time order, never randomly. Default 0.7. [as double]</p></dd>
 
@@ -212,6 +217,42 @@
 
 <dt>cascadeSteps</dt>
 <dd><p>default number of recursive steps used by the temporal cascade simulation of a virtual perturbation. Default 5. [as integer]</p></dd>
+
+
+<dt>denseAttentionMaxNodes</dt>
+<dd><p>gene count up to which the exact dense attention (an <code>N×N</code> score matrix) and the exact Laplacian positional encoding are used. Above this threshold the model switches to the sparse candidate attention (<code>O(N·c·d)</code>) and to the random walk positional encoding, which is what makes the whole genome scale (<code>N</code> around 60 thousand) trainable. Default 1024. [as integer]</p></dd>
+
+
+<dt>attentionNeighbors</dt>
+<dd><p>number of attention candidates per gene in the sparse mode (including the gene itself): self + graph neighbourhood (budget truncated BFS) + hub genes + random long range links. Default 32. [as integer]</p></dd>
+
+
+<dt>attentionRandomLinks</dt>
+<dd><p>number of random long range links per gene in the sparse mode; the slots left over by a small graph neighbourhood are filled with additional random links, so even a prior network without any edge still keeps a global receptive field. Default 8. [as integer]</p></dd>
+
+
+<dt>attentionHubGenes</dt>
+<dd><p>number of high degree genes included as global hubs in every candidate set of the sparse mode. Default 8. [as integer]</p></dd>
+
+
+<dt>knockdownResidual</dt>
+<dd><p>the fraction of the wild type expression level that is kept for the target gene of an in silico knockdown experiment, applied in linear CPM space on the baseline of the current cell context: <code>cpm_mut = knockdownResidual * cpm_ctrl</code>, then transformed back to <code>log2(CPM + 1)</code>. <code>0.2</code> corresponds to the CRISPRi setting of the Virtual Cell Challenge (more than 80 percent on target knockdown). Default 0.2. [as double]</p></dd>
+
+
+<dt>edgeNormalization</dt>
+<dd><p>how the graph convolution normalises the aggregated edge weights: <code>"mean"</code> (the legacy convex averaging, attenuates a single gene perturbation by about 1e-4 after three hops), <code>"sqrt"</code> (default, keeps about 5 to 8 times more magnitude per hop) or <code>"sum"</code> (no normalisation, strongest but easiest to saturate). [as string]</p></dd>
+
+
+<dt>perturbationChannel</dt>
+<dd><p>inject the change of the perturbed gene into the input window of its downstream targets along the prior edges, so a knockdown does not have to survive several rounds of degree normalisation. Default TRUE. [as boolean]</p></dd>
+
+
+<dt>perturbationChannelGain</dt>
+<dd><p>injection gain of the perturbation channel; <code>0</code> disables it. Default 1. [as double]</p></dd>
+
+
+<dt>perturbationChannelCoRegulation</dt>
+<dd><p>when the perturbed gene has no outgoing edge (every non transcription factor in a TF to target prior), spread its change to the genes sharing the same upstream regulators. Heuristic, therefore FALSE by default. [as boolean]</p></dd>
 
         </table>
 

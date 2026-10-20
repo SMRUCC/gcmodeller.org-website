@@ -27,7 +27,8 @@
         <h3>Usage</h3>
 
         <div style="width: 100%; padding-left: 3%; color: black;">
-            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>build_gps</strong>(<i>x</i>, <i>prior</i>,
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>build_gps</strong>(<i>x</i>,
+    <i>prior</i> = <span style='color: blue !important;'>NULL</span>,
     <i>config</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
         </div>
 
@@ -36,7 +37,7 @@
         <table>
             
 <dt>x</dt>
-<dd><p>the time series gene expression matrix object: rows are genes and columns are samples, and every sample must carry a time point label (for example the matrix loaded by <code>geneExpression::load.expr</code>). At least three distinct time points are required. [as <a href="/vignettes/clr/SMRUCC/genomics/Analysis/BNLearn/Core/GeneExpressionData.html">GeneExpressionData</a>]</p></dd>
+<dd><p>the time series gene expression matrix object: rows are genes and columns are samples, and every sample must carry a time point label (for example the matrix loaded by <code>geneExpression::load.expr</code>). At least three distinct time points are required. [as <a href="/vignettes/clr/SMRUCC/genomics/Analysis/HTS/DataFrame/GeneExpressionData.html">GeneExpressionData</a>]</p></dd>
 
 
 <dt>prior</dt>

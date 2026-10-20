@@ -30,18 +30,25 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.Analysis.GPS.Config
 export class GPSConfig {
+   AttentionHubGenes: integer;
+   AttentionNeighbors: integer;
+   AttentionRandomLinks: integer;
    AutofocusGamma: double;
    CascadeSteps: integer;
+   CheckpointIntervalEpochs: integer;
    CoexpressionTopK: integer;
    CpmNormalize: boolean;
+   DenseAttentionMaxNodes: integer;
    DModel: integer;
    Dropout: double;
    EarlyStopPatience: integer;
+   EdgeNormalization: string;
    FfnDim: integer;
    FinetuneEpochs: integer;
    GeneEmbedDim: integer;
    GradientClip: double;
    GruHidden: integer;
+   KnockdownResidual: double;
    LambdaDir: double;
    LambdaL1: double;
    LambdaPrior: double;
@@ -53,8 +60,10 @@ export class GPSConfig {
    NHeads: integer;
    NLayers: integer;
    PeDim: integer;
+   PerturbationChannel: boolean;
+   PerturbationChannelCoRegulation: boolean;
+   PerturbationChannelGain: double;
    PretrainEpochs: integer;
-   PrintEvery: integer;
    Seed: integer;
    SignificanceZScore: double;
    SpdMaxDist: integer;
