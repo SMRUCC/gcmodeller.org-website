@@ -526,15 +526,22 @@
     ]
   },
   "https://gcmodeller.org/vignettes/TRNtoolkit/linear.html": {
-    "md5": "42ee13ca923d9c908370f206ae27b9b1",
+    "md5": "c45351b21326250776b0dc7ca9802c36",
     "timestamp": [
-      1792520867
+      1792520867,
+      1792525640
     ]
   },
   "https://gcmodeller.org/vignettes/TRNtoolkit/linear/coef.html": {
     "md5": "9d23cfe351e92db2917e79daa3611d99",
     "timestamp": [
       1792520867
+    ]
+  },
+  "https://gcmodeller.org/vignettes/TRNtoolkit/linear/elastic_model.html": {
+    "md5": "e9ad11b2caa58343c87020945b8bb6cb",
+    "timestamp": [
+      1792525640
     ]
   },
   "https://gcmodeller.org/vignettes/TRNtoolkit/linear/elastic_net.html": {
@@ -3125,6 +3132,24 @@
     "timestamp": [
       1788097339,
       1790107539
+    ]
+  },
+  "https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/CellPhenotype/ElasticNet.html": {
+    "md5": "562e67f3222933a7830b10b43e77aef1",
+    "timestamp": [
+      1792525640
+    ]
+  },
+  "https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/CellPhenotype/ElasticNetPerturbationOptions.html": {
+    "md5": "0c55d90782b5abf6fcdbf176ea1df2ad",
+    "timestamp": [
+      1792525640
+    ]
+  },
+  "https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/CellPhenotype/PropagationMode.html": {
+    "md5": "91b1665b8b62dddde596c7d87cc62f0c",
+    "timestamp": [
+      1792525640
     ]
   },
   "https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Analysis/CellPhenotype/RegulationNetwork/BuildSummary.html": {
@@ -7735,9 +7760,10 @@
     ]
   },
   "https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Model/Network/Regulons/LinearRegression/GeneRegulatoryNetwork.html": {
-    "md5": "fd00eb7b786e221dd2be1ab359ce6879",
+    "md5": "f0f72b90645924185f88d047ae0fc88c",
     "timestamp": [
-      1792520867
+      1792520867,
+      1792525640
     ]
   },
   "https://gcmodeller.org/vignettes/clr/SMRUCC/genomics/Model/Network/Regulons/LinearRegression/GrnFittingOptions.html": {
