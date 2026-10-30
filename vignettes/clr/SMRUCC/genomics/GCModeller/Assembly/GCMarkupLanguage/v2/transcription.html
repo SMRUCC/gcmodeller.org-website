@@ -30,16 +30,28 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2
 export class transcription {
+   # 调控过程所需要的辅助蛋白质编号
+   accessoryProteins: string;
+   # 调控因子所结合的具体DNA位点
+   bindingSite: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/BindingSite.html">BindingSite</a>;
    biological_process: string;
    # 这个调控关系所影响到的中心法则的事件名称
    centralDogma: string;
    effector: string;
+   # 该调控关系所关联的文献证据编号
+   evidence: string;
+   # 抑制常数Ki
+   ki: double;
+   # 调控的分子机制，例如 <code>binding</code>、<code>phosphorylation</code>
+   mechanism: string;
    mode: string;
    motif: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Motif.html">Motif</a>;
    note: string;
    # a collection of the genes id inside the regulated operons
    operonId: string;
    regulator: string;
+   # 当前调控关系所属的调控组的编号
+   regulonId: string;
 }
 </code>
         </pre>
@@ -47,6 +59,7 @@ export class transcription {
         <h3>.NET clr type reference tree</h3>
 
         <ol>
+<li>use by <i>property</i> member <code>bindingSite</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/BindingSite.html">BindingSite</a></li>
 <li>use by <i>property</i> member <code>motif</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Motif.html">Motif</a></li>
 </ol>
 

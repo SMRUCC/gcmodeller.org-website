@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2.Promoter</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://gcmodeller.org/lib/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>Promoter {SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>Promoter</h2>
+
+        <h3>Description</h3>
+
+        <p>启动子(转录起始位点)</p>
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2
+export class Promoter {
+   id: string;
+   left: integer;
+   # -10区的坐标区间
+   minus10Left: integer;
+   minus10Right: integer;
+   # -35区的坐标区间
+   minus35Left: integer;
+   minus35Right: integer;
+   note: string;
+   operonId: string;
+   right: integer;
+   # 识别当前启动子的sigma因子编号
+   sigmaFactor: string;
+   strand: string;
+   # 转录起始位点的绝对位置(+1位点)
+   tss: integer;
+}
+</code>
+        </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        this clr type has no other .net clr type reference.
+
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://gcmodeller.org/lib/R_syntax.js"></script>
+<script type="text/javascript" src="https://gcmodeller.org/lib/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

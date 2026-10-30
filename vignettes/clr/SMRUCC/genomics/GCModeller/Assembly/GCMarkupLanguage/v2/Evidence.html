@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2.Evidence</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://gcmodeller.org/lib/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>Evidence {SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>Evidence</h2>
+
+        <h3>Description</h3>
+
+        <p>虚拟细胞模型之中的文献证据索引。</p>
+
+<p>模型之中的基因、蛋白质、反应以及调控关系都通过文献的编号来引用本表之中的记录， 从而达到“数据可溯源”的目的。为了控制模型文件的体积，本表不保存文献的正文内容。</p>
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2
+export class Evidence {
+   authors: string;
+   doi: string;
+   # 证据的类型：实验证据(exp)、计算证据(comp)或者推断(inf)
+   evidenceType: string;
+   # 文献在本模型之中的唯一编号，通常为BioCyc数据库的 <code>PUB-xxxx</code> 编号
+   id: string;
+   pubmed: string;
+   source: string;
+   title: string;
+   year: integer;
+}
+</code>
+        </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        this clr type has no other .net clr type reference.
+
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://gcmodeller.org/lib/R_syntax.js"></script>
+<script type="text/javascript" src="https://gcmodeller.org/lib/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

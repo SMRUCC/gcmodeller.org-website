@@ -30,8 +30,16 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2
 export class Traits {
+   # 细胞在给定培养基条件之下的比生长速率
+   growthRate: double;
+   # 细胞生长所使用的培养基描述
+   medium: string;
+   # 氧气利用方式：aerobic / anaerobic / facultative
+   oxygenRequirement: string;
    # the phenoetype terms that annotated for this cell model
    phenotype: <a href="/vignettes/clr/SMRUCC/genomics/ComponentModel/Annotation/PhenotypeTrait.html">PhenotypeTrait[]</a>;
+   # 表型数据的来源描述或者文献编号
+   references: string;
 }
 </code>
         </pre>

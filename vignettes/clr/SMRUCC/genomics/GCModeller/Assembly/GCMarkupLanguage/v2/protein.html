@@ -30,11 +30,27 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2
 export class protein {
+   # 蛋白质所催化的反应编号列表
+   catalyzes: string;
    cellular_location: string;
+   # 蛋白质所属的复合物的编号，非复合物成员的时候为空
+   complexId: string;
+   # 蛋白质序列上面的结构域以及功能位点
+   domains: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/ProteinFeature.html">ProteinFeature[]</a>;
+   # 该蛋白质所关联的文献证据编号
+   evidence: string;
+   # 蛋白质的GO功能注释编号
+   goTerms: string;
    ligand: string;
+   # 蛋白质在细胞之中的定位列表(因为有些蛋白质会在多个区室之中出现)
+   locations: string;
+   # 蛋白质的相对分子质量(Dalton)
+   molecularWeight: double;
    name: string;
    note: string;
    peptide_chains: string;
+   # 蛋白质的等电点
+   pi: double;
    protein_id: string;
 }
 </code>
@@ -42,7 +58,9 @@ export class protein {
 
         <h3>.NET clr type reference tree</h3>
 
-        this clr type has no other .net clr type reference.
+        <ol>
+<li>use by <i>property</i> member <code>domains</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/ProteinFeature.html">ProteinFeature</a></li>
+</ol>
 
 
         <hr />

@@ -34,11 +34,23 @@
 export class VirtualCell extends <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/CompilerServices/ModelBaseType.html">ModelBaseType</a> {
    # the intra-cellular environment id, will be used for identify the compound source between different cell source. usually be the organism taxonomy scientific name, or taxid, something.
    cellular_id: string;
+   # BioCyc/GO的类层次定义表，用于描述化合物、蛋白质以及代谢通路的分类归属
+   classTerms: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/ClassTerm.html">ClassTerm[]</a>;
+   # 细胞模型之中的区室定义表，模型之中的所有区室编号都必须在本表之中存在
+   compartments: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Compartment.html">Compartment[]</a>;
+   # 模型数据的来源描述，通常为 <code>BioCyc EcoCyc 29.0</code>
+   dataSource: string;
+   # 模型所引用的文献证据索引表
+   evidence: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Evidence.html">Evidence[]</a>;
    # 基因组结构模型，包含有基因的列表，以及转录调控网络
    genome: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Genome.html">Genome</a>;
    # 代谢组网络结构
    metabolismStructure: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/MetabolismStructure.html">MetabolismStructure</a>;
+   # 细胞的生理状态参数
+   physiology: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Physiology.html">Physiology</a>;
    properties: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/CompilerServices/Property.html">Property</a>;
+   # 当前的模型文件所遵循的XML schema的版本号
+   schemaVersion: string;
    Stylesheet: <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/XmlStyleProcessor.html">XmlStyleProcessor</a>;
    # 物种注释信息
    taxonomy: <a href="/vignettes/clr/SMRUCC/genomics/Metagenomics/Taxonomy.html">Taxonomy</a>;
@@ -52,8 +64,12 @@ export class VirtualCell extends <a href="/vignettes/clr/SMRUCC/genomics/GCModel
 
         <ol>
 <li>this class extends from <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/CompilerServices/ModelBaseType.html">ModelBaseType</a> class: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/CompilerServices/ModelBaseType.html">ModelBaseType</a></li>
+<li>use by <i>property</i> member <code>classTerms</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/ClassTerm.html">ClassTerm</a></li>
+<li>use by <i>property</i> member <code>compartments</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Compartment.html">Compartment</a></li>
+<li>use by <i>property</i> member <code>evidence</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Evidence.html">Evidence</a></li>
 <li>use by <i>property</i> member <code>genome</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Genome.html">Genome</a></li>
 <li>use by <i>property</i> member <code>metabolismStructure</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/MetabolismStructure.html">MetabolismStructure</a></li>
+<li>use by <i>property</i> member <code>physiology</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Physiology.html">Physiology</a></li>
 <li>use by <i>property</i> member <code>properties</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/CompilerServices/Property.html">Property</a></li>
 <li>use by <i>property</i> member <code>Stylesheet</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/XmlStyleProcessor.html">XmlStyleProcessor</a></li>
 <li>use by <i>property</i> member <code>taxonomy</code>: <a href="/vignettes/clr/SMRUCC/genomics/Metagenomics/Taxonomy.html">Taxonomy</a></li>

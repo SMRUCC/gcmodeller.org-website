@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2.Physiology</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://gcmodeller.org/lib/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>Physiology {SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>Physiology</h2>
+
+        <h3>Description</h3>
+
+        <p>虚拟细胞的生理状态参数，用于约束模型模拟的初始条件</p>
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2
+export class Physiology {
+   # 细胞的倍增时间，单位：分钟
+   doublingTime: double;
+   # 细胞生长的比速率，单位：每小时
+   growthRate: double;
+   # 培养基的描述文本
+   medium: string;
+   # 氧气的利用方式：aerobic / anaerobic / facultative
+   oxygenRequirement: string;
+   pH: double;
+   # 培养温度，单位：摄氏度
+   temperature: double;
+}
+</code>
+        </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        this clr type has no other .net clr type reference.
+
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://gcmodeller.org/lib/R_syntax.js"></script>
+<script type="text/javascript" src="https://gcmodeller.org/lib/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

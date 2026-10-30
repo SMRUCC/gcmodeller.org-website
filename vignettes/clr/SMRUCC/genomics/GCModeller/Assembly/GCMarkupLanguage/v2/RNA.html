@@ -30,6 +30,14 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2
 export class RNA {
+   # 当前RNA分子所属的父对象编号
+   componentOf: string;
+   # 当前RNA分子的组成成分(对于复合物类型的RNA)
+   components: string;
+   # RNA分子的交叉引用编号列表
+   dbLinks: string;
+   # RNA分子在基因组上面的终止位置
+   endPosition: integer;
    # the trranscription source template gene <a href="cref:P:SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2.gene.locus_tag">gene.locus_tag</a>
    gene: string;
    id: string;

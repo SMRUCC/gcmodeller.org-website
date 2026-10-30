@@ -30,14 +30,25 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2
 export class TranscriptUnit {
+   # 转录方向：<code>+1</code> 或者 <code>-1</code>
+   direction: string;
    # the operon gene list
    genes: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/gene.html">gene[]</a>;
    id: string;
+   # 转录单元在基因组上面的坐标区间
+   left: integer;
    # the display name of this operon object
    name: string;
    note: string;
    numOfGenes: integer;
+   # 当前转录单元的启动子
+   promoter: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Promoter.html">Promoter</a>;
+   # 调控当前转录单元的调控关系编号列表
+   regulatedBy: string;
+   right: integer;
    sites: string;
+   # 当前转录单元的终止子
+   terminator: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Terminator.html">Terminator</a>;
 }
 </code>
         </pre>
@@ -46,6 +57,8 @@ export class TranscriptUnit {
 
         <ol>
 <li>use by <i>property</i> member <code>genes</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/gene.html">gene</a></li>
+<li>use by <i>property</i> member <code>promoter</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Promoter.html">Promoter</a></li>
+<li>use by <i>property</i> member <code>terminator</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Terminator.html">Terminator</a></li>
 </ol>
 
 

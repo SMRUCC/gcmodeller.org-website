@@ -30,17 +30,30 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2
 export class Transportation {
+   # 转运过程所使用的能量耦合方式：例如 <code>symport</code>、<code>antiport</code>、<code>ATP</code>
+   couplingType: string;
    enzymes: string;
    # the reaction model reference id
    guid: string;
    membrane: string;
+   # 转运过程的名称
+   name: string;
+   # 被转运的产物列表
+   products: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/CompoundFactor.html">CompoundFactor[]</a>;
+   # 该转运过程所对应的反应编号
+   reaction: string;
+   # 被转运的底物列表
+   substrates: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/CompoundFactor.html">CompoundFactor[]</a>;
 }
 </code>
         </pre>
 
         <h3>.NET clr type reference tree</h3>
 
-        this clr type has no other .net clr type reference.
+        <ol>
+<li>use by <i>property</i> member <code>products</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/CompoundFactor.html">CompoundFactor</a></li>
+<li>use by <i>property</i> member <code>substrates</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/CompoundFactor.html">CompoundFactor</a></li>
+</ol>
 
 
         <hr />

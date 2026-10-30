@@ -30,15 +30,35 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2
 export class Compound {
+   # 化合物的净电荷
+   charge: double;
+   # 化合物所属的BioCyc类的编号
+   classId: string;
+   # 对于聚合物类型的化合物，其所包含的单体编号列表
+   componentOf: string;
    # the cross reference id of this compound, used for search on the workbench ui
    db_xrefs: string;
+   # 该化合物所关联的文献证据编号
+   evidence: string;
    formula: string;
+   # 化合物的标准生成自由能(kJ/mol)
+   gibbs0: double;
    # the registry unique reference symbol id
    ID: string;
+   inchi: string;
+   inchiKey: string;
+   # 化合物所出现的细胞区室编号列表
+   locations: string;
+   # 化合物的平均分子质量(Dalton)
+   mass: double;
+   # 化合物的单同位素质量(Dalton)
+   monoisotopicMass: double;
    name: string;
    # the reference id of current metabolite
    referenceIds: string;
    smiles: string;
+   # 化合物的同义名称列表
+   synonyms: string;
 }
 </code>
         </pre>

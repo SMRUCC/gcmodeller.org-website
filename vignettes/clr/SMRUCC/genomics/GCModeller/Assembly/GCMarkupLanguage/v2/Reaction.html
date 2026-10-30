@@ -30,14 +30,30 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2
 export class Reaction {
+   # 反应前后的原子映射关系
+   atomMappings: string;
    baseline: double;
    # [forward, reverse] boundary of the reaction speed
    bounds: double;
    # the compartment location of the reaction
    compartment: string;
+   # 标准自由能变化(kJ/mol)
+   deltaG: double;
+   # 标准自由能变化的计算误差(kJ/mol)
+   deltaGError: double;
+   # 反应的热力学方向。
+   # 
+   # 在旧版本的数据结构之中需要通过 <code>bounds</code> 来进行猜测，在新版本之中直接使用 这个显式的方向标志来表示反应在生理条件之下的实际方向。
+   direction: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/ReactionDirection.html">ReactionDirection</a>;
    ec_number: string;
+   # 催化当前反应的酶的蛋白质编号列表
+   enzymes: string;
    # the debug view of the current equation model
    equation: string;
+   # 反应的平衡常数
+   equilibriumConstant: double;
+   # 当前反应所关联的文献证据编号
+   evidence: string;
    gibbs: double;
    # unique reference id of current reaction link
    ID: string;
@@ -45,7 +61,13 @@ export class Reaction {
    is_enzymatic: boolean;
    name: string;
    note: string;
+   # 当前反应所属于的代谢通路的编号列表
+   pathways: string;
    product: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/CompoundFactor.html">CompoundFactor[]</a>;
+   # 当前反应是否是自发反应(不需要酶的催化就可以发生)
+   spontaneous: boolean;
+   # 反应的标准还原电位
+   stdReductionPotential: double;
    substrate: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/CompoundFactor.html">CompoundFactor[]</a>;
 }
 </code>
@@ -54,6 +76,7 @@ export class Reaction {
         <h3>.NET clr type reference tree</h3>
 
         <ol>
+<li>use by <i>property</i> member <code>direction</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/ReactionDirection.html">ReactionDirection</a></li>
 <li>use by <i>property</i> member <code>product</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/CompoundFactor.html">CompoundFactor</a></li>
 <li>use by <i>property</i> member <code>substrate</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/CompoundFactor.html">CompoundFactor</a></li>
 </ol>

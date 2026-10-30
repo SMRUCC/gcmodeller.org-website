@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2.Compartment</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://gcmodeller.org/lib/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>Compartment {SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>Compartment</h2>
+
+        <h3>Description</h3>
+
+        <p>虚拟细胞模型之中的区室定义。</p>
+
+<p>虚拟细胞模型的反应方程以及化合物的定位所使用的区室编号必须在本表之中存在， 这样可以保证模型文件本身是自描述的，而不需要依赖外部的区室映射表。</p>
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2
+export class Compartment {
+   id: string;
+   # 区室的离子强度，单位：mol/L
+   ionicStrength: double;
+   kind: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/CompartmentKind.html">CompartmentKind</a>;
+   # 区室所相邻的膜结构编号
+   membrane: string;
+   name: string;
+   # 区室的pH值
+   pH: double;
+   # 区室的体积，单位：飞升(fL)
+   volume: double;
+}
+</code>
+        </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>kind</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/CompartmentKind.html">CompartmentKind</a></li>
+</ol>
+
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://gcmodeller.org/lib/R_syntax.js"></script>
+<script type="text/javascript" src="https://gcmodeller.org/lib/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

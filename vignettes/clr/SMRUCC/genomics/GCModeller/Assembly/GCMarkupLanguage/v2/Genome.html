@@ -30,11 +30,27 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2
 export class Genome {
+   # DNA结合位点列表
+   bindingSites: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/BindingSite.html">BindingSite[]</a>;
+   # 整个基因组的GC百分含量，取值范围为[0,1]
+   gcContent: double;
+   # 整个基因组的长度(bp)
+   genomeSize: integer;
+   # 质粒复制子的数量
+   plasmidCount: integer;
+   # 启动子(转录起始位点)列表
+   promoters: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Promoter.html">Promoter[]</a>;
+   # 蛋白质序列上面的结构域以及功能位点
+   proteinFeatures: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/ProteinFeature.html">ProteinFeature[]</a>;
    proteins: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/protein.html">protein[]</a>;
    # 转录调控网络
    regulations: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/transcription.html">transcription[]</a>;
+   # 调控组：转录因子以及其所调控的全部转录单元
+   regulons: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Regulon.html">Regulon[]</a>;
    # 一个完整的基因组是由若干个复制子所构成的，复制子主要是指基因组和细菌的质粒基因组
    replicons: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/replicon.html">replicon[]</a>;
+   # 转录终止子列表
+   terminators: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Terminator.html">Terminator[]</a>;
 }
 </code>
         </pre>
@@ -42,9 +58,14 @@ export class Genome {
         <h3>.NET clr type reference tree</h3>
 
         <ol>
+<li>use by <i>property</i> member <code>bindingSites</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/BindingSite.html">BindingSite</a></li>
+<li>use by <i>property</i> member <code>promoters</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Promoter.html">Promoter</a></li>
+<li>use by <i>property</i> member <code>proteinFeatures</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/ProteinFeature.html">ProteinFeature</a></li>
 <li>use by <i>property</i> member <code>proteins</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/protein.html">protein</a></li>
 <li>use by <i>property</i> member <code>regulations</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/transcription.html">transcription</a></li>
+<li>use by <i>property</i> member <code>regulons</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Regulon.html">Regulon</a></li>
 <li>use by <i>property</i> member <code>replicons</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/replicon.html">replicon</a></li>
+<li>use by <i>property</i> member <code>terminators</code>: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/Terminator.html">Terminator</a></li>
 </ol>
 
 

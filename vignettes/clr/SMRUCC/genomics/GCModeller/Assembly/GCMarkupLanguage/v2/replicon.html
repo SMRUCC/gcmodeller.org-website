@@ -30,13 +30,23 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2
 export class replicon {
+   # 复制子在公共数据库(例如NCBI)之中的登录号
+   accession: string;
+   # 质粒的拷贝数
+   copyNumber: integer;
+   # 复制子的GC百分含量，取值范围为[0,1]
+   gcContent: double;
    genomeName: string;
    # 当前的这个复制子对象是否是质粒基因组？
    isPlasmid: boolean;
+   # 复制子的长度(bp)
+   length: integer;
    # the operon is the transcript unit inside the cellular system
    operons: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/TranscriptUnit.html">TranscriptUnit[]</a>;
    # 除了mRNA的其他的一切非蛋白编码RNA
    RNAs: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/Assembly/GCMarkupLanguage/v2/RNA.html">RNA[]</a>;
+   # 复制子的拓扑结构：circular / linear
+   topology: string;
 }
 </code>
         </pre>

@@ -30,13 +30,29 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.GCModeller.Assembly.GCMarkupLanguage.v2
 export class gene {
+   # 基因在公共数据库(例如NCBI GeneBank)之中的登录号
+   accession: string;
    # 对于rRNA和tRNA不存在
    amino_acid: <a href="/vignettes/clr/Microsoft/VisualBasic/Text/Xml/Models/NumericVector.html">NumericVector</a>;
+   # 基因在染色体上面的着丝粒相对位置，取值范围为[0,1]
+   centisomePosition: double;
+   # 基因的功能描述文本
+   characterization: string;
+   # 基因所属的复制子或者基因簇的编号
+   componentOf: string;
+   # 基因的交叉引用编号列表
+   dbLinks: string;
+   # 该基因所关联的文献证据编号
+   evidence: string;
    # apply for the gene overexpress
    expression_level: double;
+   # 基因的GO功能注释编号
+   goTerms: string;
    left: integer;
    # the gene id
    locus_tag: string;
+   # 基因的名称(通常为基因的symbol，例如 <code>lacZ</code>)
+   name: string;
    # mRNA, tRNA, rRNA, etc
    nucleotide_base: <a href="/vignettes/clr/Microsoft/VisualBasic/Text/Xml/Models/NumericVector.html">NumericVector</a>;
    # the protein function description
@@ -45,6 +61,8 @@ export class gene {
    protein_id: string;
    right: integer;
    strand: string;
+   # 基因的同义名称列表
+   synonyms: string;
    type: <a href="/vignettes/clr/SMRUCC/genomics/GCModeller/ModellingEngine/Model/Cellular/RNATypes.html">RNATypes</a>;
 }
 </code>
