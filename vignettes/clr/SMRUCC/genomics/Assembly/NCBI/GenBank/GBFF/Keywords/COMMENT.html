@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        
+        <p><code>COMMENT</code>段: 记录的附加说明信息</p>
 
         <h3>Declare</h3>        
 
@@ -31,6 +31,8 @@
 # namespace SMRUCC.genomics.Assembly.NCBI.GenBank.GBFF.Keywords
 export class COMMENT extends <a href="/vignettes/clr/SMRUCC/genomics/Assembly/NCBI/GenBank/GBFF/Keywords/KeyWord.html">KeyWord</a> {
    Comment: string;
+   # 原始的文本行(用于写出的时候保持原始的换行位置)
+   Lines: string;
 }
 </code>
         </pre>

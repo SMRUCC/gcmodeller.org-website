@@ -22,7 +22,21 @@
 
         <h3>Description</h3>
 
-        
+        <p>GenBank feature 的位点信息。</p>
+
+<p>支持的 location 语法包括:</p>
+
+
+<pre><code> 1..100
+ &lt;1..100
+ 1..&gt;100
+ complement(1..100)
+ join(1..100,201..300)
+ complement(join(1..100,201..300))
+ order(1..100,201..300)
+ join(complement(1..100),complement(201..300))
+ 100
+ 100^101</code></pre>
 
         <h3>Declare</h3>        
 
@@ -35,11 +49,23 @@ export class Location {
    # 假若目标对象是真核生物基因组的话，则可能会因为内含子的原因出现不连续的片段， 故而此时的<a href="cref:P:SMRUCC.genomics.Assembly.NCBI.GenBank.GBFF.Keywords.FEATURES.Location.Locations">Location.Locations</a>属性会有多个值，这个属性会尝试将连续 的区域返回。对于原核生物而言，也可以直接使用这个属性来获取特性位点的在 基因组序列之上的位置
    ContiguousRegion: <a href="/vignettes/clr/SMRUCC/genomics/ComponentModel/Loci/NucleotideLocation.html">NucleotideLocation</a>;
    HasJoinLocation: boolean;
+   # 是否为<code>order(...)</code>类型的位点: 表示各个片段之间的顺序是不确定的
+   IsOrder: boolean;
+   # 位点是否为一个不完整的片段(存在于序列的两端位置被截断的情况)
+   IsPartial: boolean;
    # 对于环状的DNA分子，当某一个特性位点跨越了终点的时候，会有一个这个属性，本属性此时不会为空值
    JoinLocation: <a href="/vignettes/clr/SMRUCC/genomics/Assembly/NCBI/GenBank/GBFF/Keywords/FEATURES/RegionSegment.html">RegionSegment</a>;
+   # 起始位置
+   Left: integer;
    Location: <a href="/vignettes/clr/SMRUCC/genomics/ComponentModel/Loci/Location.html">Location</a>;
    # join mutliple location for the extron. join(...,...,...)
    Locations: <a href="/vignettes/clr/SMRUCC/genomics/Assembly/NCBI/GenBank/GBFF/Keywords/FEATURES/RegionSegment.html">RegionSegment[]</a>;
+   # 结束位置
+   Right: integer;
+   # 片段的数量
+   SegmentCount: integer;
+   # 用于提取序列片段的位点列表：按照原始的书写顺序返回，并且兼容了旧版本 之中用于处理环状分子跨起点的<a href="cref:P:SMRUCC.genomics.Assembly.NCBI.GenBank.GBFF.Keywords.FEATURES.Location.JoinLocation">Location.JoinLocation</a>属性
+   SequenceSegments: <a href="/vignettes/clr/SMRUCC/genomics/Assembly/NCBI/GenBank/GBFF/Keywords/FEATURES/RegionSegment.html">RegionSegment[]</a>;
    UniqueId: string;
 }
 </code>
@@ -52,6 +78,7 @@ export class Location {
 <li>use by <i>property</i> member <code>JoinLocation</code>: <a href="/vignettes/clr/SMRUCC/genomics/Assembly/NCBI/GenBank/GBFF/Keywords/FEATURES/RegionSegment.html">RegionSegment</a></li>
 <li>use by <i>property</i> member <code>Location</code>: <a href="/vignettes/clr/SMRUCC/genomics/ComponentModel/Loci/Location.html">Location</a></li>
 <li>use by <i>property</i> member <code>Locations</code>: <a href="/vignettes/clr/SMRUCC/genomics/Assembly/NCBI/GenBank/GBFF/Keywords/FEATURES/RegionSegment.html">RegionSegment</a></li>
+<li>use by <i>property</i> member <code>SequenceSegments</code>: <a href="/vignettes/clr/SMRUCC/genomics/Assembly/NCBI/GenBank/GBFF/Keywords/FEATURES/RegionSegment.html">RegionSegment</a></li>
 </ol>
 
 

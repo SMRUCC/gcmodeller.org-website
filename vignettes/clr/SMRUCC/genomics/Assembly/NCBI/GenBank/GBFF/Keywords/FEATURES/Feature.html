@@ -33,13 +33,21 @@
 # namespace SMRUCC.genomics.Assembly.NCBI.GenBank.GBFF.Keywords.FEATURES
 export class Feature extends <a href="/vignettes/clr/SMRUCC/genomics/Assembly/NCBI/GenBank/GBFF/IgbComponent.html">IgbComponent</a> {
    Count: integer;
+   Gene: string;
+   # 这个feature是否位于互补链之上
+   IsComplement: boolean;
+   # 是否为伪基因
+   IsPseudo: boolean;
    IsReadOnly: boolean;
    # 第6至第20列的小字段的字段名
    KeyName: string;
    Keys: <a href="/vignettes/clr/System/String.html">iterates(String)</a>;
    # The location of this feature site on the DNA chain.
    Location: <a href="/vignettes/clr/SMRUCC/genomics/Assembly/NCBI/GenBank/GBFF/Keywords/FEATURES/Location.html">Location</a>;
+   LocusTag: string;
    PairedValues: <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/DataSourceModel/NamedValue`1.html">NamedValue`1[]</a>;
+   Product: string;
+   ProteinId: string;
    # nt sequence of this feature site.
    SequenceData: string;
    Values: <a href="/vignettes/clr/System/String.html">iterates(String)</a>;

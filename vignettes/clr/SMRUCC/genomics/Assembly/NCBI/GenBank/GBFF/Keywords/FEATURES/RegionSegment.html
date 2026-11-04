@@ -32,9 +32,16 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.Assembly.NCBI.GenBank.GBFF.Keywords.FEATURES
 export class RegionSegment {
+   # 这一个片段是否是在互补链上面的(<code>join(complement(1..10),20..30)</code>这种写法)
+   Complement: boolean;
    Left: integer;
+   # 片段的起始位置是否为一个不完整的端点(<code>&lt;1..100</code>)
+   LeftPartial: boolean;
+   # 片段所包含的碱基数量
    RegionLength: integer;
    Right: integer;
+   # 片段的结束位置是否为一个不完整的端点(<code>1..&gt;100</code>)
+   RightPartial: boolean;
 }
 </code>
         </pre>

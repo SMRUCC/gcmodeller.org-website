@@ -22,7 +22,9 @@
 
         <h3>Description</h3>
 
-        
+        <p>GenBank记录之中的<code>FEATURES</code>段: 位点注释数据的列表。</p>
+
+<p>这里的索引(按照类型分组索引以及位置区间索引)全部是惰性构建的: 当列表被修改的时候，索引会被标记为失效，在下一次查询的时候才会重新构建。 由于读取大型数据库文件的时候一般只会进行查询操作，因此这种方式不会带来额外的初始化开销。</p>
 
         <h3>Declare</h3>        
 
@@ -30,6 +32,14 @@
             <code id="clr_ts">
 # namespace SMRUCC.genomics.Assembly.NCBI.GenBank.GBFF.Keywords.FEATURES
 export class FEATURES extends <a href="/vignettes/clr/SMRUCC/genomics/Assembly/NCBI/GenBank/GBFF/Keywords/KeyWord.html">KeyWord</a> {
+   # 位点的数量
+   Count: integer;
+   # 位置区间索引
+   Interval: <a href="/vignettes/clr/SMRUCC/genomics/Assembly/NCBI/GenBank/GBFF/Keywords/FEATURES/FeatureIntervalIndex.html">FeatureIntervalIndex</a>;
+   # 解析过程之中所跳过的非法行的数量
+   InvalidLines: integer;
+   # 按照类型名称分组的索引
+   Keys: <a href="/vignettes/clr/SMRUCC/genomics/Assembly/NCBI/GenBank/GBFF/Keywords/FEATURES/FeatureKeyIndex.html">FeatureKeyIndex</a>;
    # The <code>source</code> feature definition.
    source: <a href="/vignettes/clr/SMRUCC/genomics/Assembly/NCBI/GenBank/GBFF/Keywords/FEATURES/Feature.html">Feature</a>;
 }
@@ -40,6 +50,8 @@ export class FEATURES extends <a href="/vignettes/clr/SMRUCC/genomics/Assembly/N
 
         <ol>
 <li>this class extends from <a href="/vignettes/clr/SMRUCC/genomics/Assembly/NCBI/GenBank/GBFF/Keywords/KeyWord.html">KeyWord</a> class: <a href="/vignettes/clr/SMRUCC/genomics/Assembly/NCBI/GenBank/GBFF/Keywords/KeyWord.html">KeyWord</a></li>
+<li>use by <i>property</i> member <code>Interval</code>: <a href="/vignettes/clr/SMRUCC/genomics/Assembly/NCBI/GenBank/GBFF/Keywords/FEATURES/FeatureIntervalIndex.html">FeatureIntervalIndex</a></li>
+<li>use by <i>property</i> member <code>Keys</code>: <a href="/vignettes/clr/SMRUCC/genomics/Assembly/NCBI/GenBank/GBFF/Keywords/FEATURES/FeatureKeyIndex.html">FeatureKeyIndex</a></li>
 <li>use by <i>property</i> member <code>source</code>: <a href="/vignettes/clr/SMRUCC/genomics/Assembly/NCBI/GenBank/GBFF/Keywords/FEATURES/Feature.html">Feature</a></li>
 </ol>
 

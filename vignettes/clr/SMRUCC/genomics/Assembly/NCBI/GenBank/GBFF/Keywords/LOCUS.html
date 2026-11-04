@@ -22,7 +22,11 @@
 
         <h3>Description</h3>
 
-        
+        <p><code>LOCUS</code>行所描述的记录摘要信息</p>
+
+
+<pre><code> LOCUS       NC_000001          248956422 bp    DNA     linear   CON 06-AUG-2025
+ LOCUS       SCU49845              5028 bp    DNA     circular PLN 21-JUN-1999</code></pre>
 
         <h3>Declare</h3>        
 
@@ -32,9 +36,21 @@
 export class LOCUS extends <a href="/vignettes/clr/SMRUCC/genomics/Assembly/NCBI/GenBank/GBFF/Keywords/KeyWord.html">KeyWord</a> {
    # 一般可以通过这个属性来作为整个基因组数据的唯一编号
    AccessionID: string;
+   # 数据库的分类代码: <code>CON</code>/<code>BCT</code>/<code>PLN</code>/<code>PRI</code>/<code>MAM</code> 等
+   Division: string;
+   # 是否为环状分子
+   IsCircular: boolean;
+   # 这个记录是否为<code>CON</code>(constructed)类型的记录: 即序列是由多个片段拼接而成的
+   IsCON: boolean;
+   # 序列的长度(碱基数量)
    Length: integer;
+   # 分子的拓扑结构: <code>linear</code>/<code>circular</code>/<code>both</code>
    Molecular: string;
+   # 分子的拓扑结构(<code>linear</code>/<code>circular</code>)
+   Topology: string;
+   # 分子的类型: <code>DNA</code>/<code>RNA</code>/<code>mRNA</code>等
    Type: string;
+   # 最后更新的日期
    UpdateTime: string;
 }
 </code>

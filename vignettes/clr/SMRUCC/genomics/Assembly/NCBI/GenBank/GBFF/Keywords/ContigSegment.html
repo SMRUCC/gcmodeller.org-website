@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SMRUCC.genomics.Assembly.NCBI.GenBank.GBFF.Keywords.ContigSegment</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://gcmodeller.org/lib/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>ContigSegment {SMRUCC.genomics.Assembly.NCBI.GenBank.GBFF.Keywords}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>ContigSegment</h2>
+
+        <h3>Description</h3>
+
+        <p><code>CONTIG</code>段之中的一个片段</p>
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace SMRUCC.genomics.Assembly.NCBI.GenBank.GBFF.Keywords
+export class ContigSegment {
+   # 片段所引用的记录的编号(<code>gap</code>片段为<code>Nothing</code>)
+   Accession: string;
+   # 片段在引用记录之中的结束位置(包含)
+   Ends: integer;
+   # gap片段的长度
+   GapLength: integer;
+   # 这个片段是否为一个gap
+   IsGap: boolean;
+   # 片段所占据的序列长度
+   Length: integer;
+   # 片段在引用记录之中的起始位置(从1开始)
+   Start: integer;
+}
+</code>
+        </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        this clr type has no other .net clr type reference.
+
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://gcmodeller.org/lib/R_syntax.js"></script>
+<script type="text/javascript" src="https://gcmodeller.org/lib/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>
